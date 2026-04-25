@@ -1,0 +1,294 @@
+{
+  "industry": {
+    "labels": [
+      "Sales & Promotion",
+      "Accounting & Finance",
+      "Creative Art & Design",
+      "Marketing",
+      "Customer Service & Care",
+      "Manufacturing & Production",
+      "Construction & Civil Engineering",
+      "Software Design & Development",
+      "Human Resource & Talent Management",
+      "Teaching & Education",
+      "Information Technology",
+      "Multimedia Content Production",
+      "Architecture & Urban Planning",
+      "Media & Entertainment",
+      "Business Administration & Operations",
+      "Food & Drink Preparation / Service",
+      "Secretarial & Office Management",
+      "Transportation & Delivery",
+      "Other",
+      "Mechanical & Electrical Engineering",
+      "Healthcare",
+      "Logistics & Supply Chain",
+      "Fashion / Clothing & Textile Design",
+      "Pharmaceutical",
+      "Documentation & Writing",
+      "Journalism & Communication",
+      "Security & Safety",
+      "Tutoring, Training & Mentorship",
+      "Event Management & Organization",
+      "Installation & Maintenance",
+      "Purchasing & Procurement",
+      "Woodwork & Carpentry",
+      "Hospitality & Tourism",
+      "Chemical & Biomedical Engineering",
+      "Beauty & Grooming",
+      "Retail & Office Support",
+      "Janitorial & Office Services",
+      "Advisory & Consultancy",
+      "Data Science & Analytics",
+      "Translation & Transcription",
+      "Research Services",
+      "Agriculture",
+      "Horticulture",
+      "Veterinary",
+      "Brokerage & Case Closing"
+    ],
+    "values": [
+      87,
+      66,
+      41,
+      41,
+      36,
+      32,
+      27,
+      25,
+      24,
+      23,
+      22,
+      21,
+      20,
+      19,
+      18,
+      17,
+      14,
+      12,
+      11,
+      10,
+      10,
+      8,
+      8,
+      6,
+      6,
+      5,
+      5,
+      5,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "top3": [
+      "Sales & Promotion",
+      "Accounting & Finance",
+      "Creative Art & Design"
+    ]
+  },
+  "weekly": {
+    "labels": [
+      "2026-02-23/2026-03-01",
+      "2026-03-02/2026-03-08",
+      "2026-03-09/2026-03-15",
+      "2026-03-16/2026-03-22",
+      "2026-03-23/2026-03-29",
+      "2026-03-30/2026-04-05",
+      "2026-04-06/2026-04-12",
+      "2026-04-13/2026-04-19",
+      "2026-04-20/2026-04-26"
+    ],
+    "values": [
+      2,
+      2,
+      23,
+      81,
+      120,
+      95,
+      97,
+      139,
+      103
+    ]
+  },
+  "experience": {
+    "labels": [
+      "Mid-Level",
+      "Senior",
+      "Junior",
+      "Not Specified"
+    ],
+    "values": [
+      263,
+      192,
+      157,
+      50
+    ]
+  },
+  "work_mode": {
+    "labels": [
+      "Onsite",
+      "Remote",
+      "Hybrid",
+      "Unknown"
+    ],
+    "values": [
+      550,
+      54,
+      49,
+      9
+    ]
+  },
+  "contract_type": {
+    "labels": [
+      "Full Time",
+      "Part Time",
+      "Contract",
+      "Freelance",
+      "Unknown"
+    ],
+    "values": [
+      573,
+      31,
+      29,
+      20,
+      9
+    ]
+  },
+  "skills": {
+    "labels": [
+      "Communication",
+      "Accountability",
+      "Problem Solving",
+      "Sales",
+      "Time Management",
+      "Account Management",
+      "Customer Service",
+      "Communications",
+      "English Language",
+      "Creative Thinking",
+      "Management",
+      "Leadership",
+      "Video Editing",
+      "Teamwork",
+      "Computer Literacy"
+    ],
+    "values": [
+      149,
+      71,
+      39,
+      31,
+      26,
+      26,
+      23,
+      23,
+      22,
+      21,
+      21,
+      20,
+      19,
+      17,
+      16
+    ]
+  },
+  "education": {
+    "labels": [
+      "Bachelors Degree",
+      "Not Specified",
+      "Not Required",
+      "Diploma",
+      "Certificate",
+      "Secondary School",
+      "Tvet",
+      "Masters Degree",
+      "Phd"
+    ],
+    "values": [
+      362,
+      78,
+      78,
+      75,
+      33,
+      22,
+      9,
+      4,
+      1
+    ]
+  },
+  "gender": {
+    "labels": [
+      "Both",
+      "Female",
+      "Male"
+    ],
+    "values": [
+      383,
+      212,
+      67
+    ]
+  },
+  "salary": {
+    "min": 1,
+    "max": 204300,
+    "median": 14500,
+    "mean": 18467,
+    "period_breakdown": {
+      "Monthly": 155,
+      "Fixed": 10,
+      "for": 1,
+      "per": 1,
+      "monthly": 1,
+      "Hourly": 1,
+      "Senior": 1
+    }
+  },
+  "companies": {
+    "labels": [
+      "M Advertising activities",
+      "Afriwork Recruitment",
+      "AIT Technologies",
+      "Melhiq Consult PLC",
+      "Sheger Wedding Store",
+      "Golden Family Real Estate LLC",
+      "Addislife Real Estate PLC",
+      "Bright Techno Tonic plc",
+      "Phoenix Telecom Plc",
+      "Learneta Academy"
+    ],
+    "values": [
+      14,
+      10,
+      7,
+      7,
+      6,
+      6,
+      6,
+      5,
+      5,
+      5
+    ]
+  },
+  "kpi": {
+    "total_jobs": 662,
+    "total_companies": 260,
+    "total_industries": 45,
+    "jobs_with_salary": 172,
+    "remote_jobs": 54,
+    "last_updated": "2026-04-25T07:11:18.699821",
+    "date_range_start": "Feb 23, 2026",
+    "date_range_end": "Apr 25, 2026"
+  }
+}
