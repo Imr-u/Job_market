@@ -3,7 +3,7 @@ name: Generate Job Market Report
 on:
   # Runs automatically after your scraper workflow completes
   workflow_run:
-    workflows: ["Scrape Afriworket Jobs"]   # ← change this to your scraper workflow's exact name
+    workflows: ["Scrape Jobs"]   # ← change this to your scraper workflow's exact name
     types: [completed]
 
   # Also allows manual trigger from GitHub UI
@@ -50,7 +50,7 @@ jobs:
       - name: Normalize titles & experience levels
         run: python pipeline/normalize.py
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Analyze
         run: python pipeline/analyze.py

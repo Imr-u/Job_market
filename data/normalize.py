@@ -276,34 +276,30 @@ Rules:
 - If truly unclear, return "Other".
 """
 
-def llm_classify(title: str, api_key_env: str = "ANTHROPIC_API_KEY") -> str:
-    """Call Claude API to classify a single title. Returns category string."""
+def llm_classify(title: str, api_key_env: str = "GEMINI_API_KEY") -> str:
+    """Call Gemini API to classify a single title. Returns category string."""
     import os
     api_key = os.environ.get(api_key_env, "")
     if not api_key:
         return "Other"
 
+    prompt = f"{SYSTEM_PROMPT}\n\nJob title: {title}"
     payload = json.dumps({
-        "model": "claude-haiku-4-5-20251001",   # cheapest + fast — perfect for classification
-        "max_tokens": 30,
-        "system": SYSTEM_PROMPT,
-        "messages": [{"role": "user", "content": title}],
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"maxOutputTokens": 30, "temperature": 0},
     }).encode("utf-8")
 
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
     req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
+        url,
         data=payload,
-        headers={
-            "Content-Type":      "application/json",
-            "x-api-key":         api_key,
-            "anthropic-version": "2023-06-01",
-        },
+        headers={"Content-Type": "application/json"},
         method="POST",
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read())
-            return data["content"][0]["text"].strip()
+            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
     except Exception as e:
         print(f"  ⚠ API error for '{title}': {e}")
         return "Other"
