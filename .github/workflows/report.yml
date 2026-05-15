@@ -1,30 +1,23 @@
 name: Generate Job Market Report
 
 on:
-  # Runs automatically after your scraper workflow completes
   workflow_run:
-    workflows: ["Scrape Jobs"]   # ← change this to your scraper workflow's exact name
+    workflows: ["Scrape Afriworket Jobs"]
     types: [completed]
-
-  # Also allows manual trigger from GitHub UI
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-report:
     runs-on: ubuntu-latest
-    # Only run if scraper succeeded (remove this condition if you want it to run regardless)
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Need full history so we can push back to the repo
           fetch-depth: 0
 
       - name: Set up Python
@@ -36,18 +29,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # ── Rename scraper output to what our pipeline expects ──────────────────
-      # If your scraper already saves to data/jobs_raw.parquet, remove this step
       - name: Stage raw parquet
         run: |
           mkdir -p data
           cp jobs.parquet data/jobs_raw.parquet
 
-      # ── Run pipeline ────────────────────────────────────────────────────────
       - name: Clean data
         run: python pipeline/clean.py
 
-      - name: Normalize titles & experience levels
+      - name: Normalize titles and experience levels
         run: python pipeline/normalize.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -58,17 +48,15 @@ jobs:
       - name: Generate HTML report
         run: python pipeline/generate_report.py
 
-      # ── Commit cache + report back to repo ──────────────────────────────────
-      - name: Commit updated files
+      - name: Commit cache and analysis back to main
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/title_cache.json docs/index.html data/analysis.json
-          git diff --staged --quiet || git commit -m "chore: auto-update report [skip ci]"
+          git add data/title_cache.json data/analysis.json
+          git diff --staged --quiet || git commit -m "chore: auto-update analysis [skip ci]"
           git push
 
-      # ── Deploy to GitHub Pages ───────────────────────────────────────────────
-     - name: Deploy to GitHub Pages
+      - name: Deploy index.html to gh-pages
         run: |
           mkdir -p /tmp/deploy
           cp docs/index.html /tmp/deploy/index.html
@@ -76,6 +64,7 @@ jobs:
           git init
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
+          touch .nojekyll
+          git add .
           git commit -m "deploy: update job market report"
           git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Imr-u/Job_market.git HEAD:gh-pages
