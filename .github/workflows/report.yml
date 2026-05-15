@@ -68,10 +68,14 @@ jobs:
           git push
 
       # ── Deploy to GitHub Pages ───────────────────────────────────────────────
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
-          commit_message: "deploy: update job market report [skip ci]"
+     - name: Deploy to GitHub Pages
+        run: |
+          mkdir -p /tmp/deploy
+          cp docs/index.html /tmp/deploy/index.html
+          cd /tmp/deploy
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "deploy: update job market report"
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Imr-u/Job_market.git HEAD:gh-pages
