@@ -6,89 +6,95 @@
       "Creative Art & Design",
       "Marketing",
       "Customer Service & Care",
-      "Manufacturing & Production",
       "Construction & Civil Engineering",
+      "Manufacturing & Production",
+      "Multimedia Content Production",
+      "Other",
       "Software Design & Development",
       "Human Resource & Talent Management",
-      "Teaching & Education",
-      "Information Technology",
-      "Multimedia Content Production",
-      "Architecture & Urban Planning",
       "Media & Entertainment",
-      "Business Administration & Operations",
+      "Teaching & Education",
       "Food & Drink Preparation / Service",
+      "Information Technology",
+      "Architecture & Urban Planning",
+      "Business Administration & Operations",
       "Secretarial & Office Management",
-      "Transportation & Delivery",
-      "Other",
       "Mechanical & Electrical Engineering",
+      "Transportation & Delivery",
       "Healthcare",
       "Logistics & Supply Chain",
+      "Retail & Office Support",
       "Fashion / Clothing & Textile Design",
-      "Pharmaceutical",
+      "Hospitality & Tourism",
+      "Event Management & Organization",
+      "Tutoring, Training & Mentorship",
+      "Installation & Maintenance",
+      "Security & Safety",
+      "Woodwork & Carpentry",
       "Documentation & Writing",
       "Journalism & Communication",
-      "Security & Safety",
-      "Tutoring, Training & Mentorship",
-      "Event Management & Organization",
-      "Installation & Maintenance",
+      "Pharmaceutical",
       "Purchasing & Procurement",
-      "Woodwork & Carpentry",
-      "Hospitality & Tourism",
       "Chemical & Biomedical Engineering",
-      "Beauty & Grooming",
-      "Retail & Office Support",
+      "Translation & Transcription",
       "Janitorial & Office Services",
       "Advisory & Consultancy",
       "Data Science & Analytics",
-      "Translation & Transcription",
-      "Research Services",
+      "Beauty & Grooming",
       "Agriculture",
+      "Research Services",
+      "Psychiatry, Psychology & Social Work",
       "Horticulture",
       "Veterinary",
-      "Brokerage & Case Closing"
+      "Brokerage & Case Closing",
+      "Environmental, Mining & Energy Engineering",
+      "Livestock & Animal Husbandry"
     ],
     "values": [
-      87,
-      66,
+      151,
+      102,
+      62,
+      59,
+      55,
+      52,
       41,
-      41,
-      36,
-      32,
+      40,
+      34,
+      33,
+      33,
+      31,
+      30,
+      27,
       27,
       25,
       24,
-      23,
-      22,
       21,
-      20,
       19,
-      18,
       17,
-      14,
+      15,
+      13,
+      13,
       12,
-      11,
-      10,
-      10,
+      9,
       8,
       8,
+      7,
+      7,
+      7,
+      7,
       6,
       6,
+      6,
       5,
-      5,
-      5,
       4,
       4,
-      4,
-      4,
-      3,
-      3,
       3,
       3,
       3,
       2,
       2,
       2,
-      2,
+      1,
       1,
       1,
       1,
@@ -110,7 +116,10 @@
       "2026-03-30/2026-04-05",
       "2026-04-06/2026-04-12",
       "2026-04-13/2026-04-19",
-      "2026-04-20/2026-04-26"
+      "2026-04-20/2026-04-26",
+      "2026-04-27/2026-05-03",
+      "2026-05-04/2026-05-10",
+      "2026-05-11/2026-05-17"
     ],
     "values": [
       2,
@@ -121,7 +130,10 @@
       95,
       97,
       139,
-      103
+      133,
+      126,
+      130,
+      92
     ]
   },
   "experience": {
@@ -132,10 +144,10 @@
       "Not Specified"
     ],
     "values": [
-      263,
-      192,
-      157,
-      50
+      427,
+      309,
+      232,
+      72
     ]
   },
   "work_mode": {
@@ -146,69 +158,69 @@
       "Unknown"
     ],
     "values": [
-      550,
-      54,
-      49,
-      9
+      850,
+      98,
+      80,
+      12
     ]
   },
   "contract_type": {
     "labels": [
       "Full Time",
-      "Part Time",
       "Contract",
+      "Part Time",
       "Freelance",
       "Unknown"
     ],
     "values": [
-      573,
-      31,
-      29,
-      20,
-      9
+      903,
+      52,
+      43,
+      30,
+      12
     ]
   },
   "skills": {
     "labels": [
       "Communication",
       "Accountability",
-      "Problem Solving",
       "Sales",
+      "Problem Solving",
+      "Customer Service",
       "Time Management",
       "Account Management",
-      "Customer Service",
-      "Communications",
+      "Work Address",
       "English Language",
       "Creative Thinking",
       "Management",
-      "Leadership",
       "Video Editing",
-      "Teamwork",
-      "Computer Literacy"
+      "Communications",
+      "Leadership",
+      "Teamwork"
     ],
     "values": [
-      149,
-      71,
-      39,
+      231,
+      106,
+      60,
+      49,
+      44,
+      43,
+      38,
+      33,
+      32,
       31,
-      26,
-      26,
-      23,
-      23,
-      22,
-      21,
-      21,
-      20,
-      19,
-      17,
-      16
+      31,
+      29,
+      28,
+      27,
+      27
     ]
   },
   "education": {
     "labels": [
       "Bachelors Degree",
-      "Not Specified",
       "Not Required",
+      "Not Specified",
       "Diploma",
       "Certificate",
       "Secondary School",
@@ -217,13 +229,13 @@
       "Phd"
     ],
     "values": [
-      362,
-      78,
-      78,
-      75,
-      33,
-      22,
-      9,
+      578,
+      123,
+      117,
+      117,
+      51,
+      34,
+      15,
       4,
       1
     ]
@@ -235,159 +247,185 @@
       "Male"
     ],
     "values": [
-      383,
-      212,
-      67
+      614,
+      329,
+      97
     ]
   },
   "salary": {
     "min": 1,
     "max": 204300,
-    "median": 14500,
-    "mean": 18467,
+    "median": 13000,
+    "mean": 17481,
     "period_breakdown": {
-      "Monthly": 155,
-      "Fixed": 10,
+      "Monthly": 228,
+      "Fixed": 18,
+      "per": 2,
+      "Hourly": 2,
       "for": 1,
-      "per": 1,
       "monthly": 1,
-      "Hourly": 1,
-      "Senior": 1
+      "Senior": 1,
+      "net": 1,
+      "Net": 1
     }
   },
   "companies": {
     "labels": [
       "M Advertising activities",
       "Afriwork Recruitment",
-      "AIT Technologies",
-      "Melhiq Consult PLC",
       "Sheger Wedding Store",
-      "Golden Family Real Estate LLC",
-      "Addislife Real Estate PLC",
+      "Shangi Furniture PLC.",
+      "AIT Technologies",
       "Bright Techno Tonic plc",
-      "Phoenix Telecom Plc",
-      "Learneta Academy"
+      "Emarosh Real state",
+      "wb interior",
+      "Melhiq Consult PLC",
+      "Majestic Trading P.L.C"
     ],
     "values": [
+      19,
       14,
-      10,
+      12,
+      9,
+      8,
       7,
       7,
-      6,
-      6,
-      6,
-      5,
-      5,
-      5
+      7,
+      7,
+      6
     ]
   },
   "titles": [
     {
       "rank": 1,
+      "title": "Accountant",
+      "count": 24,
+      "salary_min": 8000,
+      "salary_max": 13000,
+      "salary_med": 13000
+    },
+    {
+      "rank": 2,
       "title": "Senior Accountant",
-      "count": 16,
+      "count": 22,
       "salary_min": 12000,
       "salary_max": 35000,
       "salary_med": 27500
     },
     {
-      "rank": 2,
-      "title": "Accountant",
-      "count": 13,
-      "salary_min": 8000,
-      "salary_max": 8000,
-      "salary_med": 8000
-    },
-    {
       "rank": 3,
       "title": "Sales",
-      "count": 10,
+      "count": 14,
       "salary_min": 4000,
       "salary_max": 13000,
-      "salary_med": 10000
+      "salary_med": 8000
     },
     {
       "rank": 4,
       "title": "Sales Representative",
-      "count": 7,
+      "count": 14,
       "salary_min": 11500,
       "salary_max": 11500,
       "salary_med": 11500
     },
     {
       "rank": 5,
+      "title": "Cashier",
+      "count": 11,
+      "salary_min": 7000,
+      "salary_max": 10000,
+      "salary_med": 8750
+    },
+    {
+      "rank": 6,
       "title": "Video Editor",
-      "count": 6,
+      "count": 9,
       "salary_min": 6000,
       "salary_max": 15000,
       "salary_med": 10000
     },
     {
-      "rank": 6,
-      "title": "Marketing Officer",
-      "count": 6,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
       "rank": 7,
       "title": "Junior Accountant",
-      "count": 6,
+      "count": 8,
       "salary_min": 9000,
       "salary_max": 9000,
       "salary_med": 9000
     },
     {
       "rank": 8,
-      "title": "Cashier",
-      "count": 5,
-      "salary_min": 7000,
-      "salary_max": 10000,
-      "salary_med": 9000
+      "title": "Reception",
+      "count": 8,
+      "salary_min": 10000,
+      "salary_max": 15000,
+      "salary_med": 11000
     },
     {
       "rank": 9,
       "title": "Architect",
-      "count": 5,
+      "count": 7,
       "salary_min": 10000,
       "salary_max": 10000,
       "salary_med": 10000
     },
     {
       "rank": 10,
+      "title": "Marketing Officer",
+      "count": 7,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 11,
       "title": "Driver",
-      "count": 5,
+      "count": 6,
       "salary_min": 12000,
       "salary_max": 12000,
       "salary_med": 12000
     },
     {
-      "rank": 11,
+      "rank": 12,
+      "title": "Marketing Manager",
+      "count": 6,
+      "salary_min": 20000,
+      "salary_max": 25000,
+      "salary_med": 22500
+    },
+    {
+      "rank": 13,
       "title": "HR Officer",
-      "count": 5,
+      "count": 6,
       "salary_min": 20000,
       "salary_max": 20000,
       "salary_med": 20000
     },
     {
-      "rank": 12,
-      "title": "Reception",
-      "count": 5,
-      "salary_min": 10000,
-      "salary_max": 15000,
-      "salary_med": 12500
+      "rank": 14,
+      "title": "Social Media Manager",
+      "count": 6,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
-      "rank": 13,
+      "rank": 15,
       "title": "English Teacher",
-      "count": 5,
+      "count": 6,
       "salary_min": 15000,
       "salary_max": 25000,
-      "salary_med": 17356
+      "salary_med": 19713
     },
     {
-      "rank": 14,
+      "rank": 16,
+      "title": "Sales Officer",
+      "count": 4,
+      "salary_min": 22327,
+      "salary_max": 22327,
+      "salary_med": 22327
+    },
+    {
+      "rank": 17,
       "title": "Secretary",
       "count": 4,
       "salary_min": 7000,
@@ -395,7 +433,7 @@
       "salary_med": 9750
     },
     {
-      "rank": 15,
+      "rank": 18,
       "title": "Receptionist",
       "count": 4,
       "salary_min": 9000,
@@ -403,23 +441,31 @@
       "salary_med": 9000
     },
     {
-      "rank": 16,
-      "title": "Marketing Manager",
+      "rank": 19,
+      "title": "Full Stack Developer",
       "count": 4,
-      "salary_min": 20000,
-      "salary_max": 25000,
-      "salary_med": 22500
+      "salary_min": 29000,
+      "salary_max": 50000,
+      "salary_med": 39500
     },
     {
-      "rank": 17,
-      "title": "Sales Officer",
+      "rank": 20,
+      "title": "Graphics Designer",
+      "count": 4,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 21,
+      "title": "Field Sales Representative",
       "count": 3,
-      "salary_min": 22327,
-      "salary_max": 22327,
-      "salary_med": 22327
+      "salary_min": 8000,
+      "salary_max": 20000,
+      "salary_med": 14000
     },
     {
-      "rank": 18,
+      "rank": 22,
       "title": "Office Engineer",
       "count": 3,
       "salary_min": null,
@@ -427,7 +473,7 @@
       "salary_med": null
     },
     {
-      "rank": 19,
+      "rank": 23,
       "title": "Human Resource Officer",
       "count": 3,
       "salary_min": null,
@@ -435,7 +481,7 @@
       "salary_med": null
     },
     {
-      "rank": 20,
+      "rank": 24,
       "title": "Marketing",
       "count": 3,
       "salary_min": null,
@@ -443,7 +489,7 @@
       "salary_med": null
     },
     {
-      "rank": 21,
+      "rank": 25,
       "title": "IT Support",
       "count": 3,
       "salary_min": 11000,
@@ -451,7 +497,7 @@
       "salary_med": 11000
     },
     {
-      "rank": 22,
+      "rank": 26,
       "title": "Graphics designer",
       "count": 3,
       "salary_min": 10000,
@@ -459,7 +505,15 @@
       "salary_med": 10000
     },
     {
-      "rank": 23,
+      "rank": 27,
+      "title": "የሽያጭ ሰራተኛ",
+      "count": 3,
+      "salary_min": 6000,
+      "salary_max": 6000,
+      "salary_med": 6000
+    },
+    {
+      "rank": 28,
       "title": "accountant",
       "count": 3,
       "salary_min": null,
@@ -467,7 +521,7 @@
       "salary_med": null
     },
     {
-      "rank": 24,
+      "rank": 29,
       "title": "Fashion designer",
       "count": 3,
       "salary_min": 800,
@@ -475,15 +529,15 @@
       "salary_med": 800
     },
     {
-      "rank": 25,
-      "title": "Social Media Manager",
+      "rank": 30,
+      "title": "Real Estate Sales",
       "count": 3,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
+      "salary_min": 17500,
+      "salary_max": 17500,
+      "salary_med": 17500
     },
     {
-      "rank": 26,
+      "rank": 31,
       "title": "Executive Assistant",
       "count": 3,
       "salary_min": 30000,
@@ -491,15 +545,15 @@
       "salary_med": 30000
     },
     {
-      "rank": 27,
-      "title": "Full Stack Developer",
+      "rank": 32,
+      "title": "Marketing officer",
       "count": 3,
-      "salary_min": 29000,
-      "salary_max": 29000,
-      "salary_med": 29000
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
-      "rank": 28,
+      "rank": 33,
       "title": "Graphic Designer",
       "count": 3,
       "salary_min": 8000,
@@ -507,15 +561,63 @@
       "salary_med": 8000
     },
     {
-      "rank": 29,
-      "title": "Graphics Designer",
+      "rank": 34,
+      "title": "Office Manager",
       "count": 3,
-      "salary_min": 7000,
-      "salary_max": 7000,
-      "salary_med": 7000
+      "salary_min": 25000,
+      "salary_max": 25000,
+      "salary_med": 25000
     },
     {
-      "rank": 30,
+      "rank": 35,
+      "title": "Human Resources Officer",
+      "count": 3,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 36,
+      "title": "Pharmacist",
+      "count": 3,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 37,
+      "title": "Sales Person",
+      "count": 3,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 38,
+      "title": "HR Manager",
+      "count": 3,
+      "salary_min": 20000,
+      "salary_max": 25000,
+      "salary_med": 22500
+    },
+    {
+      "rank": 39,
+      "title": "Supervisor for a supermarket",
+      "count": 3,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 40,
+      "title": "Executive Secretary",
+      "count": 3,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 41,
       "title": "Nanny",
       "count": 2,
       "salary_min": null,
@@ -523,96 +625,8 @@
       "salary_med": null
     },
     {
-      "rank": 31,
-      "title": "Store keeper",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 32,
-      "title": "Outdoor Sales Representative",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 33,
-      "title": "Interior designer",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 34,
-      "title": "Teachers",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 35,
-      "title": "የሽያጭ ሰራተኛ",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 36,
-      "title": "Sales Supervisor",
-      "count": 2,
-      "salary_min": 39568,
-      "salary_max": 39568,
-      "salary_med": 39568
-    },
-    {
-      "rank": 37,
-      "title": "Customer Service Representative",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 38,
-      "title": "Software Developer",
-      "count": 2,
-      "salary_min": 15000,
-      "salary_max": 15000,
-      "salary_med": 15000
-    },
-    {
-      "rank": 39,
-      "title": "Sales and Marketing",
-      "count": 2,
-      "salary_min": 20000,
-      "salary_max": 20000,
-      "salary_med": 20000
-    },
-    {
-      "rank": 40,
-      "title": "Technical Manager",
-      "count": 2,
-      "salary_min": 23000,
-      "salary_max": 23000,
-      "salary_med": 23000
-    },
-    {
-      "rank": 41,
-      "title": "Junior Architect",
-      "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
       "rank": 42,
-      "title": "Accounting Officer",
+      "title": "Sales representative",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
@@ -620,7 +634,7 @@
     },
     {
       "rank": 43,
-      "title": "Tender Assistant",
+      "title": "Store keeper",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
@@ -628,7 +642,7 @@
     },
     {
       "rank": 44,
-      "title": "Tender Officer",
+      "title": "Outdoor Sales Representative",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
@@ -636,31 +650,31 @@
     },
     {
       "rank": 45,
-      "title": "Short Form Video Editor",
+      "title": "Interior designer",
       "count": 2,
-      "salary_min": 6000,
-      "salary_max": 10000,
-      "salary_med": 8000
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
       "rank": 46,
-      "title": "የወረቀት ቦርሳ እና ፓኬጂንግ ሰራተኛ",
+      "title": "Teachers",
       "count": 2,
-      "salary_min": 5000,
-      "salary_max": 5000,
-      "salary_med": 5000
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
       "rank": 47,
-      "title": "ጉዳይ አስፈጻሚ",
+      "title": "UI/UX Designer",
       "count": 2,
-      "salary_min": 11000,
-      "salary_max": 11000,
-      "salary_med": 11000
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
       "rank": 48,
-      "title": "የፅዳት ሰራተኛ",
+      "title": "Online English Teacher",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
@@ -668,15 +682,15 @@
     },
     {
       "rank": 49,
-      "title": "Marketing officer",
+      "title": "Sales Supervisor",
       "count": 2,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
+      "salary_min": 39568,
+      "salary_max": 39568,
+      "salary_med": 39568
     },
     {
       "rank": 50,
-      "title": "ወርክ ሾኘ ማናጀር እና supervisor",
+      "title": "Customer Service Representative",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
@@ -684,14 +698,182 @@
     },
     {
       "rank": 51,
-      "title": "Office Manager",
+      "title": "Electrician",
       "count": 2,
-      "salary_min": 25000,
-      "salary_max": 25000,
-      "salary_med": 25000
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
     },
     {
       "rank": 52,
+      "title": "Software Developer",
+      "count": 2,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 53,
+      "title": "Sales and Marketing",
+      "count": 2,
+      "salary_min": 20000,
+      "salary_max": 20000,
+      "salary_med": 20000
+    },
+    {
+      "rank": 54,
+      "title": "Technical Manager",
+      "count": 2,
+      "salary_min": 23000,
+      "salary_max": 23000,
+      "salary_med": 23000
+    },
+    {
+      "rank": 55,
+      "title": "Store Clerk",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 56,
+      "title": "Junior Architect",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 57,
+      "title": "Accounting Officer",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 58,
+      "title": "B2B Sales Representative (US Market)",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 59,
+      "title": "Tender Assistant",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 60,
+      "title": "Finance Officer",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 61,
+      "title": "Tender Officer",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 62,
+      "title": "Short Form Video Editor",
+      "count": 2,
+      "salary_min": 6000,
+      "salary_max": 10000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 63,
+      "title": "የወረቀት ቦርሳ እና ፓኬጂንግ ሰራተኛ",
+      "count": 2,
+      "salary_min": 5000,
+      "salary_max": 5000,
+      "salary_med": 5000
+    },
+    {
+      "rank": 64,
+      "title": "ጉዳይ አስፈጻሚ",
+      "count": 2,
+      "salary_min": 11000,
+      "salary_max": 11000,
+      "salary_med": 11000
+    },
+    {
+      "rank": 65,
+      "title": "የፅዳት ሰራተኛ",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 66,
+      "title": "Sales Representatives",
+      "count": 2,
+      "salary_min": 12650,
+      "salary_max": 12650,
+      "salary_med": 12650
+    },
+    {
+      "rank": 67,
+      "title": "workshop store keeper እና Attendance ተቆጣጣሪ",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 68,
+      "title": "ወርክ ሾኘ ማናጀር እና supervisor",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 69,
+      "title": "Sales person",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 70,
+      "title": "Real-estate sales",
+      "count": 2,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 71,
+      "title": "Shop and Tiktok live sales",
+      "count": 2,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 72,
+      "title": "Quantity Surveyor",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 73,
       "title": "Junior Business Development Officer",
       "count": 2,
       "salary_min": null,
@@ -699,31 +881,119 @@
       "salary_med": null
     },
     {
-      "rank": 53,
-      "title": "Human Resources Officer",
+      "rank": 74,
+      "title": "Call center",
+      "count": 2,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 75,
+      "title": "Social media managment",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
       "salary_med": null
     },
     {
-      "rank": 54,
-      "title": "Pharmacist",
+      "rank": 76,
+      "title": "የልብስ ስፌት ሰራተኛ/Seamstress",
+      "count": 2,
+      "salary_min": 7500,
+      "salary_max": 7500,
+      "salary_med": 7500
+    },
+    {
+      "rank": 77,
+      "title": "Furniture designer",
+      "count": 2,
+      "salary_min": 1,
+      "salary_max": 1,
+      "salary_med": 1
+    },
+    {
+      "rank": 78,
+      "title": "Videographer",
       "count": 2,
       "salary_min": null,
       "salary_max": null,
       "salary_med": null
     },
     {
-      "rank": 55,
-      "title": "HR Manager",
+      "rank": 79,
+      "title": "Sales supervisor",
+      "count": 2,
+      "salary_min": 8500,
+      "salary_max": 8500,
+      "salary_med": 8500
+    },
+    {
+      "rank": 80,
+      "title": "Social media manager",
       "count": 2,
       "salary_min": 20000,
       "salary_max": 20000,
       "salary_med": 20000
     },
     {
-      "rank": 56,
+      "rank": 81,
+      "title": "TECHNICAL MANAGER",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 82,
+      "title": "Marketing Coordinator",
+      "count": 2,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 83,
+      "title": "Senior Architect",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 84,
+      "title": "SENIOR GRAPHICS DESIGNER",
+      "count": 2,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 85,
+      "title": "Junior Showroom Assistant",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 86,
+      "title": "Game zone ፑል እና ፕሌይስቴሽን አጫዋች",
+      "count": 2,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 87,
+      "title": "Senior Graphics Designer",
+      "count": 2,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 88,
       "title": "Customer service and media host",
       "count": 1,
       "salary_min": null,
@@ -731,7 +1001,7 @@
       "salary_med": null
     },
     {
-      "rank": 57,
+      "rank": 89,
       "title": "Junior consultant",
       "count": 1,
       "salary_min": null,
@@ -739,7 +1009,7 @@
       "salary_med": null
     },
     {
-      "rank": 58,
+      "rank": 90,
       "title": "Video Editor and Motion Graphics/ Post-Production Specialist",
       "count": 1,
       "salary_min": null,
@@ -747,7 +1017,7 @@
       "salary_med": null
     },
     {
-      "rank": 59,
+      "rank": 91,
       "title": "IELTS & Duolingo English Test (DET) Teacher",
       "count": 1,
       "salary_min": 13000,
@@ -755,7 +1025,7 @@
       "salary_med": 13000
     },
     {
-      "rank": 60,
+      "rank": 92,
       "title": "Graphic Design - Internship",
       "count": 1,
       "salary_min": null,
@@ -763,7 +1033,7 @@
       "salary_med": null
     },
     {
-      "rank": 61,
+      "rank": 93,
       "title": "Script Writer & Voice Over Artist",
       "count": 1,
       "salary_min": 6000,
@@ -771,7 +1041,7 @@
       "salary_med": 6000
     },
     {
-      "rank": 62,
+      "rank": 94,
       "title": "Civil Engineer",
       "count": 1,
       "salary_min": null,
@@ -779,7 +1049,7 @@
       "salary_med": null
     },
     {
-      "rank": 63,
+      "rank": 95,
       "title": "Engineering manager",
       "count": 1,
       "salary_min": null,
@@ -787,7 +1057,7 @@
       "salary_med": null
     },
     {
-      "rank": 64,
+      "rank": 96,
       "title": "Business Development Representative",
       "count": 1,
       "salary_min": null,
@@ -795,7 +1065,7 @@
       "salary_med": null
     },
     {
-      "rank": 65,
+      "rank": 97,
       "title": "Building Electrician",
       "count": 1,
       "salary_min": null,
@@ -803,7 +1073,7 @@
       "salary_med": null
     },
     {
-      "rank": 66,
+      "rank": 98,
       "title": "መስተንግዶ/waiter",
       "count": 1,
       "salary_min": null,
@@ -811,7 +1081,7 @@
       "salary_med": null
     },
     {
-      "rank": 67,
+      "rank": 99,
       "title": "High-Impact Video Producer",
       "count": 1,
       "salary_min": null,
@@ -819,7 +1089,7 @@
       "salary_med": null
     },
     {
-      "rank": 68,
+      "rank": 100,
       "title": "Product Manager",
       "count": 1,
       "salary_min": null,
@@ -827,7 +1097,7 @@
       "salary_med": null
     },
     {
-      "rank": 69,
+      "rank": 101,
       "title": "Reporter",
       "count": 1,
       "salary_min": 9000,
@@ -835,7 +1105,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 70,
+      "rank": 102,
       "title": "Junior Full-Stack Developer",
       "count": 1,
       "salary_min": null,
@@ -843,7 +1113,7 @@
       "salary_med": null
     },
     {
-      "rank": 71,
+      "rank": 103,
       "title": "Program Director",
       "count": 1,
       "salary_min": null,
@@ -851,7 +1121,7 @@
       "salary_med": null
     },
     {
-      "rank": 72,
+      "rank": 104,
       "title": "Medical content host(GP)",
       "count": 1,
       "salary_min": 31000,
@@ -859,7 +1129,7 @@
       "salary_med": 31000
     },
     {
-      "rank": 73,
+      "rank": 105,
       "title": "Ticketing Agent",
       "count": 1,
       "salary_min": null,
@@ -867,7 +1137,7 @@
       "salary_med": null
     },
     {
-      "rank": 74,
+      "rank": 106,
       "title": "Junior Laboratory Technologist",
       "count": 1,
       "salary_min": 20000,
@@ -875,7 +1145,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 75,
+      "rank": 107,
       "title": "Social Media manager and Graphics Designer",
       "count": 1,
       "salary_min": null,
@@ -883,7 +1153,7 @@
       "salary_med": null
     },
     {
-      "rank": 76,
+      "rank": 108,
       "title": "Office Admin",
       "count": 1,
       "salary_min": null,
@@ -891,7 +1161,7 @@
       "salary_med": null
     },
     {
-      "rank": 77,
+      "rank": 109,
       "title": "Video Creator (Cameraman + Editor)",
       "count": 1,
       "salary_min": null,
@@ -899,15 +1169,7 @@
       "salary_med": null
     },
     {
-      "rank": 78,
-      "title": "Sales representative",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 79,
+      "rank": 110,
       "title": "Senior Human resource manager",
       "count": 1,
       "salary_min": null,
@@ -915,15 +1177,7 @@
       "salary_med": null
     },
     {
-      "rank": 80,
-      "title": "Field Sales Representative",
-      "count": 1,
-      "salary_min": 8000,
-      "salary_max": 8000,
-      "salary_med": 8000
-    },
-    {
-      "rank": 81,
+      "rank": 111,
       "title": "Senior Event Project Manager (Large-Scale & Government)",
       "count": 1,
       "salary_min": null,
@@ -931,7 +1185,7 @@
       "salary_med": null
     },
     {
-      "rank": 82,
+      "rank": 112,
       "title": "Client Growth Manager",
       "count": 1,
       "salary_min": null,
@@ -939,7 +1193,7 @@
       "salary_med": null
     },
     {
-      "rank": 83,
+      "rank": 113,
       "title": "Bartender",
       "count": 1,
       "salary_min": null,
@@ -947,7 +1201,7 @@
       "salary_med": null
     },
     {
-      "rank": 84,
+      "rank": 114,
       "title": "Digital marketer",
       "count": 1,
       "salary_min": 10000,
@@ -955,7 +1209,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 85,
+      "rank": 115,
       "title": "Marketing and Communication officers",
       "count": 1,
       "salary_min": 35000,
@@ -963,7 +1217,7 @@
       "salary_med": 35000
     },
     {
-      "rank": 86,
+      "rank": 116,
       "title": "የቲክቶክ ኤዲተር እና ካሜራ ማን",
       "count": 1,
       "salary_min": null,
@@ -971,7 +1225,7 @@
       "salary_med": null
     },
     {
-      "rank": 87,
+      "rank": 117,
       "title": "Data Scientist",
       "count": 1,
       "salary_min": 40000,
@@ -979,7 +1233,7 @@
       "salary_med": 40000
     },
     {
-      "rank": 88,
+      "rank": 118,
       "title": "Accountants",
       "count": 1,
       "salary_min": null,
@@ -987,7 +1241,7 @@
       "salary_med": null
     },
     {
-      "rank": 89,
+      "rank": 119,
       "title": "Tender & Project Officer",
       "count": 1,
       "salary_min": null,
@@ -995,7 +1249,7 @@
       "salary_med": null
     },
     {
-      "rank": 90,
+      "rank": 120,
       "title": "Content Lead",
       "count": 1,
       "salary_min": 20000,
@@ -1003,7 +1257,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 91,
+      "rank": 121,
       "title": "Oddo Programer",
       "count": 1,
       "salary_min": null,
@@ -1011,7 +1265,7 @@
       "salary_med": null
     },
     {
-      "rank": 92,
+      "rank": 122,
       "title": "Corporate Account Officer",
       "count": 1,
       "salary_min": null,
@@ -1019,7 +1273,7 @@
       "salary_med": null
     },
     {
-      "rank": 93,
+      "rank": 123,
       "title": "Personal Chef Needed",
       "count": 1,
       "salary_min": null,
@@ -1027,7 +1281,7 @@
       "salary_med": null
     },
     {
-      "rank": 94,
+      "rank": 124,
       "title": "Senior Brand & Marketing Designer",
       "count": 1,
       "salary_min": null,
@@ -1035,7 +1289,7 @@
       "salary_med": null
     },
     {
-      "rank": 95,
+      "rank": 125,
       "title": "Bike Station Keeper",
       "count": 1,
       "salary_min": 4000,
@@ -1043,7 +1297,7 @@
       "salary_med": 4000
     },
     {
-      "rank": 96,
+      "rank": 126,
       "title": "Graphics Designer & Video Editor",
       "count": 1,
       "salary_min": null,
@@ -1051,7 +1305,7 @@
       "salary_med": null
     },
     {
-      "rank": 97,
+      "rank": 127,
       "title": "Maintainance technician",
       "count": 1,
       "salary_min": null,
@@ -1059,7 +1313,7 @@
       "salary_med": null
     },
     {
-      "rank": 98,
+      "rank": 128,
       "title": "Female Sales Representative (Interior Design / Architecture Background)",
       "count": 1,
       "salary_min": 20000,
@@ -1067,7 +1321,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 99,
+      "rank": 129,
       "title": "interior design construction foreman",
       "count": 1,
       "salary_min": 11000,
@@ -1075,7 +1329,7 @@
       "salary_med": 11000
     },
     {
-      "rank": 100,
+      "rank": 130,
       "title": "digital marketing Intern",
       "count": 1,
       "salary_min": null,
@@ -1083,7 +1337,7 @@
       "salary_med": null
     },
     {
-      "rank": 101,
+      "rank": 131,
       "title": "የኢንቴሪየር ዲዛይን ማኔጀር",
       "count": 1,
       "salary_min": 25000,
@@ -1091,7 +1345,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 102,
+      "rank": 132,
       "title": "Job Bidding & Application Specialist",
       "count": 1,
       "salary_min": 15000,
@@ -1099,7 +1353,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 103,
+      "rank": 133,
       "title": "3D Designer",
       "count": 1,
       "salary_min": 40000,
@@ -1107,7 +1361,7 @@
       "salary_med": 40000
     },
     {
-      "rank": 104,
+      "rank": 134,
       "title": "Nurse",
       "count": 1,
       "salary_min": null,
@@ -1115,7 +1369,7 @@
       "salary_med": null
     },
     {
-      "rank": 105,
+      "rank": 135,
       "title": "English to Afar Interpreter/Translator",
       "count": 1,
       "salary_min": null,
@@ -1123,7 +1377,7 @@
       "salary_med": null
     },
     {
-      "rank": 106,
+      "rank": 136,
       "title": "Secretary Executive Assistant",
       "count": 1,
       "salary_min": null,
@@ -1131,7 +1385,7 @@
       "salary_med": null
     },
     {
-      "rank": 107,
+      "rank": 137,
       "title": "Junior engineers",
       "count": 1,
       "salary_min": null,
@@ -1139,7 +1393,7 @@
       "salary_med": null
     },
     {
-      "rank": 108,
+      "rank": 138,
       "title": "Juice Bar Attendant (Night Shift)",
       "count": 1,
       "salary_min": null,
@@ -1147,7 +1401,7 @@
       "salary_med": null
     },
     {
-      "rank": 109,
+      "rank": 139,
       "title": "Editor/content creator",
       "count": 1,
       "salary_min": null,
@@ -1155,7 +1409,7 @@
       "salary_med": null
     },
     {
-      "rank": 110,
+      "rank": 140,
       "title": "Business Journalist/ documentary producer",
       "count": 1,
       "salary_min": null,
@@ -1163,7 +1417,7 @@
       "salary_med": null
     },
     {
-      "rank": 111,
+      "rank": 141,
       "title": "Customer Support Intern",
       "count": 1,
       "salary_min": null,
@@ -1171,7 +1425,7 @@
       "salary_med": null
     },
     {
-      "rank": 112,
+      "rank": 142,
       "title": "Merchant Acquisition Sales Executive",
       "count": 1,
       "salary_min": null,
@@ -1179,7 +1433,7 @@
       "salary_med": null
     },
     {
-      "rank": 113,
+      "rank": 143,
       "title": "Primary school English Teacher",
       "count": 1,
       "salary_min": null,
@@ -1187,7 +1441,7 @@
       "salary_med": null
     },
     {
-      "rank": 114,
+      "rank": 144,
       "title": "Sales Person / Sales Officer",
       "count": 1,
       "salary_min": null,
@@ -1195,7 +1449,7 @@
       "salary_med": null
     },
     {
-      "rank": 115,
+      "rank": 145,
       "title": "Teacher",
       "count": 1,
       "salary_min": 9000,
@@ -1203,7 +1457,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 116,
+      "rank": 146,
       "title": "Call Center Operation",
       "count": 1,
       "salary_min": null,
@@ -1211,7 +1465,7 @@
       "salary_med": null
     },
     {
-      "rank": 117,
+      "rank": 147,
       "title": "store keeper",
       "count": 1,
       "salary_min": null,
@@ -1219,7 +1473,7 @@
       "salary_med": null
     },
     {
-      "rank": 118,
+      "rank": 148,
       "title": "Delivery operations Manager",
       "count": 1,
       "salary_min": null,
@@ -1227,7 +1481,7 @@
       "salary_med": null
     },
     {
-      "rank": 119,
+      "rank": 149,
       "title": "Graphic Designer & Video Editor",
       "count": 1,
       "salary_min": null,
@@ -1235,7 +1489,7 @@
       "salary_med": null
     },
     {
-      "rank": 120,
+      "rank": 150,
       "title": "Full Stack Developer ERP & POS System",
       "count": 1,
       "salary_min": null,
@@ -1243,7 +1497,7 @@
       "salary_med": null
     },
     {
-      "rank": 121,
+      "rank": 151,
       "title": "የእንጨት ስራ አጋዥ (Assistant)",
       "count": 1,
       "salary_min": 15000,
@@ -1251,7 +1505,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 122,
+      "rank": 152,
       "title": "Junior Finance Officer",
       "count": 1,
       "salary_min": null,
@@ -1259,7 +1513,7 @@
       "salary_med": null
     },
     {
-      "rank": 123,
+      "rank": 153,
       "title": "Primary Math Teacher",
       "count": 1,
       "salary_min": null,
@@ -1267,7 +1521,7 @@
       "salary_med": null
     },
     {
-      "rank": 124,
+      "rank": 154,
       "title": "የእንጨት ሰራተኛ",
       "count": 1,
       "salary_min": 25000,
@@ -1275,7 +1529,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 125,
+      "rank": 155,
       "title": "senior Marketing And Sales Officer",
       "count": 1,
       "salary_min": null,
@@ -1283,7 +1537,7 @@
       "salary_med": null
     },
     {
-      "rank": 126,
+      "rank": 156,
       "title": "Quality control analysts",
       "count": 1,
       "salary_min": null,
@@ -1291,7 +1545,7 @@
       "salary_med": null
     },
     {
-      "rank": 127,
+      "rank": 157,
       "title": "የሂሳብ ባለሞያ (Accountant)",
       "count": 1,
       "salary_min": null,
@@ -1299,7 +1553,7 @@
       "salary_med": null
     },
     {
-      "rank": 128,
+      "rank": 158,
       "title": "Content Creator / Social Media Manager",
       "count": 1,
       "salary_min": 15000,
@@ -1307,7 +1561,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 129,
+      "rank": 159,
       "title": "SACCO Manager/CEO",
       "count": 1,
       "salary_min": null,
@@ -1315,7 +1569,7 @@
       "salary_med": null
     },
     {
-      "rank": 130,
+      "rank": 160,
       "title": "IT and Program Specialist",
       "count": 1,
       "salary_min": 23000,
@@ -1323,7 +1577,7 @@
       "salary_med": 23000
     },
     {
-      "rank": 131,
+      "rank": 161,
       "title": "Junior Sales and Service Engineer",
       "count": 1,
       "salary_min": null,
@@ -1331,7 +1585,7 @@
       "salary_med": null
     },
     {
-      "rank": 132,
+      "rank": 162,
       "title": "IT-OFFICER",
       "count": 1,
       "salary_min": null,
@@ -1339,7 +1593,7 @@
       "salary_med": null
     },
     {
-      "rank": 133,
+      "rank": 163,
       "title": "Branch Coordinator",
       "count": 1,
       "salary_min": null,
@@ -1347,7 +1601,7 @@
       "salary_med": null
     },
     {
-      "rank": 134,
+      "rank": 164,
       "title": "Interior Designer",
       "count": 1,
       "salary_min": null,
@@ -1355,7 +1609,7 @@
       "salary_med": null
     },
     {
-      "rank": 135,
+      "rank": 165,
       "title": "Senior Savings and Resource Mobilization Specialist",
       "count": 1,
       "salary_min": null,
@@ -1363,7 +1617,7 @@
       "salary_med": null
     },
     {
-      "rank": 136,
+      "rank": 166,
       "title": "Full-Stack Developer & EdTech Specialist",
       "count": 1,
       "salary_min": null,
@@ -1371,7 +1625,7 @@
       "salary_med": null
     },
     {
-      "rank": 137,
+      "rank": 167,
       "title": "የዲጂታል ሚዲያ ማናጀር እና ኮንቴንት ክሬተር",
       "count": 1,
       "salary_min": null,
@@ -1379,7 +1633,7 @@
       "salary_med": null
     },
     {
-      "rank": 138,
+      "rank": 168,
       "title": "Junior Marketing",
       "count": 1,
       "salary_min": null,
@@ -1387,7 +1641,7 @@
       "salary_med": null
     },
     {
-      "rank": 139,
+      "rank": 169,
       "title": "HR manager",
       "count": 1,
       "salary_min": null,
@@ -1395,7 +1649,7 @@
       "salary_med": null
     },
     {
-      "rank": 140,
+      "rank": 170,
       "title": "Video Editor & Videographer",
       "count": 1,
       "salary_min": null,
@@ -1403,7 +1657,7 @@
       "salary_med": null
     },
     {
-      "rank": 141,
+      "rank": 171,
       "title": "Hospitality customer care supervisor",
       "count": 1,
       "salary_min": null,
@@ -1411,7 +1665,7 @@
       "salary_med": null
     },
     {
-      "rank": 142,
+      "rank": 172,
       "title": "Sales and social media icon",
       "count": 1,
       "salary_min": null,
@@ -1419,7 +1673,7 @@
       "salary_med": null
     },
     {
-      "rank": 143,
+      "rank": 173,
       "title": "Video and Animation Project Feedback & Review Coordinator",
       "count": 1,
       "salary_min": 30000,
@@ -1427,7 +1681,7 @@
       "salary_med": 30000
     },
     {
-      "rank": 144,
+      "rank": 174,
       "title": "Laboratory Technician",
       "count": 1,
       "salary_min": null,
@@ -1435,7 +1689,7 @@
       "salary_med": null
     },
     {
-      "rank": 145,
+      "rank": 175,
       "title": "Human Resource Manager",
       "count": 1,
       "salary_min": null,
@@ -1443,7 +1697,7 @@
       "salary_med": null
     },
     {
-      "rank": 146,
+      "rank": 176,
       "title": "Plant Manager",
       "count": 1,
       "salary_min": null,
@@ -1451,7 +1705,7 @@
       "salary_med": null
     },
     {
-      "rank": 147,
+      "rank": 177,
       "title": "Junior Video Editor & Graphics Designer",
       "count": 1,
       "salary_min": null,
@@ -1459,7 +1713,7 @@
       "salary_med": null
     },
     {
-      "rank": 148,
+      "rank": 178,
       "title": "Senior Mobile Maintenance Instructor",
       "count": 1,
       "salary_min": null,
@@ -1467,7 +1721,7 @@
       "salary_med": null
     },
     {
-      "rank": 149,
+      "rank": 179,
       "title": "Operations & Growth Manager",
       "count": 1,
       "salary_min": null,
@@ -1475,7 +1729,7 @@
       "salary_med": null
     },
     {
-      "rank": 150,
+      "rank": 180,
       "title": "Inventory and Operations Assistant",
       "count": 1,
       "salary_min": 26470,
@@ -1483,7 +1737,7 @@
       "salary_med": 26470
     },
     {
-      "rank": 151,
+      "rank": 181,
       "title": "Commercial Manager",
       "count": 1,
       "salary_min": null,
@@ -1491,7 +1745,7 @@
       "salary_med": null
     },
     {
-      "rank": 152,
+      "rank": 182,
       "title": "Senior Human Resource Officer",
       "count": 1,
       "salary_min": null,
@@ -1499,7 +1753,7 @@
       "salary_med": null
     },
     {
-      "rank": 153,
+      "rank": 183,
       "title": "Middle level Marketing Officer",
       "count": 1,
       "salary_min": null,
@@ -1507,7 +1761,7 @@
       "salary_med": null
     },
     {
-      "rank": 154,
+      "rank": 184,
       "title": "Sales and Operation",
       "count": 1,
       "salary_min": 204300,
@@ -1515,7 +1769,7 @@
       "salary_med": 204300
     },
     {
-      "rank": 155,
+      "rank": 185,
       "title": "Home care nurse",
       "count": 1,
       "salary_min": null,
@@ -1523,7 +1777,7 @@
       "salary_med": null
     },
     {
-      "rank": 156,
+      "rank": 186,
       "title": "Security Guard",
       "count": 1,
       "salary_min": null,
@@ -1531,7 +1785,7 @@
       "salary_med": null
     },
     {
-      "rank": 157,
+      "rank": 187,
       "title": "ሞተረኛ",
       "count": 1,
       "salary_min": 12500,
@@ -1539,7 +1793,7 @@
       "salary_med": 12500
     },
     {
-      "rank": 158,
+      "rank": 188,
       "title": "Druggist",
       "count": 1,
       "salary_min": null,
@@ -1547,7 +1801,7 @@
       "salary_med": null
     },
     {
-      "rank": 159,
+      "rank": 189,
       "title": "Junior Backend Engineer",
       "count": 1,
       "salary_min": null,
@@ -1555,7 +1809,7 @@
       "salary_med": null
     },
     {
-      "rank": 160,
+      "rank": 190,
       "title": "Technical engineer or architect",
       "count": 1,
       "salary_min": null,
@@ -1563,7 +1817,7 @@
       "salary_med": null
     },
     {
-      "rank": 161,
+      "rank": 191,
       "title": "Senior office engineer",
       "count": 1,
       "salary_min": null,
@@ -1571,7 +1825,7 @@
       "salary_med": null
     },
     {
-      "rank": 162,
+      "rank": 192,
       "title": "Architect /interior Designer",
       "count": 1,
       "salary_min": null,
@@ -1579,7 +1833,7 @@
       "salary_med": null
     },
     {
-      "rank": 163,
+      "rank": 193,
       "title": "Procurement & Supplies Coordination Manager",
       "count": 1,
       "salary_min": null,
@@ -1587,7 +1841,7 @@
       "salary_med": null
     },
     {
-      "rank": 164,
+      "rank": 194,
       "title": "Accountant and Office Admin",
       "count": 1,
       "salary_min": null,
@@ -1595,7 +1849,7 @@
       "salary_med": null
     },
     {
-      "rank": 165,
+      "rank": 195,
       "title": "Senior Technology Professionals",
       "count": 1,
       "salary_min": null,
@@ -1603,7 +1857,7 @@
       "salary_med": null
     },
     {
-      "rank": 166,
+      "rank": 196,
       "title": "DevOps Engineer",
       "count": 1,
       "salary_min": 100000,
@@ -1611,7 +1865,7 @@
       "salary_med": 100000
     },
     {
-      "rank": 167,
+      "rank": 197,
       "title": "EHS officer",
       "count": 1,
       "salary_min": null,
@@ -1619,7 +1873,7 @@
       "salary_med": null
     },
     {
-      "rank": 168,
+      "rank": 198,
       "title": "Hairstylist",
       "count": 1,
       "salary_min": null,
@@ -1627,7 +1881,7 @@
       "salary_med": null
     },
     {
-      "rank": 169,
+      "rank": 199,
       "title": "Junior Marketing & Sales Officer",
       "count": 1,
       "salary_min": null,
@@ -1635,7 +1889,7 @@
       "salary_med": null
     },
     {
-      "rank": 170,
+      "rank": 200,
       "title": "Sales Officer - የሽያጭ ሰራተኛ",
       "count": 1,
       "salary_min": 9000,
@@ -1643,7 +1897,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 171,
+      "rank": 201,
       "title": "Videographer / Cinematographer",
       "count": 1,
       "salary_min": null,
@@ -1651,7 +1905,7 @@
       "salary_med": null
     },
     {
-      "rank": 172,
+      "rank": 202,
       "title": "PURCHASING ASSISTANT",
       "count": 1,
       "salary_min": 13000,
@@ -1659,15 +1913,7 @@
       "salary_med": 13000
     },
     {
-      "rank": 173,
-      "title": "UI/UX Designer",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 174,
+      "rank": 203,
       "title": "Mid Level DevOps Engineer MOSIP Platform Fayda",
       "count": 1,
       "salary_min": null,
@@ -1675,7 +1921,7 @@
       "salary_med": null
     },
     {
-      "rank": 175,
+      "rank": 204,
       "title": "Shop Manager /Sales Manager",
       "count": 1,
       "salary_min": null,
@@ -1683,7 +1929,7 @@
       "salary_med": null
     },
     {
-      "rank": 176,
+      "rank": 205,
       "title": "Finance",
       "count": 1,
       "salary_min": 25000,
@@ -1691,7 +1937,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 177,
+      "rank": 206,
       "title": "Accounting Clerk",
       "count": 1,
       "salary_min": null,
@@ -1699,7 +1945,7 @@
       "salary_med": null
     },
     {
-      "rank": 178,
+      "rank": 207,
       "title": "architect/ Revit & D5 SPECIALIST",
       "count": 1,
       "salary_min": 25000,
@@ -1707,7 +1953,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 179,
+      "rank": 208,
       "title": "Junior IT Operations Analyst",
       "count": 1,
       "salary_min": 12000,
@@ -1715,7 +1961,7 @@
       "salary_med": 12000
     },
     {
-      "rank": 180,
+      "rank": 209,
       "title": "chef",
       "count": 1,
       "salary_min": null,
@@ -1723,7 +1969,7 @@
       "salary_med": null
     },
     {
-      "rank": 181,
+      "rank": 210,
       "title": "እንግዳ ተቀባይ (Package Clerk)",
       "count": 1,
       "salary_min": 10000,
@@ -1731,7 +1977,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 182,
+      "rank": 211,
       "title": "Meetup Coordinator",
       "count": 1,
       "salary_min": null,
@@ -1739,7 +1985,7 @@
       "salary_med": null
     },
     {
-      "rank": 183,
+      "rank": 212,
       "title": "የቧንቧ መስመር ዝርጋታ እና የኤሌትሪክ ጥገና ባለሙያ",
       "count": 1,
       "salary_min": null,
@@ -1747,7 +1993,7 @@
       "salary_med": null
     },
     {
-      "rank": 184,
+      "rank": 213,
       "title": "Arabic Language and Household Skills Trainer",
       "count": 1,
       "salary_min": null,
@@ -1755,15 +2001,7 @@
       "salary_med": null
     },
     {
-      "rank": 185,
-      "title": "Online English Teacher",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 186,
+      "rank": 214,
       "title": "Senior Graphic Designer",
       "count": 1,
       "salary_min": null,
@@ -1771,7 +2009,7 @@
       "salary_med": null
     },
     {
-      "rank": 187,
+      "rank": 215,
       "title": "Human resource manager",
       "count": 1,
       "salary_min": null,
@@ -1779,7 +2017,7 @@
       "salary_med": null
     },
     {
-      "rank": 188,
+      "rank": 216,
       "title": "Restaurant supervisor",
       "count": 1,
       "salary_min": 20000,
@@ -1787,7 +2025,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 189,
+      "rank": 217,
       "title": "B2B Sales Representative",
       "count": 1,
       "salary_min": 25000,
@@ -1795,7 +2033,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 190,
+      "rank": 218,
       "title": "Project & Operations Officer",
       "count": 1,
       "salary_min": 50000,
@@ -1803,7 +2041,7 @@
       "salary_med": 50000
     },
     {
-      "rank": 191,
+      "rank": 219,
       "title": "E-Commerce Assistant & Customer Support Agent",
       "count": 1,
       "salary_min": null,
@@ -1811,7 +2049,7 @@
       "salary_med": null
     },
     {
-      "rank": 192,
+      "rank": 220,
       "title": "Workshop manager",
       "count": 1,
       "salary_min": 20000,
@@ -1819,7 +2057,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 193,
+      "rank": 221,
       "title": "Social media manger and content creation",
       "count": 1,
       "salary_min": null,
@@ -1827,7 +2065,7 @@
       "salary_med": null
     },
     {
-      "rank": 194,
+      "rank": 222,
       "title": "Medical Software Sales Representative",
       "count": 1,
       "salary_min": null,
@@ -1835,7 +2073,7 @@
       "salary_med": null
     },
     {
-      "rank": 195,
+      "rank": 223,
       "title": "Digital marketing and office assistant",
       "count": 1,
       "salary_min": null,
@@ -1843,7 +2081,7 @@
       "salary_med": null
     },
     {
-      "rank": 196,
+      "rank": 224,
       "title": "Sales Represntative",
       "count": 1,
       "salary_min": 15000,
@@ -1851,7 +2089,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 197,
+      "rank": 225,
       "title": "DESIGNING AND FINISHING ENGINEER",
       "count": 1,
       "salary_min": null,
@@ -1859,7 +2097,7 @@
       "salary_med": null
     },
     {
-      "rank": 198,
+      "rank": 226,
       "title": "Senior Arch VIZ professional",
       "count": 1,
       "salary_min": null,
@@ -1867,7 +2105,7 @@
       "salary_med": null
     },
     {
-      "rank": 199,
+      "rank": 227,
       "title": "Lawyer",
       "count": 1,
       "salary_min": null,
@@ -1875,7 +2113,7 @@
       "salary_med": null
     },
     {
-      "rank": 200,
+      "rank": 228,
       "title": "Outdoor sales representative",
       "count": 1,
       "salary_min": null,
@@ -1883,7 +2121,7 @@
       "salary_med": null
     },
     {
-      "rank": 201,
+      "rank": 229,
       "title": "General Manager",
       "count": 1,
       "salary_min": 10000,
@@ -1891,7 +2129,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 202,
+      "rank": 230,
       "title": "Tiktok Live streaming Entertainer",
       "count": 1,
       "salary_min": null,
@@ -1899,7 +2137,7 @@
       "salary_med": null
     },
     {
-      "rank": 203,
+      "rank": 231,
       "title": "Women Dance Teacher",
       "count": 1,
       "salary_min": null,
@@ -1907,7 +2145,7 @@
       "salary_med": null
     },
     {
-      "rank": 204,
+      "rank": 232,
       "title": "IT / አይቲ",
       "count": 1,
       "salary_min": null,
@@ -1915,7 +2153,7 @@
       "salary_med": null
     },
     {
-      "rank": 205,
+      "rank": 233,
       "title": "Customer Success Officer",
       "count": 1,
       "salary_min": null,
@@ -1923,7 +2161,7 @@
       "salary_med": null
     },
     {
-      "rank": 206,
+      "rank": 234,
       "title": "UI/UX Designer (Remote)",
       "count": 1,
       "salary_min": null,
@@ -1931,7 +2169,7 @@
       "salary_med": null
     },
     {
-      "rank": 207,
+      "rank": 235,
       "title": "Marketing and Social Media Executive",
       "count": 1,
       "salary_min": null,
@@ -1939,7 +2177,7 @@
       "salary_med": null
     },
     {
-      "rank": 208,
+      "rank": 236,
       "title": "Data Entry & Finishing Assistant",
       "count": 1,
       "salary_min": null,
@@ -1947,7 +2185,7 @@
       "salary_med": null
     },
     {
-      "rank": 209,
+      "rank": 237,
       "title": "VIRTUAL ADMINISTRATIVE ASSISTANT REAL ESTATE OPERATIONS (REMOTE)",
       "count": 1,
       "salary_min": null,
@@ -1955,7 +2193,7 @@
       "salary_med": null
     },
     {
-      "rank": 210,
+      "rank": 238,
       "title": "Marketing and social media manager",
       "count": 1,
       "salary_min": 5000,
@@ -1963,7 +2201,7 @@
       "salary_med": 5000
     },
     {
-      "rank": 211,
+      "rank": 239,
       "title": "College Guidance Counselor",
       "count": 1,
       "salary_min": null,
@@ -1971,7 +2209,7 @@
       "salary_med": null
     },
     {
-      "rank": 212,
+      "rank": 240,
       "title": "Real estate Sales supervisor and sales representative",
       "count": 1,
       "salary_min": 15000,
@@ -1979,7 +2217,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 213,
+      "rank": 241,
       "title": "Veterinary Doctor",
       "count": 1,
       "salary_min": null,
@@ -1987,15 +2225,7 @@
       "salary_med": null
     },
     {
-      "rank": 214,
-      "title": "Electrician",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 215,
+      "rank": 242,
       "title": "Facility Technician",
       "count": 1,
       "salary_min": null,
@@ -2003,7 +2233,7 @@
       "salary_med": null
     },
     {
-      "rank": 216,
+      "rank": 243,
       "title": "senior Accountant",
       "count": 1,
       "salary_min": 30000,
@@ -2011,7 +2241,7 @@
       "salary_med": 30000
     },
     {
-      "rank": 217,
+      "rank": 244,
       "title": "Fashion Tech Pack & Pattern Designer",
       "count": 1,
       "salary_min": null,
@@ -2019,7 +2249,7 @@
       "salary_med": null
     },
     {
-      "rank": 218,
+      "rank": 245,
       "title": "Senior Quantity surveyor",
       "count": 1,
       "salary_min": null,
@@ -2027,7 +2257,7 @@
       "salary_med": null
     },
     {
-      "rank": 219,
+      "rank": 246,
       "title": "Sales Representative Opportunity",
       "count": 1,
       "salary_min": null,
@@ -2035,7 +2265,7 @@
       "salary_med": null
     },
     {
-      "rank": 220,
+      "rank": 247,
       "title": "Customer service agent",
       "count": 1,
       "salary_min": null,
@@ -2043,7 +2273,7 @@
       "salary_med": null
     },
     {
-      "rank": 221,
+      "rank": 248,
       "title": "Design Head",
       "count": 1,
       "salary_min": null,
@@ -2051,7 +2281,7 @@
       "salary_med": null
     },
     {
-      "rank": 222,
+      "rank": 249,
       "title": "Sr Architect",
       "count": 1,
       "salary_min": null,
@@ -2059,7 +2289,7 @@
       "salary_med": null
     },
     {
-      "rank": 223,
+      "rank": 250,
       "title": "Software Engineer",
       "count": 1,
       "salary_min": null,
@@ -2067,7 +2297,7 @@
       "salary_med": null
     },
     {
-      "rank": 224,
+      "rank": 251,
       "title": "Site Engineer (Finishing)",
       "count": 1,
       "salary_min": null,
@@ -2075,7 +2305,7 @@
       "salary_med": null
     },
     {
-      "rank": 225,
+      "rank": 252,
       "title": "Multimedia Specialist",
       "count": 1,
       "salary_min": 20000,
@@ -2083,7 +2313,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 226,
+      "rank": 253,
       "title": "structural darfts peron",
       "count": 1,
       "salary_min": null,
@@ -2091,7 +2321,7 @@
       "salary_med": null
     },
     {
-      "rank": 227,
+      "rank": 254,
       "title": "Digital Marketer",
       "count": 1,
       "salary_min": null,
@@ -2099,7 +2329,7 @@
       "salary_med": null
     },
     {
-      "rank": 228,
+      "rank": 255,
       "title": "customer service",
       "count": 1,
       "salary_min": 25000,
@@ -2107,7 +2337,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 229,
+      "rank": 256,
       "title": "Customer Service and Admin Assistant",
       "count": 1,
       "salary_min": null,
@@ -2115,7 +2345,7 @@
       "salary_med": null
     },
     {
-      "rank": 230,
+      "rank": 257,
       "title": "Sales Manager",
       "count": 1,
       "salary_min": null,
@@ -2123,7 +2353,7 @@
       "salary_med": null
     },
     {
-      "rank": 231,
+      "rank": 258,
       "title": "Brand & Operations Assistant",
       "count": 1,
       "salary_min": null,
@@ -2131,7 +2361,7 @@
       "salary_med": null
     },
     {
-      "rank": 232,
+      "rank": 259,
       "title": "Production Fabrication and Installation Manager",
       "count": 1,
       "salary_min": null,
@@ -2139,7 +2369,7 @@
       "salary_med": null
     },
     {
-      "rank": 233,
+      "rank": 260,
       "title": "Registrar office head",
       "count": 1,
       "salary_min": null,
@@ -2147,7 +2377,7 @@
       "salary_med": null
     },
     {
-      "rank": 234,
+      "rank": 261,
       "title": "Research and Development",
       "count": 1,
       "salary_min": null,
@@ -2155,7 +2385,7 @@
       "salary_med": null
     },
     {
-      "rank": 235,
+      "rank": 262,
       "title": "Customer Service Officer",
       "count": 1,
       "salary_min": null,
@@ -2163,7 +2393,7 @@
       "salary_med": null
     },
     {
-      "rank": 236,
+      "rank": 263,
       "title": "Senior Drafts Man",
       "count": 1,
       "salary_min": null,
@@ -2171,7 +2401,7 @@
       "salary_med": null
     },
     {
-      "rank": 237,
+      "rank": 264,
       "title": "sales excutive",
       "count": 1,
       "salary_min": null,
@@ -2179,7 +2409,7 @@
       "salary_med": null
     },
     {
-      "rank": 238,
+      "rank": 265,
       "title": "Profesional Video Grapher",
       "count": 1,
       "salary_min": null,
@@ -2187,7 +2417,7 @@
       "salary_med": null
     },
     {
-      "rank": 239,
+      "rank": 266,
       "title": "Senior Store Keeper",
       "count": 1,
       "salary_min": null,
@@ -2195,7 +2425,7 @@
       "salary_med": null
     },
     {
-      "rank": 240,
+      "rank": 267,
       "title": "Graphics Designer(Real Estate)",
       "count": 1,
       "salary_min": null,
@@ -2203,7 +2433,7 @@
       "salary_med": null
     },
     {
-      "rank": 241,
+      "rank": 268,
       "title": "Social Media & Content Manager",
       "count": 1,
       "salary_min": null,
@@ -2211,7 +2441,7 @@
       "salary_med": null
     },
     {
-      "rank": 242,
+      "rank": 269,
       "title": "Business Development Assistant (Entry-Level)",
       "count": 1,
       "salary_min": null,
@@ -2219,7 +2449,7 @@
       "salary_med": null
     },
     {
-      "rank": 243,
+      "rank": 270,
       "title": "VIDEO EDITTOR & GRAPHICS DESIGNER",
       "count": 1,
       "salary_min": 13000,
@@ -2227,7 +2457,7 @@
       "salary_med": 13000
     },
     {
-      "rank": 244,
+      "rank": 271,
       "title": "Senior Marketing Manager",
       "count": 1,
       "salary_min": null,
@@ -2235,7 +2465,7 @@
       "salary_med": null
     },
     {
-      "rank": 245,
+      "rank": 272,
       "title": "Cleaning Service Supervisor",
       "count": 1,
       "salary_min": 20000,
@@ -2243,7 +2473,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 246,
+      "rank": 273,
       "title": "Call Center / Customer Support Officer",
       "count": 1,
       "salary_min": null,
@@ -2251,7 +2481,7 @@
       "salary_med": null
     },
     {
-      "rank": 247,
+      "rank": 274,
       "title": "Biomedical Engineer",
       "count": 1,
       "salary_min": null,
@@ -2259,7 +2489,7 @@
       "salary_med": null
     },
     {
-      "rank": 248,
+      "rank": 275,
       "title": "Warehouse manager",
       "count": 1,
       "salary_min": null,
@@ -2267,7 +2497,7 @@
       "salary_med": null
     },
     {
-      "rank": 249,
+      "rank": 276,
       "title": "Account Manager",
       "count": 1,
       "salary_min": null,
@@ -2275,7 +2505,7 @@
       "salary_med": null
     },
     {
-      "rank": 250,
+      "rank": 277,
       "title": "English teacher",
       "count": 1,
       "salary_min": 22900,
@@ -2283,7 +2513,7 @@
       "salary_med": 22900
     },
     {
-      "rank": 251,
+      "rank": 278,
       "title": "Presentation Design Specialist",
       "count": 1,
       "salary_min": 30000,
@@ -2291,7 +2521,7 @@
       "salary_med": 30000
     },
     {
-      "rank": 252,
+      "rank": 279,
       "title": "Marketing & Sales Support",
       "count": 1,
       "salary_min": null,
@@ -2299,7 +2529,7 @@
       "salary_med": null
     },
     {
-      "rank": 253,
+      "rank": 280,
       "title": "PURCHASER",
       "count": 1,
       "salary_min": null,
@@ -2307,7 +2537,7 @@
       "salary_med": null
     },
     {
-      "rank": 254,
+      "rank": 281,
       "title": "Sales Promoter",
       "count": 1,
       "salary_min": null,
@@ -2315,7 +2545,7 @@
       "salary_med": null
     },
     {
-      "rank": 255,
+      "rank": 282,
       "title": "Maintenance Technician",
       "count": 1,
       "salary_min": null,
@@ -2323,15 +2553,7 @@
       "salary_med": null
     },
     {
-      "rank": 256,
-      "title": "Store Clerk",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 257,
+      "rank": 283,
       "title": "Finanace Manager",
       "count": 1,
       "salary_min": 80000,
@@ -2339,7 +2561,7 @@
       "salary_med": 80000
     },
     {
-      "rank": 258,
+      "rank": 284,
       "title": "Sales and paper bag producer",
       "count": 1,
       "salary_min": null,
@@ -2347,7 +2569,7 @@
       "salary_med": null
     },
     {
-      "rank": 259,
+      "rank": 285,
       "title": "Senior Backend Developer",
       "count": 1,
       "salary_min": null,
@@ -2355,7 +2577,7 @@
       "salary_med": null
     },
     {
-      "rank": 260,
+      "rank": 286,
       "title": "Junior UI/UX & Frontend Developer",
       "count": 1,
       "salary_min": null,
@@ -2363,7 +2585,7 @@
       "salary_med": null
     },
     {
-      "rank": 261,
+      "rank": 287,
       "title": "ጥበቃ",
       "count": 1,
       "salary_min": null,
@@ -2371,7 +2593,7 @@
       "salary_med": null
     },
     {
-      "rank": 262,
+      "rank": 288,
       "title": "Front desk Officer/ Executive assistant",
       "count": 1,
       "salary_min": null,
@@ -2379,7 +2601,7 @@
       "salary_med": null
     },
     {
-      "rank": 263,
+      "rank": 289,
       "title": "ሁለገብ የብየዳ ባለሙያ",
       "count": 1,
       "salary_min": 10000,
@@ -2387,7 +2609,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 264,
+      "rank": 290,
       "title": "ጽዳት",
       "count": 1,
       "salary_min": null,
@@ -2395,7 +2617,7 @@
       "salary_med": null
     },
     {
-      "rank": 265,
+      "rank": 291,
       "title": "Graphic Designer (Sportswear Company)",
       "count": 1,
       "salary_min": 10000,
@@ -2403,7 +2625,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 266,
+      "rank": 292,
       "title": "Junior sales person",
       "count": 1,
       "salary_min": 8000,
@@ -2411,7 +2633,7 @@
       "salary_med": 8000
     },
     {
-      "rank": 267,
+      "rank": 293,
       "title": "ጀማሪ ሞተርኛ",
       "count": 1,
       "salary_min": 7500,
@@ -2419,7 +2641,7 @@
       "salary_med": 7500
     },
     {
-      "rank": 268,
+      "rank": 294,
       "title": "Resident Engineer",
       "count": 1,
       "salary_min": null,
@@ -2427,7 +2649,7 @@
       "salary_med": null
     },
     {
-      "rank": 269,
+      "rank": 295,
       "title": "Production Manager",
       "count": 1,
       "salary_min": null,
@@ -2435,7 +2657,7 @@
       "salary_med": null
     },
     {
-      "rank": 270,
+      "rank": 296,
       "title": "Content Creator & Growth Operator",
       "count": 1,
       "salary_min": null,
@@ -2443,7 +2665,7 @@
       "salary_med": null
     },
     {
-      "rank": 271,
+      "rank": 297,
       "title": "Druggist/ level IV pharmacy technician",
       "count": 1,
       "salary_min": null,
@@ -2451,7 +2673,7 @@
       "salary_med": null
     },
     {
-      "rank": 272,
+      "rank": 298,
       "title": "Office manager/ receptionist",
       "count": 1,
       "salary_min": 12900,
@@ -2459,7 +2681,7 @@
       "salary_med": 12900
     },
     {
-      "rank": 273,
+      "rank": 299,
       "title": "Marketing and Social Media manager",
       "count": 1,
       "salary_min": null,
@@ -2467,7 +2689,7 @@
       "salary_med": null
     },
     {
-      "rank": 274,
+      "rank": 300,
       "title": "Head of Recruitment & Development Training",
       "count": 1,
       "salary_min": null,
@@ -2475,7 +2697,7 @@
       "salary_med": null
     },
     {
-      "rank": 275,
+      "rank": 301,
       "title": "Sales Representatives Intern",
       "count": 1,
       "salary_min": null,
@@ -2483,7 +2705,7 @@
       "salary_med": null
     },
     {
-      "rank": 276,
+      "rank": 302,
       "title": "Operations Director / General Manager",
       "count": 1,
       "salary_min": 40000,
@@ -2491,7 +2713,7 @@
       "salary_med": 40000
     },
     {
-      "rank": 277,
+      "rank": 303,
       "title": "Sales representatives",
       "count": 1,
       "salary_min": null,
@@ -2499,7 +2721,7 @@
       "salary_med": null
     },
     {
-      "rank": 278,
+      "rank": 304,
       "title": "Sales & Marketing Represnatative",
       "count": 1,
       "salary_min": null,
@@ -2507,7 +2729,7 @@
       "salary_med": null
     },
     {
-      "rank": 279,
+      "rank": 305,
       "title": "Video Production Specialist (Videography & Editing)",
       "count": 1,
       "salary_min": 22000,
@@ -2515,7 +2737,7 @@
       "salary_med": 22000
     },
     {
-      "rank": 280,
+      "rank": 306,
       "title": "Video Editor and Graphics Designer",
       "count": 1,
       "salary_min": 20000,
@@ -2523,7 +2745,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 281,
+      "rank": 307,
       "title": "Data Science Intern (Paid)",
       "count": 1,
       "salary_min": 15000,
@@ -2531,7 +2753,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 282,
+      "rank": 308,
       "title": "QA Specialist",
       "count": 1,
       "salary_min": null,
@@ -2539,7 +2761,7 @@
       "salary_med": null
     },
     {
-      "rank": 283,
+      "rank": 309,
       "title": "ጋዜጠኛ/ሪፖርተር",
       "count": 1,
       "salary_min": null,
@@ -2547,7 +2769,7 @@
       "salary_med": null
     },
     {
-      "rank": 284,
+      "rank": 310,
       "title": "Admin Officer",
       "count": 1,
       "salary_min": null,
@@ -2555,7 +2777,7 @@
       "salary_med": null
     },
     {
-      "rank": 285,
+      "rank": 311,
       "title": "Beauty & Makeup Artist",
       "count": 1,
       "salary_min": null,
@@ -2563,7 +2785,7 @@
       "salary_med": null
     },
     {
-      "rank": 286,
+      "rank": 312,
       "title": "Digital marketing manager",
       "count": 1,
       "salary_min": null,
@@ -2571,15 +2793,7 @@
       "salary_med": null
     },
     {
-      "rank": 287,
-      "title": "B2B Sales Representative (US Market)",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 288,
+      "rank": 313,
       "title": "Research & Development Associate",
       "count": 1,
       "salary_min": null,
@@ -2587,7 +2801,7 @@
       "salary_med": null
     },
     {
-      "rank": 289,
+      "rank": 314,
       "title": "junior site engineer",
       "count": 1,
       "salary_min": null,
@@ -2595,7 +2809,7 @@
       "salary_med": null
     },
     {
-      "rank": 290,
+      "rank": 315,
       "title": "Waitress",
       "count": 1,
       "salary_min": null,
@@ -2603,7 +2817,7 @@
       "salary_med": null
     },
     {
-      "rank": 291,
+      "rank": 316,
       "title": "Technical Manager (Energy Systems)",
       "count": 1,
       "salary_min": null,
@@ -2611,7 +2825,7 @@
       "salary_med": null
     },
     {
-      "rank": 292,
+      "rank": 317,
       "title": "Registrar / Office Assistant",
       "count": 1,
       "salary_min": null,
@@ -2619,7 +2833,7 @@
       "salary_med": null
     },
     {
-      "rank": 293,
+      "rank": 318,
       "title": "Customer Support (Night Shift)",
       "count": 1,
       "salary_min": null,
@@ -2627,7 +2841,7 @@
       "salary_med": null
     },
     {
-      "rank": 294,
+      "rank": 319,
       "title": "YouTube Video Editor (Cap Cut)",
       "count": 1,
       "salary_min": 500,
@@ -2635,7 +2849,7 @@
       "salary_med": 500
     },
     {
-      "rank": 295,
+      "rank": 320,
       "title": "Content Writer / Script Writer",
       "count": 1,
       "salary_min": 30000,
@@ -2643,7 +2857,7 @@
       "salary_med": 30000
     },
     {
-      "rank": 296,
+      "rank": 321,
       "title": "Senior Mobile Application Developer",
       "count": 1,
       "salary_min": null,
@@ -2651,7 +2865,7 @@
       "salary_med": null
     },
     {
-      "rank": 297,
+      "rank": 322,
       "title": "Personnel Officer",
       "count": 1,
       "salary_min": null,
@@ -2659,7 +2873,7 @@
       "salary_med": null
     },
     {
-      "rank": 298,
+      "rank": 323,
       "title": "Apartment Secretary",
       "count": 1,
       "salary_min": null,
@@ -2667,15 +2881,7 @@
       "salary_med": null
     },
     {
-      "rank": 299,
-      "title": "Finance Officer",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 300,
+      "rank": 324,
       "title": "የሬስቶራንት ሱፐርቫይዘር (Chicken House)",
       "count": 1,
       "salary_min": null,
@@ -2683,7 +2889,7 @@
       "salary_med": null
     },
     {
-      "rank": 301,
+      "rank": 325,
       "title": "content host & video marketing intern",
       "count": 1,
       "salary_min": null,
@@ -2691,7 +2897,7 @@
       "salary_med": null
     },
     {
-      "rank": 302,
+      "rank": 326,
       "title": "Office assistant",
       "count": 1,
       "salary_min": 9000,
@@ -2699,7 +2905,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 303,
+      "rank": 327,
       "title": "Shop sales person",
       "count": 1,
       "salary_min": 10000,
@@ -2707,7 +2913,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 304,
+      "rank": 328,
       "title": "Finance & Administration Officer",
       "count": 1,
       "salary_min": null,
@@ -2715,7 +2921,7 @@
       "salary_med": null
     },
     {
-      "rank": 305,
+      "rank": 329,
       "title": "ማተሚያ ቤት አጋዥ",
       "count": 1,
       "salary_min": 6000,
@@ -2723,7 +2929,7 @@
       "salary_med": 6000
     },
     {
-      "rank": 306,
+      "rank": 330,
       "title": "driver",
       "count": 1,
       "salary_min": null,
@@ -2731,7 +2937,7 @@
       "salary_med": null
     },
     {
-      "rank": 307,
+      "rank": 331,
       "title": "Junior Graphic Designer",
       "count": 1,
       "salary_min": 10000,
@@ -2739,7 +2945,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 308,
+      "rank": 332,
       "title": "Machine Oprator",
       "count": 1,
       "salary_min": null,
@@ -2747,7 +2953,7 @@
       "salary_med": null
     },
     {
-      "rank": 309,
+      "rank": 333,
       "title": "CTO",
       "count": 1,
       "salary_min": null,
@@ -2755,7 +2961,7 @@
       "salary_med": null
     },
     {
-      "rank": 310,
+      "rank": 334,
       "title": "Design and finishing engineering",
       "count": 1,
       "salary_min": null,
@@ -2763,7 +2969,7 @@
       "salary_med": null
     },
     {
-      "rank": 311,
+      "rank": 335,
       "title": "Office manager and sales",
       "count": 1,
       "salary_min": null,
@@ -2771,7 +2977,7 @@
       "salary_med": null
     },
     {
-      "rank": 312,
+      "rank": 336,
       "title": "AI VIDEO EDITOR",
       "count": 1,
       "salary_min": null,
@@ -2779,7 +2985,7 @@
       "salary_med": null
     },
     {
-      "rank": 313,
+      "rank": 337,
       "title": "Customer service representative",
       "count": 1,
       "salary_min": 17000,
@@ -2787,7 +2993,7 @@
       "salary_med": 17000
     },
     {
-      "rank": 314,
+      "rank": 338,
       "title": "Mid level QA engineer",
       "count": 1,
       "salary_min": null,
@@ -2795,15 +3001,7 @@
       "salary_med": null
     },
     {
-      "rank": 315,
-      "title": "Real Estate Sales",
-      "count": 1,
-      "salary_min": 17500,
-      "salary_max": 17500,
-      "salary_med": 17500
-    },
-    {
-      "rank": 316,
+      "rank": 339,
       "title": "Garment Quality Checker",
       "count": 1,
       "salary_min": null,
@@ -2811,7 +3009,7 @@
       "salary_med": null
     },
     {
-      "rank": 317,
+      "rank": 340,
       "title": "Copier Senior Technician",
       "count": 1,
       "salary_min": null,
@@ -2819,7 +3017,7 @@
       "salary_med": null
     },
     {
-      "rank": 318,
+      "rank": 341,
       "title": "Online tutor",
       "count": 1,
       "salary_min": 70000,
@@ -2827,7 +3025,7 @@
       "salary_med": 70000
     },
     {
-      "rank": 319,
+      "rank": 342,
       "title": "Paper bag sales",
       "count": 1,
       "salary_min": 10000,
@@ -2835,7 +3033,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 320,
+      "rank": 343,
       "title": "Artificial Stone Rock Sculptor",
       "count": 1,
       "salary_min": null,
@@ -2843,7 +3041,7 @@
       "salary_med": null
     },
     {
-      "rank": 321,
+      "rank": 344,
       "title": "Sales Representative (For Real Estate)",
       "count": 1,
       "salary_min": null,
@@ -2851,7 +3049,7 @@
       "salary_med": null
     },
     {
-      "rank": 322,
+      "rank": 345,
       "title": "General Sales Executive (Import-Export)",
       "count": 1,
       "salary_min": null,
@@ -2859,7 +3057,7 @@
       "salary_med": null
     },
     {
-      "rank": 323,
+      "rank": 346,
       "title": "Drugist and or Pharmacist",
       "count": 1,
       "salary_min": null,
@@ -2867,7 +3065,7 @@
       "salary_med": null
     },
     {
-      "rank": 324,
+      "rank": 347,
       "title": "TikTok Live streaming Assistant",
       "count": 1,
       "salary_min": null,
@@ -2875,7 +3073,7 @@
       "salary_med": null
     },
     {
-      "rank": 325,
+      "rank": 348,
       "title": "Senior Sales Representative",
       "count": 1,
       "salary_min": 50000,
@@ -2883,7 +3081,7 @@
       "salary_med": 50000
     },
     {
-      "rank": 326,
+      "rank": 349,
       "title": "Software Sales Trainee",
       "count": 1,
       "salary_min": null,
@@ -2891,7 +3089,7 @@
       "salary_med": null
     },
     {
-      "rank": 327,
+      "rank": 350,
       "title": "junior sales officer",
       "count": 1,
       "salary_min": null,
@@ -2899,7 +3097,7 @@
       "salary_med": null
     },
     {
-      "rank": 328,
+      "rank": 351,
       "title": "Finance and HR Manager",
       "count": 1,
       "salary_min": null,
@@ -2907,7 +3105,7 @@
       "salary_med": null
     },
     {
-      "rank": 329,
+      "rank": 352,
       "title": "Junior Accountant (Peachtree-Pharmaceutical Experience)",
       "count": 1,
       "salary_min": 25000,
@@ -2915,7 +3113,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 330,
+      "rank": 353,
       "title": "Modern Dancer",
       "count": 1,
       "salary_min": 20000,
@@ -2923,7 +3121,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 331,
+      "rank": 354,
       "title": "Senior Social Media & Digital Marketing Manager",
       "count": 1,
       "salary_min": 45000,
@@ -2931,7 +3129,7 @@
       "salary_med": 45000
     },
     {
-      "rank": 332,
+      "rank": 355,
       "title": "Production & Fabrication Lead",
       "count": 1,
       "salary_min": null,
@@ -2939,7 +3137,7 @@
       "salary_med": null
     },
     {
-      "rank": 333,
+      "rank": 356,
       "title": "Machine Design Engineer (3D Modeler)",
       "count": 1,
       "salary_min": null,
@@ -2947,7 +3145,7 @@
       "salary_med": null
     },
     {
-      "rank": 334,
+      "rank": 357,
       "title": "Senior Foreign Procurement Officer",
       "count": 1,
       "salary_min": null,
@@ -2955,7 +3153,7 @@
       "salary_med": null
     },
     {
-      "rank": 335,
+      "rank": 358,
       "title": "bar man",
       "count": 1,
       "salary_min": null,
@@ -2963,7 +3161,7 @@
       "salary_med": null
     },
     {
-      "rank": 336,
+      "rank": 359,
       "title": "Arabic-Speaking Female Content Creator",
       "count": 1,
       "salary_min": null,
@@ -2971,7 +3169,7 @@
       "salary_med": null
     },
     {
-      "rank": 337,
+      "rank": 360,
       "title": "Spa Manager",
       "count": 1,
       "salary_min": null,
@@ -2979,7 +3177,7 @@
       "salary_med": null
     },
     {
-      "rank": 338,
+      "rank": 361,
       "title": "Customer Service Officer / Front Desk Executive (Tech Institute)",
       "count": 1,
       "salary_min": null,
@@ -2987,7 +3185,7 @@
       "salary_med": null
     },
     {
-      "rank": 339,
+      "rank": 362,
       "title": "Marketing Research &expansion Division Head",
       "count": 1,
       "salary_min": null,
@@ -2995,7 +3193,7 @@
       "salary_med": null
     },
     {
-      "rank": 340,
+      "rank": 363,
       "title": "Planning, monitoring amd evaluation service Head",
       "count": 1,
       "salary_min": null,
@@ -3003,7 +3201,7 @@
       "salary_med": null
     },
     {
-      "rank": 341,
+      "rank": 364,
       "title": "Fleet Managment Service Head",
       "count": 1,
       "salary_min": null,
@@ -3011,7 +3209,7 @@
       "salary_med": null
     },
     {
-      "rank": 342,
+      "rank": 365,
       "title": "Internal Audit Service Head",
       "count": 1,
       "salary_min": null,
@@ -3019,7 +3217,7 @@
       "salary_med": null
     },
     {
-      "rank": 343,
+      "rank": 366,
       "title": "Marketing Development and sales Manager",
       "count": 1,
       "salary_min": null,
@@ -3027,7 +3225,7 @@
       "salary_med": null
     },
     {
-      "rank": 344,
+      "rank": 367,
       "title": "GARMENT SAMPLE MAKER",
       "count": 1,
       "salary_min": null,
@@ -3035,7 +3233,7 @@
       "salary_med": null
     },
     {
-      "rank": 345,
+      "rank": 368,
       "title": "HR and administration Department Head",
       "count": 1,
       "salary_min": null,
@@ -3043,7 +3241,7 @@
       "salary_med": null
     },
     {
-      "rank": 346,
+      "rank": 369,
       "title": "Furniture manufacturing supervisor",
       "count": 1,
       "salary_min": 20000,
@@ -3051,7 +3249,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 347,
+      "rank": 370,
       "title": "Technical Engineer ( BOQ & Water Systems)",
       "count": 1,
       "salary_min": null,
@@ -3059,7 +3257,7 @@
       "salary_med": null
     },
     {
-      "rank": 348,
+      "rank": 371,
       "title": "Agronomist",
       "count": 1,
       "salary_min": null,
@@ -3067,7 +3265,7 @@
       "salary_med": null
     },
     {
-      "rank": 349,
+      "rank": 372,
       "title": "Experienced Auditor / Accountant Required",
       "count": 1,
       "salary_min": 11000,
@@ -3075,7 +3273,7 @@
       "salary_med": 11000
     },
     {
-      "rank": 350,
+      "rank": 373,
       "title": "ENGLISH TIKTOK LIVE STREAM HOST",
       "count": 1,
       "salary_min": null,
@@ -3083,7 +3281,7 @@
       "salary_med": null
     },
     {
-      "rank": 351,
+      "rank": 374,
       "title": "Sales and Marketing Executive",
       "count": 1,
       "salary_min": null,
@@ -3091,7 +3289,7 @@
       "salary_med": null
     },
     {
-      "rank": 352,
+      "rank": 375,
       "title": "Social Media Team Leader",
       "count": 1,
       "salary_min": null,
@@ -3099,7 +3297,7 @@
       "salary_med": null
     },
     {
-      "rank": 353,
+      "rank": 376,
       "title": "Video Content Creator & Social Media Manager",
       "count": 1,
       "salary_min": 7500,
@@ -3107,7 +3305,7 @@
       "salary_med": 7500
     },
     {
-      "rank": 354,
+      "rank": 377,
       "title": "Tiktok content creator",
       "count": 1,
       "salary_min": null,
@@ -3115,7 +3313,7 @@
       "salary_med": null
     },
     {
-      "rank": 355,
+      "rank": 378,
       "title": "Growth Marketing Manager",
       "count": 1,
       "salary_min": 20000,
@@ -3123,7 +3321,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 356,
+      "rank": 379,
       "title": "General Practitioner (GP)",
       "count": 1,
       "salary_min": 31000,
@@ -3131,7 +3329,7 @@
       "salary_med": 31000
     },
     {
-      "rank": 357,
+      "rank": 380,
       "title": "IT Administrator and Technical Specialist CS/Engineering Grads",
       "count": 1,
       "salary_min": 10000,
@@ -3139,15 +3337,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 358,
-      "title": "Sales Representatives",
-      "count": 1,
-      "salary_min": 12650,
-      "salary_max": 12650,
-      "salary_med": 12650
-    },
-    {
-      "rank": 359,
+      "rank": 381,
       "title": "የቤት ምግብ አብሳይ",
       "count": 1,
       "salary_min": 7000,
@@ -3155,7 +3345,7 @@
       "salary_med": 7000
     },
     {
-      "rank": 360,
+      "rank": 382,
       "title": "Junior Admin Support",
       "count": 1,
       "salary_min": null,
@@ -3163,7 +3353,7 @@
       "salary_med": null
     },
     {
-      "rank": 361,
+      "rank": 383,
       "title": "Senior Technician",
       "count": 1,
       "salary_min": null,
@@ -3171,7 +3361,7 @@
       "salary_med": null
     },
     {
-      "rank": 362,
+      "rank": 384,
       "title": "አጋዥ ሰራተኛ (Assistant)",
       "count": 1,
       "salary_min": 6000,
@@ -3179,7 +3369,7 @@
       "salary_med": 6000
     },
     {
-      "rank": 363,
+      "rank": 385,
       "title": "Shop Manager",
       "count": 1,
       "salary_min": null,
@@ -3187,7 +3377,7 @@
       "salary_med": null
     },
     {
-      "rank": 364,
+      "rank": 386,
       "title": "Head office secretary",
       "count": 1,
       "salary_min": 9000,
@@ -3195,7 +3385,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 365,
+      "rank": 387,
       "title": "እንጨት ቀለም ቀቢ",
       "count": 1,
       "salary_min": 15000,
@@ -3203,7 +3393,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 366,
+      "rank": 388,
       "title": "Software Sales and Marketing Expert",
       "count": 1,
       "salary_min": null,
@@ -3211,15 +3401,7 @@
       "salary_med": null
     },
     {
-      "rank": 367,
-      "title": "workshop store keeper እና Attendance ተቆጣጣሪ",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 368,
+      "rank": 389,
       "title": "ዋና አናፂ(ራሳቸውን ችለው የሚሰሩ)",
       "count": 1,
       "salary_min": null,
@@ -3227,7 +3409,7 @@
       "salary_med": null
     },
     {
-      "rank": 369,
+      "rank": 390,
       "title": "Sales Agent (የሽያጭ ባለሞያ)",
       "count": 1,
       "salary_min": null,
@@ -3235,15 +3417,7 @@
       "salary_med": null
     },
     {
-      "rank": 370,
-      "title": "Sales person",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 371,
+      "rank": 391,
       "title": "Salesperson/ የሽያጭ ሰራተኛ",
       "count": 1,
       "salary_min": null,
@@ -3251,7 +3425,7 @@
       "salary_med": null
     },
     {
-      "rank": 372,
+      "rank": 392,
       "title": "ACCOUNTANT",
       "count": 1,
       "salary_min": null,
@@ -3259,7 +3433,7 @@
       "salary_med": null
     },
     {
-      "rank": 373,
+      "rank": 393,
       "title": "Purchases",
       "count": 1,
       "salary_min": null,
@@ -3267,7 +3441,7 @@
       "salary_med": null
     },
     {
-      "rank": 374,
+      "rank": 394,
       "title": "ሹፌር ISUZU",
       "count": 1,
       "salary_min": 10000,
@@ -3275,7 +3449,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 375,
+      "rank": 395,
       "title": "Chef",
       "count": 1,
       "salary_min": null,
@@ -3283,7 +3457,7 @@
       "salary_med": null
     },
     {
-      "rank": 376,
+      "rank": 396,
       "title": "Medical Billing specialist",
       "count": 1,
       "salary_min": null,
@@ -3291,7 +3465,7 @@
       "salary_med": null
     },
     {
-      "rank": 377,
+      "rank": 397,
       "title": "Chemical Engineer (Detergent Manufacturing",
       "count": 1,
       "salary_min": null,
@@ -3299,7 +3473,7 @@
       "salary_med": null
     },
     {
-      "rank": 378,
+      "rank": 398,
       "title": "marketing manager",
       "count": 1,
       "salary_min": null,
@@ -3307,7 +3481,7 @@
       "salary_med": null
     },
     {
-      "rank": 379,
+      "rank": 399,
       "title": "Video Editor Needed (UGC, Ads, AI Tools)",
       "count": 1,
       "salary_min": null,
@@ -3315,7 +3489,7 @@
       "salary_med": null
     },
     {
-      "rank": 380,
+      "rank": 400,
       "title": "Receptionist & Office Admin / HR Assistant",
       "count": 1,
       "salary_min": null,
@@ -3323,7 +3497,7 @@
       "salary_med": null
     },
     {
-      "rank": 381,
+      "rank": 401,
       "title": "sales executive events",
       "count": 1,
       "salary_min": null,
@@ -3331,7 +3505,7 @@
       "salary_med": null
     },
     {
-      "rank": 382,
+      "rank": 402,
       "title": "Tutorial",
       "count": 1,
       "salary_min": 5000,
@@ -3339,7 +3513,7 @@
       "salary_med": 5000
     },
     {
-      "rank": 383,
+      "rank": 403,
       "title": "Field sales",
       "count": 1,
       "salary_min": null,
@@ -3347,7 +3521,7 @@
       "salary_med": null
     },
     {
-      "rank": 384,
+      "rank": 404,
       "title": "የእንስሳት ሀኪም",
       "count": 1,
       "salary_min": null,
@@ -3355,7 +3529,7 @@
       "salary_med": null
     },
     {
-      "rank": 385,
+      "rank": 405,
       "title": "Contract Import Officer",
       "count": 1,
       "salary_min": null,
@@ -3363,7 +3537,7 @@
       "salary_med": null
     },
     {
-      "rank": 386,
+      "rank": 406,
       "title": "HR officer",
       "count": 1,
       "salary_min": null,
@@ -3371,7 +3545,7 @@
       "salary_med": null
     },
     {
-      "rank": 387,
+      "rank": 407,
       "title": "የቲክቶክ ሆስት እና ተዋናይ ይፈለጋል",
       "count": 1,
       "salary_min": 20000,
@@ -3379,7 +3553,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 388,
+      "rank": 408,
       "title": "Sales & Customer Service",
       "count": 1,
       "salary_min": null,
@@ -3387,7 +3561,7 @@
       "salary_med": null
     },
     {
-      "rank": 389,
+      "rank": 409,
       "title": "Real estate sales consultants",
       "count": 1,
       "salary_min": 15000,
@@ -3395,7 +3569,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 390,
+      "rank": 410,
       "title": "Administrative Assistant and Receptionist",
       "count": 1,
       "salary_min": null,
@@ -3403,15 +3577,7 @@
       "salary_med": null
     },
     {
-      "rank": 391,
-      "title": "Real-estate sales",
-      "count": 1,
-      "salary_min": 15000,
-      "salary_max": 15000,
-      "salary_med": 15000
-    },
-    {
-      "rank": 392,
+      "rank": 411,
       "title": "Software Sales",
       "count": 1,
       "salary_min": null,
@@ -3419,15 +3585,7 @@
       "salary_med": null
     },
     {
-      "rank": 393,
-      "title": "Shop and Tiktok live sales",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 394,
+      "rank": 412,
       "title": "Video editor and motion graphics designer",
       "count": 1,
       "salary_min": null,
@@ -3435,7 +3593,7 @@
       "salary_med": null
     },
     {
-      "rank": 395,
+      "rank": 413,
       "title": "ሲኒየር የሽያጭ ባለሞያ",
       "count": 1,
       "salary_min": null,
@@ -3443,7 +3601,7 @@
       "salary_med": null
     },
     {
-      "rank": 396,
+      "rank": 414,
       "title": "Customer Service",
       "count": 1,
       "salary_min": 25000,
@@ -3451,7 +3609,7 @@
       "salary_med": 25000
     },
     {
-      "rank": 397,
+      "rank": 415,
       "title": "Tender Officer (Garment / Textile)",
       "count": 1,
       "salary_min": null,
@@ -3459,7 +3617,7 @@
       "salary_med": null
     },
     {
-      "rank": 398,
+      "rank": 416,
       "title": "Call Center Agent & TikTok Live Host",
       "count": 1,
       "salary_min": 14000,
@@ -3467,15 +3625,7 @@
       "salary_med": 14000
     },
     {
-      "rank": 399,
-      "title": "Quantity Surveyor",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 400,
+      "rank": 417,
       "title": "HR/IT officer",
       "count": 1,
       "salary_min": null,
@@ -3483,7 +3633,7 @@
       "salary_med": null
     },
     {
-      "rank": 401,
+      "rank": 418,
       "title": "Cable Puller:",
       "count": 1,
       "salary_min": null,
@@ -3491,7 +3641,7 @@
       "salary_med": null
     },
     {
-      "rank": 402,
+      "rank": 419,
       "title": "Nanny/ child care",
       "count": 1,
       "salary_min": 10000,
@@ -3499,7 +3649,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 403,
+      "rank": 420,
       "title": "Intermediate & Junior Fire Protection Plumber",
       "count": 1,
       "salary_min": null,
@@ -3507,7 +3657,7 @@
       "salary_med": null
     },
     {
-      "rank": 404,
+      "rank": 421,
       "title": "office engineer",
       "count": 1,
       "salary_min": null,
@@ -3515,7 +3665,7 @@
       "salary_med": null
     },
     {
-      "rank": 405,
+      "rank": 422,
       "title": "Senior Water Supply and Drainage Worker",
       "count": 1,
       "salary_min": null,
@@ -3523,7 +3673,7 @@
       "salary_med": null
     },
     {
-      "rank": 406,
+      "rank": 423,
       "title": "System Admin/ IT officer",
       "count": 1,
       "salary_min": null,
@@ -3531,7 +3681,7 @@
       "salary_med": null
     },
     {
-      "rank": 407,
+      "rank": 424,
       "title": "Secretary(administrative Assisant)",
       "count": 1,
       "salary_min": null,
@@ -3539,7 +3689,7 @@
       "salary_med": null
     },
     {
-      "rank": 408,
+      "rank": 425,
       "title": "Project Sales Officer",
       "count": 1,
       "salary_min": null,
@@ -3547,7 +3697,7 @@
       "salary_med": null
     },
     {
-      "rank": 409,
+      "rank": 426,
       "title": "የላፕቶፕ ሽያጭ ሰራተኛ",
       "count": 1,
       "salary_min": null,
@@ -3555,7 +3705,7 @@
       "salary_med": null
     },
     {
-      "rank": 410,
+      "rank": 427,
       "title": "DUTCH (NETHERLANDS) TEACHER",
       "count": 1,
       "salary_min": 500,
@@ -3563,7 +3713,7 @@
       "salary_med": 500
     },
     {
-      "rank": 411,
+      "rank": 428,
       "title": "Design and Drafting",
       "count": 1,
       "salary_min": null,
@@ -3571,7 +3721,7 @@
       "salary_med": null
     },
     {
-      "rank": 412,
+      "rank": 429,
       "title": "Junior Admin Assistant",
       "count": 1,
       "salary_min": null,
@@ -3579,7 +3729,7 @@
       "salary_med": null
     },
     {
-      "rank": 413,
+      "rank": 430,
       "title": "የኮስሞቲክስ ሽያጭ ባለሙያ",
       "count": 1,
       "salary_min": null,
@@ -3587,15 +3737,7 @@
       "salary_med": null
     },
     {
-      "rank": 414,
-      "title": "Call center",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 415,
+      "rank": 431,
       "title": "Inventory & Operations Assistant",
       "count": 1,
       "salary_min": null,
@@ -3603,7 +3745,7 @@
       "salary_med": null
     },
     {
-      "rank": 416,
+      "rank": 432,
       "title": "Operations & Finance Coordinator",
       "count": 1,
       "salary_min": null,
@@ -3611,7 +3753,7 @@
       "salary_med": null
     },
     {
-      "rank": 417,
+      "rank": 433,
       "title": "Growth Associate (Sales)",
       "count": 1,
       "salary_min": null,
@@ -3619,7 +3761,7 @@
       "salary_med": null
     },
     {
-      "rank": 418,
+      "rank": 434,
       "title": "Customer service officer",
       "count": 1,
       "salary_min": null,
@@ -3627,7 +3769,7 @@
       "salary_med": null
     },
     {
-      "rank": 419,
+      "rank": 435,
       "title": "Front Desk",
       "count": 1,
       "salary_min": null,
@@ -3635,7 +3777,7 @@
       "salary_med": null
     },
     {
-      "rank": 420,
+      "rank": 436,
       "title": "Operation Officer (Manager)",
       "count": 1,
       "salary_min": null,
@@ -3643,7 +3785,7 @@
       "salary_med": null
     },
     {
-      "rank": 421,
+      "rank": 437,
       "title": "REAL ESTATE SALES CONSULTANT",
       "count": 1,
       "salary_min": null,
@@ -3651,7 +3793,7 @@
       "salary_med": null
     },
     {
-      "rank": 422,
+      "rank": 438,
       "title": "Real estate sales consultant",
       "count": 1,
       "salary_min": null,
@@ -3659,7 +3801,7 @@
       "salary_med": null
     },
     {
-      "rank": 423,
+      "rank": 439,
       "title": "IT teacher for primary school",
       "count": 1,
       "salary_min": null,
@@ -3667,7 +3809,7 @@
       "salary_med": null
     },
     {
-      "rank": 424,
+      "rank": 440,
       "title": "architect",
       "count": 1,
       "salary_min": null,
@@ -3675,7 +3817,7 @@
       "salary_med": null
     },
     {
-      "rank": 425,
+      "rank": 441,
       "title": "Manager",
       "count": 1,
       "salary_min": 15000,
@@ -3683,7 +3825,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 426,
+      "rank": 442,
       "title": "Workshop Supervisor",
       "count": 1,
       "salary_min": null,
@@ -3691,7 +3833,7 @@
       "salary_med": null
     },
     {
-      "rank": 427,
+      "rank": 443,
       "title": "Supervisor",
       "count": 1,
       "salary_min": null,
@@ -3699,7 +3841,7 @@
       "salary_med": null
     },
     {
-      "rank": 428,
+      "rank": 444,
       "title": "Visual Content Creator (Photography & Videography)",
       "count": 1,
       "salary_min": null,
@@ -3707,7 +3849,7 @@
       "salary_med": null
     },
     {
-      "rank": 429,
+      "rank": 445,
       "title": "Accounting and Financ",
       "count": 1,
       "salary_min": null,
@@ -3715,7 +3857,7 @@
       "salary_med": null
     },
     {
-      "rank": 430,
+      "rank": 446,
       "title": "Female production assistant",
       "count": 1,
       "salary_min": 8000,
@@ -3723,7 +3865,7 @@
       "salary_med": 8000
     },
     {
-      "rank": 431,
+      "rank": 447,
       "title": "Content Creator / Storyteller",
       "count": 1,
       "salary_min": null,
@@ -3731,7 +3873,7 @@
       "salary_med": null
     },
     {
-      "rank": 432,
+      "rank": 448,
       "title": "Fashion Designer",
       "count": 1,
       "salary_min": null,
@@ -3739,7 +3881,7 @@
       "salary_med": null
     },
     {
-      "rank": 433,
+      "rank": 449,
       "title": "ሞተረኛ (electric)",
       "count": 1,
       "salary_min": null,
@@ -3747,7 +3889,7 @@
       "salary_med": null
     },
     {
-      "rank": 434,
+      "rank": 450,
       "title": "UGC Content Creator",
       "count": 1,
       "salary_min": 20000,
@@ -3755,7 +3897,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 435,
+      "rank": 451,
       "title": "Marketing and Social media manager",
       "count": 1,
       "salary_min": 7500,
@@ -3763,7 +3905,7 @@
       "salary_med": 7500
     },
     {
-      "rank": 436,
+      "rank": 452,
       "title": "Online English Teachers",
       "count": 1,
       "salary_min": null,
@@ -3771,7 +3913,7 @@
       "salary_med": null
     },
     {
-      "rank": 437,
+      "rank": 453,
       "title": "ሹፌር",
       "count": 1,
       "salary_min": null,
@@ -3779,7 +3921,7 @@
       "salary_med": null
     },
     {
-      "rank": 438,
+      "rank": 454,
       "title": "ስፓ ሬሴፕሽኒስት / Spa Receptionist",
       "count": 1,
       "salary_min": null,
@@ -3787,7 +3929,7 @@
       "salary_med": null
     },
     {
-      "rank": 439,
+      "rank": 455,
       "title": "Finance and HR",
       "count": 1,
       "salary_min": 8000,
@@ -3795,7 +3937,7 @@
       "salary_med": 8000
     },
     {
-      "rank": 440,
+      "rank": 456,
       "title": "Scriptwriting",
       "count": 1,
       "salary_min": null,
@@ -3803,7 +3945,7 @@
       "salary_med": null
     },
     {
-      "rank": 441,
+      "rank": 457,
       "title": "Techno-Functional Consultant",
       "count": 1,
       "salary_min": null,
@@ -3811,7 +3953,7 @@
       "salary_med": null
     },
     {
-      "rank": 442,
+      "rank": 458,
       "title": "Security Head",
       "count": 1,
       "salary_min": null,
@@ -3819,7 +3961,7 @@
       "salary_med": null
     },
     {
-      "rank": 443,
+      "rank": 459,
       "title": "sales Representative",
       "count": 1,
       "salary_min": null,
@@ -3827,7 +3969,7 @@
       "salary_med": null
     },
     {
-      "rank": 444,
+      "rank": 460,
       "title": "Human resource and General service manager",
       "count": 1,
       "salary_min": null,
@@ -3835,7 +3977,7 @@
       "salary_med": null
     },
     {
-      "rank": 445,
+      "rank": 461,
       "title": "ጠቅላላ አገልግሎት",
       "count": 1,
       "salary_min": null,
@@ -3843,7 +3985,7 @@
       "salary_med": null
     },
     {
-      "rank": 446,
+      "rank": 462,
       "title": "Journalist",
       "count": 1,
       "salary_min": null,
@@ -3851,7 +3993,7 @@
       "salary_med": null
     },
     {
-      "rank": 447,
+      "rank": 463,
       "title": "Sales and operations",
       "count": 1,
       "salary_min": null,
@@ -3859,7 +4001,7 @@
       "salary_med": null
     },
     {
-      "rank": 448,
+      "rank": 464,
       "title": "Video Editor & Graphic Designer",
       "count": 1,
       "salary_min": 20000,
@@ -3867,15 +4009,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 449,
-      "title": "Sales Person",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 450,
+      "rank": 465,
       "title": "TikTok Live streaming Host",
       "count": 1,
       "salary_min": null,
@@ -3883,7 +4017,7 @@
       "salary_med": null
     },
     {
-      "rank": 451,
+      "rank": 466,
       "title": "PRODUCTION MANAGER",
       "count": 1,
       "salary_min": null,
@@ -3891,7 +4025,7 @@
       "salary_med": null
     },
     {
-      "rank": 452,
+      "rank": 467,
       "title": "Revit Model Expert (Freelancer)",
       "count": 1,
       "salary_min": 2000,
@@ -3899,7 +4033,7 @@
       "salary_med": 2000
     },
     {
-      "rank": 453,
+      "rank": 468,
       "title": "Researcher",
       "count": 1,
       "salary_min": null,
@@ -3907,7 +4041,7 @@
       "salary_med": null
     },
     {
-      "rank": 454,
+      "rank": 469,
       "title": "Backend Engineer",
       "count": 1,
       "salary_min": null,
@@ -3915,7 +4049,7 @@
       "salary_med": null
     },
     {
-      "rank": 455,
+      "rank": 470,
       "title": "Accountant and Administrative Assistant",
       "count": 1,
       "salary_min": null,
@@ -3923,7 +4057,7 @@
       "salary_med": null
     },
     {
-      "rank": 456,
+      "rank": 471,
       "title": "Burger Restaurant Manager",
       "count": 1,
       "salary_min": null,
@@ -3931,7 +4065,7 @@
       "salary_med": null
     },
     {
-      "rank": 457,
+      "rank": 472,
       "title": "የደህንነት ካሜራ ባለሞያ /cctv security camera expert/",
       "count": 1,
       "salary_min": null,
@@ -3939,7 +4073,7 @@
       "salary_med": null
     },
     {
-      "rank": 458,
+      "rank": 473,
       "title": "Biomedical engineer",
       "count": 1,
       "salary_min": null,
@@ -3947,7 +4081,7 @@
       "salary_med": null
     },
     {
-      "rank": 459,
+      "rank": 474,
       "title": "Junior Electrical Sales",
       "count": 1,
       "salary_min": null,
@@ -3955,7 +4089,7 @@
       "salary_med": null
     },
     {
-      "rank": 460,
+      "rank": 475,
       "title": "Digital and social media manager",
       "count": 1,
       "salary_min": null,
@@ -3963,7 +4097,7 @@
       "salary_med": null
     },
     {
-      "rank": 461,
+      "rank": 476,
       "title": "Manager Technical operation and Project management",
       "count": 1,
       "salary_min": null,
@@ -3971,7 +4105,7 @@
       "salary_med": null
     },
     {
-      "rank": 462,
+      "rank": 477,
       "title": "Restaurant Barista",
       "count": 1,
       "salary_min": null,
@@ -3979,7 +4113,7 @@
       "salary_med": null
     },
     {
-      "rank": 463,
+      "rank": 478,
       "title": "Remote Bookkeeper (QuickBooks Pro)",
       "count": 1,
       "salary_min": null,
@@ -3987,7 +4121,7 @@
       "salary_med": null
     },
     {
-      "rank": 464,
+      "rank": 479,
       "title": "ካሸር",
       "count": 1,
       "salary_min": null,
@@ -3995,7 +4129,7 @@
       "salary_med": null
     },
     {
-      "rank": 465,
+      "rank": 480,
       "title": "Real Estate sales",
       "count": 1,
       "salary_min": 8763,
@@ -4003,7 +4137,7 @@
       "salary_med": 8763
     },
     {
-      "rank": 466,
+      "rank": 481,
       "title": "Graduate Trainee - IT",
       "count": 1,
       "salary_min": null,
@@ -4011,7 +4145,7 @@
       "salary_med": null
     },
     {
-      "rank": 467,
+      "rank": 482,
       "title": "Social Media Host",
       "count": 1,
       "salary_min": null,
@@ -4019,7 +4153,7 @@
       "salary_med": null
     },
     {
-      "rank": 468,
+      "rank": 483,
       "title": "Product Owner",
       "count": 1,
       "salary_min": null,
@@ -4027,7 +4161,7 @@
       "salary_med": null
     },
     {
-      "rank": 469,
+      "rank": 484,
       "title": "Junior Cloud & Devops Engineer",
       "count": 1,
       "salary_min": null,
@@ -4035,7 +4169,7 @@
       "salary_med": null
     },
     {
-      "rank": 470,
+      "rank": 485,
       "title": "Real- Estate Sales Trainee",
       "count": 1,
       "salary_min": 7006,
@@ -4043,15 +4177,7 @@
       "salary_med": 7006
     },
     {
-      "rank": 471,
-      "title": "Social media managment",
-      "count": 1,
-      "salary_min": null,
-      "salary_max": null,
-      "salary_med": null
-    },
-    {
-      "rank": 472,
+      "rank": 486,
       "title": "Real-Estate Sales Team Leader",
       "count": 1,
       "salary_min": 27000,
@@ -4059,7 +4185,7 @@
       "salary_med": 27000
     },
     {
-      "rank": 473,
+      "rank": 487,
       "title": "Sales specialist",
       "count": 1,
       "salary_min": null,
@@ -4067,7 +4193,7 @@
       "salary_med": null
     },
     {
-      "rank": 474,
+      "rank": 488,
       "title": "Data Entry Person (Accounting fresh graduate)",
       "count": 1,
       "salary_min": null,
@@ -4075,7 +4201,7 @@
       "salary_med": null
     },
     {
-      "rank": 475,
+      "rank": 489,
       "title": "Driver/guday asfetsami",
       "count": 1,
       "salary_min": 20000,
@@ -4083,7 +4209,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 476,
+      "rank": 490,
       "title": "office assistant/Data collector",
       "count": 1,
       "salary_min": null,
@@ -4091,7 +4217,7 @@
       "salary_med": null
     },
     {
-      "rank": 477,
+      "rank": 491,
       "title": "Content Creator, Host & Growth Executive",
       "count": 1,
       "salary_min": null,
@@ -4099,7 +4225,7 @@
       "salary_med": null
     },
     {
-      "rank": 478,
+      "rank": 492,
       "title": "Ecommerce operations manager",
       "count": 1,
       "salary_min": null,
@@ -4107,7 +4233,7 @@
       "salary_med": null
     },
     {
-      "rank": 479,
+      "rank": 493,
       "title": "Graphics and video editor",
       "count": 1,
       "salary_min": null,
@@ -4115,7 +4241,7 @@
       "salary_med": null
     },
     {
-      "rank": 480,
+      "rank": 494,
       "title": "JUNIOR ACCOUNTANT",
       "count": 1,
       "salary_min": null,
@@ -4123,7 +4249,7 @@
       "salary_med": null
     },
     {
-      "rank": 481,
+      "rank": 495,
       "title": "Sanitation Technician",
       "count": 1,
       "salary_min": 21000,
@@ -4131,7 +4257,7 @@
       "salary_med": 21000
     },
     {
-      "rank": 482,
+      "rank": 496,
       "title": "Stock controler",
       "count": 1,
       "salary_min": null,
@@ -4139,7 +4265,7 @@
       "salary_med": null
     },
     {
-      "rank": 483,
+      "rank": 497,
       "title": "Copywriter / Content Creator",
       "count": 1,
       "salary_min": null,
@@ -4147,7 +4273,7 @@
       "salary_med": null
     },
     {
-      "rank": 484,
+      "rank": 498,
       "title": "Chinese Translator",
       "count": 1,
       "salary_min": null,
@@ -4155,7 +4281,7 @@
       "salary_med": null
     },
     {
-      "rank": 485,
+      "rank": 499,
       "title": "Web Developer",
       "count": 1,
       "salary_min": null,
@@ -4163,7 +4289,7 @@
       "salary_med": null
     },
     {
-      "rank": 486,
+      "rank": 500,
       "title": "Head Pastry and backers Chef",
       "count": 1,
       "salary_min": null,
@@ -4171,7 +4297,7 @@
       "salary_med": null
     },
     {
-      "rank": 487,
+      "rank": 501,
       "title": "አካውንቲንግ እና ፋይናንስ",
       "count": 1,
       "salary_min": null,
@@ -4179,7 +4305,7 @@
       "salary_med": null
     },
     {
-      "rank": 488,
+      "rank": 502,
       "title": "Finance & Admin Officer",
       "count": 1,
       "salary_min": null,
@@ -4187,7 +4313,7 @@
       "salary_med": null
     },
     {
-      "rank": 489,
+      "rank": 503,
       "title": "store Keeper",
       "count": 1,
       "salary_min": null,
@@ -4195,7 +4321,7 @@
       "salary_med": null
     },
     {
-      "rank": 490,
+      "rank": 504,
       "title": "Elevator Technician",
       "count": 1,
       "salary_min": null,
@@ -4203,7 +4329,7 @@
       "salary_med": null
     },
     {
-      "rank": 491,
+      "rank": 505,
       "title": "ELECTRICIAN",
       "count": 1,
       "salary_min": null,
@@ -4211,7 +4337,7 @@
       "salary_med": null
     },
     {
-      "rank": 492,
+      "rank": 506,
       "title": "የፋብሪካ ሰራተኛ",
       "count": 1,
       "salary_min": 5000,
@@ -4219,7 +4345,7 @@
       "salary_med": 5000
     },
     {
-      "rank": 493,
+      "rank": 507,
       "title": "Growth Associate",
       "count": 1,
       "salary_min": 20000,
@@ -4227,15 +4353,7 @@
       "salary_med": 20000
     },
     {
-      "rank": 494,
-      "title": "People Operations",
-      "count": 1,
-      "salary_min": 25000,
-      "salary_max": 25000,
-      "salary_med": 25000
-    },
-    {
-      "rank": 495,
+      "rank": 508,
       "title": "Customer Care Representative",
       "count": 1,
       "salary_min": 16000,
@@ -4243,7 +4361,7 @@
       "salary_med": 16000
     },
     {
-      "rank": 496,
+      "rank": 509,
       "title": "Script Writer",
       "count": 1,
       "salary_min": null,
@@ -4251,7 +4369,7 @@
       "salary_med": null
     },
     {
-      "rank": 497,
+      "rank": 510,
       "title": "Junior architect",
       "count": 1,
       "salary_min": 11000,
@@ -4259,7 +4377,7 @@
       "salary_med": 11000
     },
     {
-      "rank": 498,
+      "rank": 511,
       "title": "Showroom manager",
       "count": 1,
       "salary_min": 10000,
@@ -4267,7 +4385,7 @@
       "salary_med": 10000
     },
     {
-      "rank": 499,
+      "rank": 512,
       "title": "CNC and Laser machine operator",
       "count": 1,
       "salary_min": null,
@@ -4275,7 +4393,7 @@
       "salary_med": null
     },
     {
-      "rank": 500,
+      "rank": 513,
       "title": "Logistics coordinator",
       "count": 1,
       "salary_min": 15000,
@@ -4283,7 +4401,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 501,
+      "rank": 514,
       "title": "Office Assistant",
       "count": 1,
       "salary_min": 13000,
@@ -4291,7 +4409,7 @@
       "salary_med": 13000
     },
     {
-      "rank": 502,
+      "rank": 515,
       "title": "Graphic Designer (On-Site)",
       "count": 1,
       "salary_min": null,
@@ -4299,7 +4417,7 @@
       "salary_med": null
     },
     {
-      "rank": 503,
+      "rank": 516,
       "title": "Customer handling and Media Lead",
       "count": 1,
       "salary_min": null,
@@ -4307,7 +4425,7 @@
       "salary_med": null
     },
     {
-      "rank": 504,
+      "rank": 517,
       "title": "Marketing Manager / Digital Marketing Manager",
       "count": 1,
       "salary_min": 15000,
@@ -4315,15 +4433,7 @@
       "salary_med": 15000
     },
     {
-      "rank": 505,
-      "title": "የልብስ ስፌት ሰራተኛ/Seamstress",
-      "count": 1,
-      "salary_min": 7500,
-      "salary_max": 7500,
-      "salary_med": 7500
-    },
-    {
-      "rank": 506,
+      "rank": 518,
       "title": "interior designer",
       "count": 1,
       "salary_min": null,
@@ -4331,7 +4441,7 @@
       "salary_med": null
     },
     {
-      "rank": 507,
+      "rank": 519,
       "title": "Store Sales",
       "count": 1,
       "salary_min": 9000,
@@ -4339,7 +4449,7 @@
       "salary_med": 9000
     },
     {
-      "rank": 508,
+      "rank": 520,
       "title": "Senior Executive Assistant (Construction Industry)",
       "count": 1,
       "salary_min": 40000,
@@ -4347,7 +4457,7 @@
       "salary_med": 40000
     },
     {
-      "rank": 509,
+      "rank": 521,
       "title": "MAIN STORE KEEPER",
       "count": 1,
       "salary_min": null,
@@ -4355,7 +4465,7 @@
       "salary_med": null
     },
     {
-      "rank": 510,
+      "rank": 522,
       "title": "Intermediate Graphic Designer",
       "count": 1,
       "salary_min": null,
@@ -4363,7 +4473,7 @@
       "salary_med": null
     },
     {
-      "rank": 511,
+      "rank": 523,
       "title": "Content Host & Video Marketing Intern",
       "count": 1,
       "salary_min": null,
@@ -4371,15 +4481,7 @@
       "salary_med": null
     },
     {
-      "rank": 512,
-      "title": "Furniture designer",
-      "count": 1,
-      "salary_min": 1,
-      "salary_max": 1,
-      "salary_med": 1
-    },
-    {
-      "rank": 513,
+      "rank": 524,
       "title": "video Editor/ቪዲዮ ኤዲተር",
       "count": 1,
       "salary_min": null,
@@ -4387,7 +4489,7 @@
       "salary_med": null
     },
     {
-      "rank": 514,
+      "rank": 525,
       "title": "Senior B2B Deal Closer & Proposal Specialist",
       "count": 1,
       "salary_min": null,
@@ -4395,7 +4497,7 @@
       "salary_med": null
     },
     {
-      "rank": 515,
+      "rank": 526,
       "title": "Multimedia Journalist (Multi-lingual)",
       "count": 1,
       "salary_min": null,
@@ -4403,7 +4505,7 @@
       "salary_med": null
     },
     {
-      "rank": 516,
+      "rank": 527,
       "title": "Grant Officer",
       "count": 1,
       "salary_min": 50000,
@@ -4411,7 +4513,7 @@
       "salary_med": 50000
     },
     {
-      "rank": 517,
+      "rank": 528,
       "title": "English Digital Content Teacher Grades 9 upto 12",
       "count": 1,
       "salary_min": null,
@@ -4419,7 +4521,7 @@
       "salary_med": null
     },
     {
-      "rank": 518,
+      "rank": 529,
       "title": "Economics Digital Content Teacher Grade 9 to 12",
       "count": 1,
       "salary_min": null,
@@ -4427,7 +4529,7 @@
       "salary_med": null
     },
     {
-      "rank": 519,
+      "rank": 530,
       "title": "History Digital Content Teacher Grade 9 upto 12",
       "count": 1,
       "salary_min": null,
@@ -4435,8 +4537,2152 @@
       "salary_med": null
     },
     {
-      "rank": 520,
+      "rank": 531,
       "title": "Geography Digital Content Teacher Grade 9 to 12",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 532,
+      "title": "People Operations",
+      "count": 1,
+      "salary_min": 25000,
+      "salary_max": 25000,
+      "salary_med": 25000
+    },
+    {
+      "rank": 533,
+      "title": "Furniture store keeper",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 534,
+      "title": "Hotel Front Desk Receptionist",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 535,
+      "title": "Product sales Representative",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 536,
+      "title": "Call Center Agent (Sales-Focused)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 537,
+      "title": "Senior Sales Representatives (Real Estate Specialist)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 538,
+      "title": "Senior Sales Representatives (Direct Sales Specialist)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 539,
+      "title": "English Teacher (Door-to-door)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 540,
+      "title": "Junior Sales Representatives",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 541,
+      "title": "Plant Manager (የፋብሪካ ስራ አስኪያጅ)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 542,
+      "title": "English Voice Narrator",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 543,
+      "title": "sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 544,
+      "title": "የግዢ ባለሙያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 545,
+      "title": "Global Live Entertainment Dancer",
+      "count": 1,
+      "salary_min": 20000,
+      "salary_max": 20000,
+      "salary_med": 20000
+    },
+    {
+      "rank": 546,
+      "title": "ACCOUNTANT AND OFFICE SECRETARY",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 547,
+      "title": "VIDEO EDITOR",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 548,
+      "title": "Secretary/ receptionist",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 549,
+      "title": "Senior Cost Accountant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 550,
+      "title": "Oxy-Acetylene Cutting Operator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 551,
+      "title": "Electro Mechanical Design Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 552,
+      "title": "Office sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 553,
+      "title": "Odoo ERP Implementation Specialist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 554,
+      "title": "ኢንተርየር ዲዛይን, ግራፊክስ ዲዛይን / ኦንላይን አስተማሪዎች",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 555,
+      "title": "የሽያጭ ሠራተኛ",
+      "count": 1,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 556,
+      "title": "Online Call Service Agent",
+      "count": 1,
+      "salary_min": 13228,
+      "salary_max": 13228,
+      "salary_med": 13228
+    },
+    {
+      "rank": 557,
+      "title": "Agile Software Delivery Manager / Technical PM",
+      "count": 1,
+      "salary_min": 67000,
+      "salary_max": 67000,
+      "salary_med": 67000
+    },
+    {
+      "rank": 558,
+      "title": "Drawings and design",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 559,
+      "title": "የዶር ቱ ዶር ሽያጭ ባለሙያ (Door to Door Sales)",
+      "count": 1,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 560,
+      "title": "junior Sales Supervisor & Partnership Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 561,
+      "title": "Partnership and Sales Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 562,
+      "title": "People Operation",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 563,
+      "title": "Call Receptionist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 564,
+      "title": "Accountant (urgent)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 565,
+      "title": "Nanny ሞግዚት",
+      "count": 1,
+      "salary_min": 6000,
+      "salary_max": 6000,
+      "salary_med": 6000
+    },
+    {
+      "rank": 566,
+      "title": "Social media management",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 567,
+      "title": "Electrician ( Maintenance & Extension)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 568,
+      "title": "System Administrator (IT)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 569,
+      "title": "Marketing Specialist",
+      "count": 1,
+      "salary_min": 20000,
+      "salary_max": 20000,
+      "salary_med": 20000
+    },
+    {
+      "rank": 570,
+      "title": "TikTok Content Creator",
+      "count": 1,
+      "salary_min": 12000,
+      "salary_max": 12000,
+      "salary_med": 12000
+    },
+    {
+      "rank": 571,
+      "title": "Admin and HR",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 572,
+      "title": "Sales & Tinting Machine Operator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 573,
+      "title": "Contract Administrator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 574,
+      "title": "HR / ERP SYSTEM SPECIALIST",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 575,
+      "title": "Electromechanical Design Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 576,
+      "title": "Branch manager for a supermarket",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 577,
+      "title": "Cashier for a supermarket",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 578,
+      "title": "VIDEOGRAPHER and VIDEO EDITOR",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 579,
+      "title": "Janitor/ፅዳት ሰራተኛ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 580,
+      "title": "Marketing Executive",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 581,
+      "title": "Printing Assistant and printing operator",
+      "count": 1,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 582,
+      "title": "Junior Battery Charging Technician",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 583,
+      "title": "ባሪስታ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 584,
+      "title": "አስተናጋጅ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 585,
+      "title": "Sandwich and breakfast Chef",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 586,
+      "title": "dotnet developer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 587,
+      "title": "CO-HOST & LEAD CORRESPONDENT",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 588,
+      "title": "Tutoring",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 589,
+      "title": "Junior Structural Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 590,
+      "title": "Customer Service and Reception",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 591,
+      "title": "shop Clerk",
+      "count": 1,
+      "salary_min": 7000,
+      "salary_max": 7000,
+      "salary_med": 7000
+    },
+    {
+      "rank": 592,
+      "title": "Junior Sales Representative",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 593,
+      "title": "የስፌት እና ታፒሴሪ ሰራተኛ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 594,
+      "title": "የብረት ሰራተኛ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 595,
+      "title": "Architect / Interior Designer",
+      "count": 1,
+      "salary_min": 12000,
+      "salary_max": 12000,
+      "salary_med": 12000
+    },
+    {
+      "rank": 596,
+      "title": "Bilingual Content Coordinator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 597,
+      "title": "የፈርኒቸር ገጣሚ ባለሞያ",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 598,
+      "title": "Sales & Marketing",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 599,
+      "title": "Field Sales & Content Lead (Real Estate)",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 600,
+      "title": "Interior Visualization/AI Image and Video Expert",
+      "count": 1,
+      "salary_min": 13000,
+      "salary_max": 13000,
+      "salary_med": 13000
+    },
+    {
+      "rank": 601,
+      "title": "Mechanical Engineer",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 602,
+      "title": "ባሪስታ (Barista)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 603,
+      "title": "Video Editor & Digital Content Creator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 604,
+      "title": "Tailor/ልብስ ሰፊ",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 605,
+      "title": "Real estate sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 606,
+      "title": "LED Screen Wall Operator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 607,
+      "title": "General Manager (Operations)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 608,
+      "title": "የፊኒሺንግ ባለሞያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 609,
+      "title": "የእንጨት ባለሞያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 610,
+      "title": "AI Content Creator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 611,
+      "title": "Reception & Call Center Officers",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 612,
+      "title": "Junior Battery Swapper",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 613,
+      "title": "Deputy Logistics Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 614,
+      "title": "Structural Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 615,
+      "title": "Field Survey & Lead Generation Officer",
+      "count": 1,
+      "salary_min": 7200,
+      "salary_max": 7200,
+      "salary_med": 7200
+    },
+    {
+      "rank": 616,
+      "title": "Morocco and Massage Therapist/የማሳጅና ሞሮኮ ባለሙያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 617,
+      "title": "Senior Logistics Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 618,
+      "title": "OFFICE SECRETARY",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 619,
+      "title": "ARABIC AND ENGLISH LANGUAGE TRANSLATER",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 620,
+      "title": "Senior Python Backend Engineer",
+      "count": 1,
+      "salary_min": 70000,
+      "salary_max": 70000,
+      "salary_med": 70000
+    },
+    {
+      "rank": 621,
+      "title": "Af Somali Translator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 622,
+      "title": "Afar Translator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 623,
+      "title": "Public relation",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 624,
+      "title": "Figma and UI/UX Designer",
+      "count": 1,
+      "salary_min": 17000,
+      "salary_max": 17000,
+      "salary_med": 17000
+    },
+    {
+      "rank": 625,
+      "title": "ኮስሞቲክስ የሽያጭ ሰራተኛ",
+      "count": 1,
+      "salary_min": 5500,
+      "salary_max": 5500,
+      "salary_med": 5500
+    },
+    {
+      "rank": 626,
+      "title": "Public Relations and Pomotion Head",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 627,
+      "title": "3D modeler",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 628,
+      "title": "Finance and Administrative Assistant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 629,
+      "title": "Security/የጥበቃ ሠራተኛ",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 630,
+      "title": "Operational Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 631,
+      "title": "Video recorder/ content creator/social media manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 632,
+      "title": "Video Editor Trainer",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 633,
+      "title": "Video Editor & Voice Over Artist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 634,
+      "title": "Site Supervisor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 635,
+      "title": "IT Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 636,
+      "title": "Expert manger on delivery company",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 637,
+      "title": "Shop Sales",
+      "count": 1,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 638,
+      "title": "Field Sales Lead",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 639,
+      "title": "Call Center Agent",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 640,
+      "title": "Junior sanitary Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 641,
+      "title": "Payment Follow up and compilation Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 642,
+      "title": "Junior contract Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 643,
+      "title": "SALES ENGINEER",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 644,
+      "title": "General forman",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 645,
+      "title": "Site Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 646,
+      "title": "Blender 3D Animator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 647,
+      "title": "Full-Time Video Editor & Motion Designer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 648,
+      "title": "Sales Women",
+      "count": 1,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 649,
+      "title": "Electrical Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 650,
+      "title": "Columnist / writer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 651,
+      "title": "Human Resource and Recruitment",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 652,
+      "title": "Senior accountant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 653,
+      "title": "Head Pastry chef / የኬክ ባለሙያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 654,
+      "title": "Admin assistance",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 655,
+      "title": "Bakery chef",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 656,
+      "title": "Operational Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 657,
+      "title": "IT Manager",
+      "count": 1,
+      "salary_min": 70000,
+      "salary_max": 70000,
+      "salary_med": 70000
+    },
+    {
+      "rank": 658,
+      "title": "film actor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 659,
+      "title": "Event Coordinator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 660,
+      "title": "Sales Person (Door-to-Door)",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 661,
+      "title": "Directory Sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 662,
+      "title": "Human Resource officer II",
+      "count": 1,
+      "salary_min": 28000,
+      "salary_max": 28000,
+      "salary_med": 28000
+    },
+    {
+      "rank": 663,
+      "title": "Freelance Video Editors",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 664,
+      "title": "E-Tutor /E-Exam Preparation Teacher",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 665,
+      "title": "Office Engineer and Architect",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 666,
+      "title": "Shop Keeper",
+      "count": 1,
+      "salary_min": 7500,
+      "salary_max": 7500,
+      "salary_med": 7500
+    },
+    {
+      "rank": 667,
+      "title": "Project Coordinator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 668,
+      "title": "Customer service and Office Assistant lead",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 669,
+      "title": "የፋሽን ዲዛይነር (Fashion Designer)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 670,
+      "title": "Junior HR & Admin Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 671,
+      "title": "ሽያጭ ሰራተኛ",
+      "count": 1,
+      "salary_min": 5000,
+      "salary_max": 5000,
+      "salary_med": 5000
+    },
+    {
+      "rank": 672,
+      "title": "Bid Expert & Account Manager for Leading IT Company",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 673,
+      "title": "E-commerce Assistant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 674,
+      "title": "Community Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 675,
+      "title": "Finance Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 676,
+      "title": "Accountant and Finance",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 677,
+      "title": "አካውንታንት (Accountant)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 678,
+      "title": "camera man(woman),Videographer video editor ,Content creator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 679,
+      "title": "ሲኒየር አካውንታንት (Senior Accountant)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 680,
+      "title": "Course Creator / Independent Instructor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 681,
+      "title": "Sales Officer (Technical Sales Preferred)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 682,
+      "title": "Construction",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 683,
+      "title": "Reception and Sales",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 684,
+      "title": "Customer Support Representative",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 685,
+      "title": "Call Sales Representative",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 686,
+      "title": "Senior Full-Stack Android Developer (Internal Automation Systems)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 687,
+      "title": "Sales representative for real estate",
+      "count": 1,
+      "salary_min": 4000,
+      "salary_max": 4000,
+      "salary_med": 4000
+    },
+    {
+      "rank": 688,
+      "title": "chemist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 689,
+      "title": "Cashier I",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 690,
+      "title": "Freshman Course instructors(Teachers)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 691,
+      "title": "TikTok Host",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 692,
+      "title": "Digital Marketing Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 693,
+      "title": "Video Editing",
+      "count": 1,
+      "salary_min": 30000,
+      "salary_max": 30000,
+      "salary_med": 30000
+    },
+    {
+      "rank": 694,
+      "title": "Hydraulic Systems Engineer (R&D)",
+      "count": 1,
+      "salary_min": 20000,
+      "salary_max": 20000,
+      "salary_med": 20000
+    },
+    {
+      "rank": 695,
+      "title": "Printer Technician",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 696,
+      "title": "Sales Consulrtant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 697,
+      "title": "Fleet Supervisor",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 698,
+      "title": "Receptionist and cashier",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 699,
+      "title": "receptionist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 700,
+      "title": "Structural engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 701,
+      "title": "Graphics Designer & Content creator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 702,
+      "title": "Visa & Travel Consultant",
+      "count": 1,
+      "salary_min": 12000,
+      "salary_max": 12000,
+      "salary_med": 12000
+    },
+    {
+      "rank": 703,
+      "title": "One to One teacher(For Adolescents)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 704,
+      "title": "Female marketing manager",
+      "count": 1,
+      "salary_min": 18000,
+      "salary_max": 18000,
+      "salary_med": 18000
+    },
+    {
+      "rank": 705,
+      "title": "One to One Teacher",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 706,
+      "title": "procurement officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 707,
+      "title": "ስቶር ኪፐር",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 708,
+      "title": "Event security",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 709,
+      "title": "Graphic Designer & Motion Graphics Designer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 710,
+      "title": "Photo Editor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 711,
+      "title": "Bar and Restaurant Manager",
+      "count": 1,
+      "salary_min": 15500,
+      "salary_max": 15500,
+      "salary_med": 15500
+    },
+    {
+      "rank": 712,
+      "title": "HR Recruiter / Talent Acquisition Specialist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 713,
+      "title": "የሞተር ሳይክል ሾፌር እና የጣሪያ መለኪያ ባለሙያ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 714,
+      "title": "Videographer & Video Editor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 715,
+      "title": "Content Creator / Copywriter",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 716,
+      "title": "Senior Sales Driver (FMCG)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 717,
+      "title": "Receiptionist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 718,
+      "title": "Junior Software Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 719,
+      "title": "Daycare Nanny",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 720,
+      "title": "Junior Assistant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 721,
+      "title": "የሞተር ብስክሌት ማድረስ አጋር (በራሳቸው ሞተር ለሚሰሩ)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 722,
+      "title": "የሞተር ብስክሌት አሽከርካሪዎች (የድርጅት ሞተር)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 723,
+      "title": "Senior short form editor",
+      "count": 1,
+      "salary_min": 12000,
+      "salary_max": 12000,
+      "salary_med": 12000
+    },
+    {
+      "rank": 724,
+      "title": "Tender & Quantity Survey Enginee",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 725,
+      "title": "content creator& digital marketer",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 726,
+      "title": "Senior Laboratory Technician",
+      "count": 1,
+      "salary_min": 45000,
+      "salary_max": 45000,
+      "salary_med": 45000
+    },
+    {
+      "rank": 727,
+      "title": "Freshman Course Instructors(Teachers)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 728,
+      "title": "waitress & Cashier",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 729,
+      "title": "sales Agent",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 730,
+      "title": "Customer acquisition agents",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 731,
+      "title": "outdoor sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 732,
+      "title": "Front Desk Coordinator / Receptionist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 733,
+      "title": "የሽያጭ ሰራተኛ (ማስታወቂያው በደንብ ይነበብ)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 734,
+      "title": "Head of Finance",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 735,
+      "title": "FTTH Sales Agent",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 736,
+      "title": "Receptionist and Secretary",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 737,
+      "title": "Customer Support",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 738,
+      "title": "Front Desk & Guest Experience Agent",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 739,
+      "title": "Purchaser/Driver",
+      "count": 1,
+      "salary_min": 34000,
+      "salary_max": 34000,
+      "salary_med": 34000
+    },
+    {
+      "rank": 740,
+      "title": "Room Attendant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 741,
+      "title": "Housekeeping Supervisor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 742,
+      "title": "Senior Sales Officers",
+      "count": 1,
+      "salary_min": 23000,
+      "salary_max": 23000,
+      "salary_med": 23000
+    },
+    {
+      "rank": 743,
+      "title": "Medical content host (GP)",
+      "count": 1,
+      "salary_min": 31000,
+      "salary_max": 31000,
+      "salary_med": 31000
+    },
+    {
+      "rank": 744,
+      "title": "Electro-Mechanical Engineer (coffee shop Maintenance))",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 745,
+      "title": "Receptions",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 746,
+      "title": "Senior sales consultant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 747,
+      "title": "Senior Digital Marketer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 748,
+      "title": "Flutter & Laravel Developer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 749,
+      "title": "Sales & Marketing Manager",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 750,
+      "title": "Import & Export Documentation Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 751,
+      "title": "Blender 3D Character Animators",
+      "count": 1,
+      "salary_min": 45000,
+      "salary_max": 45000,
+      "salary_med": 45000
+    },
+    {
+      "rank": 752,
+      "title": "Full-Time Video Editors / Motion Graphics Artists",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 753,
+      "title": "Front Desk Manager and Secretary",
+      "count": 1,
+      "salary_min": 8000,
+      "salary_max": 8000,
+      "salary_med": 8000
+    },
+    {
+      "rank": 754,
+      "title": "Marketing Expert",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 755,
+      "title": "CRM & Digital Marketing Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 756,
+      "title": "Solar Engineer",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 757,
+      "title": "Sales Person (ሴልስ)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 758,
+      "title": "Finance Manager (Strategic/Senior Accountant)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 759,
+      "title": "Junior F&B Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 760,
+      "title": "Finance & Compliance Associate",
+      "count": 1,
+      "salary_min": 80,
+      "salary_max": 80,
+      "salary_med": 80
+    },
+    {
+      "rank": 761,
+      "title": "Electrical Design & technical Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 762,
+      "title": "Presales Engineer (Technical)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 763,
+      "title": "Cashier Accountant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 764,
+      "title": "Junior video editor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 765,
+      "title": "Junior sales engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 766,
+      "title": "Script writer and Strategist",
+      "count": 1,
+      "salary_min": 10000,
+      "salary_max": 10000,
+      "salary_med": 10000
+    },
+    {
+      "rank": 767,
+      "title": "Contract Admnistrator and Tender Preparation Engineer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 768,
+      "title": "Real estate sales supervisor",
+      "count": 1,
+      "salary_min": 22000,
+      "salary_max": 22000,
+      "salary_med": 22000
+    },
+    {
+      "rank": 769,
+      "title": "Realestate sales person",
+      "count": 1,
+      "salary_min": 13000,
+      "salary_max": 13000,
+      "salary_med": 13000
+    },
+    {
+      "rank": 770,
+      "title": "Office manager and Customer service",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 771,
+      "title": "Group Director Market Intelligence & AI-Enabled Marketing",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 772,
+      "title": "Deputy CEO",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 773,
+      "title": "Animal Nutritionist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 774,
+      "title": "የልብስ ስፌት ባለሞያ / Tailor",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 775,
+      "title": "Assembly Worker",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 776,
+      "title": "Salesperson",
+      "count": 1,
+      "salary_min": 3000,
+      "salary_max": 3000,
+      "salary_med": 3000
+    },
+    {
+      "rank": 777,
+      "title": "Welder / Metal Fabricator",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 778,
+      "title": "General Mechanic",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 779,
+      "title": "Workshop Foreman",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 780,
+      "title": "በያጅ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 781,
+      "title": "ፅዳት ሰራተኛ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 782,
+      "title": "Social Media Manager & Graphic Designer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 783,
+      "title": "International Sales Representative",
+      "count": 1,
+      "salary_min": 30000,
+      "salary_max": 30000,
+      "salary_med": 30000
+    },
+    {
+      "rank": 784,
+      "title": "video editor",
+      "count": 1,
+      "salary_min": 20000,
+      "salary_max": 20000,
+      "salary_med": 20000
+    },
+    {
+      "rank": 785,
+      "title": "Paid Ads Specialist",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 786,
+      "title": "Video Editor (short Form + YouTube content)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 787,
+      "title": "Agent /delivery person",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 788,
+      "title": "Administrative Assistance",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 789,
+      "title": "Sales Consultant (Hosea Real Estate)",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 790,
+      "title": "Import/ Export Documentation Officer",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 791,
+      "title": "Structural Engineers",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 792,
+      "title": "Marketing and sales managment",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 793,
+      "title": "Spare-parts Sales",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 794,
+      "title": "Marketing & Sales Team Leader",
+      "count": 1,
+      "salary_min": 15000,
+      "salary_max": 15000,
+      "salary_med": 15000
+    },
+    {
+      "rank": 795,
+      "title": "Female Sales",
+      "count": 1,
+      "salary_min": 6000,
+      "salary_max": 6000,
+      "salary_med": 6000
+    },
+    {
+      "rank": 796,
+      "title": "AI Creative Production Assistant",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 797,
+      "title": "ልብስ ሰፊ",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 798,
+      "title": "Female Salesperson",
+      "count": 1,
+      "salary_min": null,
+      "salary_max": null,
+      "salary_med": null
+    },
+    {
+      "rank": 799,
+      "title": "Customer Success Associate",
       "count": 1,
       "salary_min": null,
       "salary_max": null,
@@ -4444,13 +6690,13 @@
     }
   ],
   "kpi": {
-    "total_jobs": 662,
-    "total_companies": 260,
-    "total_industries": 45,
-    "jobs_with_salary": 172,
-    "remote_jobs": 54,
-    "last_updated": "2026-04-25T07:11:18.699821",
+    "total_jobs": 1040,
+    "total_companies": 363,
+    "total_industries": 48,
+    "jobs_with_salary": 260,
+    "remote_jobs": 98,
+    "last_updated": "2026-05-15T08:47:01.050727",
     "date_range_start": "Feb 23, 2026",
-    "date_range_end": "Apr 25, 2026"
+    "date_range_end": "May 15, 2026"
   }
 }
