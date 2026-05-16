@@ -335,7 +335,7 @@ def normalize(df: pd.DataFrame) -> pd.DataFrame:
             print(f"  → API classify: '{title}'")
             cache[title] = llm_classify(title)
             new_from_api += 1
-            time.sleep(0.15)  # gentle rate limiting
+            time.sleep(1.5)  # gentle rate limiting
 
     # ── 4. Save updated cache ─────────────────────────────────────────────────
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)

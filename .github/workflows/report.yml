@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/title_cache.json data/analysis.json
+          git add data/title_cache.json data/analysis.json docs/index.html
           git diff --staged --quiet || git commit -m "chore: auto-update analysis [skip ci]"
           git push
 
