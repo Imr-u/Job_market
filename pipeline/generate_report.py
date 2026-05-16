@@ -396,6 +396,11 @@ new Chart(document.getElementById('weeklyChart'), {
       tension: 0.4,
     }],
   },
+  options: { ...baseOpts, scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+  }},
+});
 
 // ── Industry bar ──────────────────────────────────────────────────────────────
 new Chart(document.getElementById('industryChart'), {
