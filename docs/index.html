@@ -335,7 +335,7 @@
 
 <footer>
   <span>Ethiopian Job Market Dashboard · Powered by afriworket.com scraper</span>
-  <span>Auto-generated 2026-05-16 08:36 UTC · github.com/Imr-u/Job_market</span>
+  <span>Auto-generated 2026-05-16 08:46 UTC · github.com/Imr-u/Job_market</span>
 </footer>
 
 <script>
@@ -386,6 +386,11 @@ new Chart(document.getElementById('weeklyChart'), {
       tension: 0.4,
     }],
   },
+  options: { ...baseOpts, scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+  }},
+});
 
 // ── Industry bar ──────────────────────────────────────────────────────────────
 new Chart(document.getElementById('industryChart'), {
