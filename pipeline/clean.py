@@ -8,6 +8,26 @@ from pathlib import Path
 RAW = Path("data/jobs_raw.parquet")
 OUT = Path("data/jobs_clean.parquet")
 
+STRIP_WORDS = [
+    "senior", "junior", "mid-level", "intermediate", "lead", "head of",
+    "chief", "principal", "associate", "assistant", "intern", "trainee",
+    "entry level", "entry-level", "sr.", "jr.", "sr", "jr",
+    "i", "ii", "iii", "iv",  # roman numeral suffixes
+]
+
+def normalize_title(title: str) -> str:
+    if not title:
+        return title
+    t = title.lower().strip()
+    # remove parenthetical suffixes like "(urgent)", "(remote)", "(real estate)"
+    t = re.sub(r"\(.*?\)", "", t)
+    # strip seniority words
+    for word in STRIP_WORDS:
+        t = re.sub(rf"\b{word}\b", "", t)
+    # collapse whitespace and strip
+    t = re.sub(r"\s+", " ", t).strip()
+    # title case for display
+    return t.title()
 def clean(df: pd.DataFrame) -> pd.DataFrame:
     # ── strip whitespace everywhere ──────────────────────────────────────────
     str_cols = df.select_dtypes("object").columns
@@ -63,6 +83,9 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     # ── gender preference from applicants_needed ─────────────────────────────
     df["gender_pref"] = df["applicants_needed"].fillna("Both")
 
+    # ── normalize job title (strip seniority for grouping) ───────────────────
+    df["title_normalized"] = df["title"].apply(normalize_title)
+    
     OUT.parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(OUT, index=False)
     print(f"✓ Cleaned {len(df)} rows → {OUT}")

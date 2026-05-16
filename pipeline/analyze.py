@@ -101,10 +101,10 @@ def analyze(df: pd.DataFrame) -> dict:
     }
 
     # ── 11. Title rankings with salary range per title ────────────────────────
-    title_counts = df["title"].value_counts()
+    title_counts = df["title_normalized"].value_counts()
     title_salary = (
         df[df["salary_etb"].notna()]
-        .groupby("title")["salary_etb"]
+        .groupby("title_normalized")["salary_etb"]
         .agg(["min", "max", "median"])
         .astype(int)
     )
