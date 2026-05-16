@@ -12,7 +12,7 @@ OUT   = Path("data/analysis.json")
 def analyze(df: pd.DataFrame) -> dict:
     result = {}
 
-    # ── 1. Top industries (job posts per field) ──────────────────────────────
+    # ── 1. Top industries ────────────────────────────────────────────────────
     industry_counts = df["industry"].value_counts()
     result["industry"] = {
         "labels": industry_counts.index.tolist(),
@@ -33,28 +33,28 @@ def analyze(df: pd.DataFrame) -> dict:
         "values": weekly["count"].tolist(),
     }
 
-    # ── 3. Experience level distribution ─────────────────────────────────────
+    # ── 3. Experience level ──────────────────────────────────────────────────
     exp = df["experience_level"].value_counts()
     result["experience"] = {
         "labels": exp.index.tolist(),
         "values": exp.values.tolist(),
     }
 
-    # ── 4. Work mode breakdown ───────────────────────────────────────────────
+    # ── 4. Work mode ─────────────────────────────────────────────────────────
     mode = df["work_mode"].value_counts()
     result["work_mode"] = {
         "labels": mode.index.tolist(),
         "values": mode.values.tolist(),
     }
 
-    # ── 5. Contract type ──────────────────────────────────────────────────────
+    # ── 5. Contract type ─────────────────────────────────────────────────────
     ct = df["contract_type"].value_counts()
     result["contract_type"] = {
         "labels": ct.index.tolist(),
         "values": ct.values.tolist(),
     }
 
-    # ── 6. Top 15 in-demand skills ────────────────────────────────────────────
+    # ── 6. Top 15 skills ─────────────────────────────────────────────────────
     all_skills = [skill for lst in df["skills_list"] for skill in lst if skill]
     skill_freq = Counter(all_skills).most_common(15)
     result["skills"] = {
@@ -62,7 +62,7 @@ def analyze(df: pd.DataFrame) -> dict:
         "values": [s[1] for s in skill_freq],
     }
 
-    # ── 7. Education requirement distribution ────────────────────────────────
+    # ── 7. Education ─────────────────────────────────────────────────────────
     edu = df["education_qualification"].fillna("Not Specified").value_counts()
     result["education"] = {
         "labels": edu.index.tolist(),
@@ -76,7 +76,7 @@ def analyze(df: pd.DataFrame) -> dict:
         "values": gender.values.tolist(),
     }
 
-    # ── 9. Salary stats (ETB, where available) ───────────────────────────────
+    # ── 9. Salary stats ──────────────────────────────────────────────────────
     sal = df["salary_etb"].dropna()
     if len(sal) > 0:
         result["salary"] = {
@@ -91,7 +91,6 @@ def analyze(df: pd.DataFrame) -> dict:
         result["salary"] = None
 
     # ── 10. Top hiring companies ──────────────────────────────────────────────
-    # Filter out "Private Client" since it's a placeholder
     companies = (
         df[~df["company"].str.contains("Private Client", case=False, na=False)]
         ["company"].value_counts().head(10)
@@ -101,7 +100,28 @@ def analyze(df: pd.DataFrame) -> dict:
         "values": companies.values.tolist(),
     }
 
-    # ── 11. KPI summary ───────────────────────────────────────────────────────
+    # ── 11. Title rankings with salary range per title ────────────────────────
+    title_counts = df["title"].value_counts()
+    title_salary = (
+        df[df["salary_etb"].notna()]
+        .groupby("title")["salary_etb"]
+        .agg(["min", "max", "median"])
+        .astype(int)
+    )
+    titles_data = []
+    for rank, (title, count) in enumerate(title_counts.items(), 1):
+        sal_row = title_salary.loc[title] if title in title_salary.index else None
+        titles_data.append({
+            "rank":       rank,
+            "title":      title,
+            "count":      int(count),
+            "salary_min": int(sal_row["min"])    if sal_row is not None else None,
+            "salary_max": int(sal_row["max"])    if sal_row is not None else None,
+            "salary_med": int(sal_row["median"]) if sal_row is not None else None,
+        })
+    result["titles"] = titles_data
+
+    # ── 12. KPI summary ──────────────────────────────────────────────────────
     result["kpi"] = {
         "total_jobs":        int(len(df)),
         "total_companies":   int(df["company"].nunique()),
