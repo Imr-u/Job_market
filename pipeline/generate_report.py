@@ -313,6 +313,15 @@ TEMPLATE = r"""<!DOCTYPE html>
 <!-- ═══════════════════════════ TAB: TITLES RANKING ═════════════════════════ -->
 <div class="tab-panel" id="tab-titles">
 
+  <!-- Month selector -->
+  <div style="background:var(--surface);padding:1.2rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem;">
+    <span style="font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Viewing Month</span>
+    <select id="monthSelect" onchange="renderTitles(this.value)"
+      style="background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:4px;
+             padding:0.4rem 0.8rem;font-family:'Space Mono',monospace;font-size:0.7rem;cursor:pointer;">
+    </select>
+  </div>
+
   <!-- Top 3 podium -->
   <div class="titles-podium" id="titlesPodium"></div>
 
@@ -372,16 +381,21 @@ const baseOpts = {
 
 // ── Weekly trend ──────────────────────────────────────────────────────────────
 new Chart(document.getElementById('weeklyChart'), {
-  type: 'bar',
+  type: 'line',
   data: {
     labels: D.weekly.labels,
-    datasets: [{ label: 'Postings', data: D.weekly.values, backgroundColor: D.weekly.values.map((_,i) => i%2===0 ? gold+'cc' : accent1+'88'), borderRadius: 3 }],
+    datasets: [{
+      label: 'Postings',
+      data: D.weekly.values,
+      borderColor: gold,
+      backgroundColor: gold + '22',
+      pointBackgroundColor: gold,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      fill: true,
+      tension: 0.4,
+    }],
   },
-  options: { ...baseOpts, scales: {
-    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
-    y: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
-  }},
-});
 
 // ── Industry bar ──────────────────────────────────────────────────────────────
 new Chart(document.getElementById('industryChart'), {
@@ -466,8 +480,6 @@ if (D.salary) {
 }
 
 // ── TITLES RANKING TAB ────────────────────────────────────────────────────────
-const titles   = D.titles;
-const maxCount = titles[0]?.count || 1;
 const podiumColors = ['#c8a84b', '#8ea0b8', '#c8845a'];
 
 function fmtSalary(t) {
@@ -477,38 +489,56 @@ function fmtSalary(t) {
   return fmt(t.salary_min) + ' – ' + fmt(t.salary_max) + ' ETB';
 }
 
-// Podium — top 3
-const podium = document.getElementById('titlesPodium');
-titles.slice(0, 3).forEach((t, i) => {
-  const sal = fmtSalary(t);
-  const salHtml = sal
-    ? `<div class="podium-salary">${sal}<br><span style="font-size:0.6rem;opacity:0.7">SALARY RANGE</span></div>`
-    : `<div class="podium-salary no-data">No salary data</div>`;
-  podium.innerHTML += `
-    <div class="podium-card">
-      <div class="podium-rank"># ${t.rank} MOST LISTED</div>
-      <div class="podium-title-text">${t.title}</div>
-      <div class="podium-count">${t.count}</div>
-      ${salHtml}
-    </div>`;
-});
+function renderTitles(month) {
+  const titles = D.monthly_titles[month] || [];
+  const maxCount = titles[0]?.count || 1;
 
-// Table — #4 onwards
-const tbody = document.getElementById('titlesTableBody');
-titles.slice(3).forEach(t => {
-  const sal = fmtSalary(t);
-  const pct = Math.round((t.count / maxCount) * 100);
-  tbody.innerHTML += `
-    <tr>
-      <td class="td-rank">${t.rank}</td>
-      <td>${t.title}</td>
-      <td class="td-count">${t.count}</td>
-      <td class="${sal ? 'td-salary' : 'td-salary none'}">${sal || 'not listed'}</td>
-      <td class="hide-mobile">
-        <div class="mini-bar-wrap"><div class="mini-bar" style="width:${pct}%"></div></div>
-      </td>
-    </tr>`;
+  // Podium
+  const podium = document.getElementById('titlesPodium');
+  podium.innerHTML = '';
+  titles.slice(0, 3).forEach((t, i) => {
+    const sal = fmtSalary(t);
+    const salHtml = sal
+      ? `<div class="podium-salary">${sal}<br><span style="font-size:0.6rem;opacity:0.7">SALARY RANGE</span></div>`
+      : `<div class="podium-salary no-data">No salary data</div>`;
+    podium.innerHTML += `
+      <div class="podium-card">
+        <div class="podium-rank"># ${t.rank} MOST LISTED</div>
+        <div class="podium-title-text">${t.title}</div>
+        <div class="podium-count">${t.count}</div>
+        ${salHtml}
+      </div>`;
+  });
+
+  // Table
+  const tbody = document.getElementById('titlesTableBody');
+  tbody.innerHTML = '';
+  titles.slice(3).forEach(t => {
+    const sal = fmtSalary(t);
+    const pct = Math.round((t.count / maxCount) * 100);
+    tbody.innerHTML += `
+      <tr>
+        <td class="td-rank">${t.rank}</td>
+        <td>${t.title}</td>
+        <td class="td-count">${t.count}</td>
+        <td class="${sal ? 'td-salary' : 'td-salary none'}">${sal || 'not listed'}</td>
+        <td class="hide-mobile">
+          <div class="mini-bar-wrap"><div class="mini-bar" style="width:${pct}%"></div></div>
+        </td>
+      </tr>`;
+  });
+}
+
+// Populate month selector and render default
+const monthSelect = document.getElementById('monthSelect');
+D.months_available.forEach((m, i) => {
+  const opt = document.createElement('option');
+  opt.value = m;
+  opt.text = m;
+  if (i === 0) opt.selected = true;
+  monthSelect.appendChild(opt);
 });
+renderTitles(D.months_available[0]);
 </script>
 </body>
 </html>"""

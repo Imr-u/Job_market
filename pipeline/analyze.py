@@ -100,26 +100,35 @@ def analyze(df: pd.DataFrame) -> dict:
         "values": companies.values.tolist(),
     }
 
-    # ── 11. Title rankings with salary range per title ────────────────────────
-    title_counts = df["title_normalized"].value_counts()
-    title_salary = (
-        df[df["salary_etb"].notna()]
-        .groupby("title_normalized")["salary_etb"]
-        .agg(["min", "max", "median"])
-        .astype(int)
-    )
-    titles_data = []
-    for rank, (title, count) in enumerate(title_counts.items(), 1):
-        sal_row = title_salary.loc[title] if title in title_salary.index else None
-        titles_data.append({
-            "rank":       rank,
-            "title":      title,
-            "count":      int(count),
-            "salary_min": int(sal_row["min"])    if sal_row is not None else None,
-            "salary_max": int(sal_row["max"])    if sal_row is not None else None,
-            "salary_med": int(sal_row["median"]) if sal_row is not None else None,
-        })
-    result["titles"] = titles_data
+    # ── 11. Title rankings — grouped by month ────────────────────────────────
+    df["month"] = df["posted_date"].dt.to_period("M").astype(str)
+    months_available = sorted(df["month"].dropna().unique().tolist(), reverse=True)
+    monthly_titles = {}
+
+    for month in months_available:
+        mdf = df[df["month"] == month]
+        title_counts = mdf["title_normalized"].value_counts()
+        title_salary = (
+            mdf[mdf["salary_etb"].notna()]
+            .groupby("title_normalized")["salary_etb"]
+            .agg(["min", "max", "median"])
+            .astype(int)
+        )
+        titles_data = []
+        for rank, (title, count) in enumerate(title_counts.items(), 1):
+            sal_row = title_salary.loc[title] if title in title_salary.index else None
+            titles_data.append({
+                "rank":       rank,
+                "title":      title,
+                "count":      int(count),
+                "salary_min": int(sal_row["min"])    if sal_row is not None else None,
+                "salary_max": int(sal_row["max"])    if sal_row is not None else None,
+                "salary_med": int(sal_row["median"]) if sal_row is not None else None,
+            })
+        monthly_titles[month] = titles_data
+
+    result["monthly_titles"] = monthly_titles
+    result["months_available"] = months_available
 
     # ── 12. KPI summary ──────────────────────────────────────────────────────
     result["kpi"] = {
