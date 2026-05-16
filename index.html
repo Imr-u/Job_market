@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethiopian Job Market — Live Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #0a0c10;
+    --surface: #111318;
+    --border:  #1e2230;
+    --gold:    #c8a84b;
+    --text:    #e8eaf0;
+    --muted:   #5a6070;
+    --accent1: #3ecfb2;
+    --accent2: #e05c5c;
+    --accent3: #7b8aff;
+    --top1:    #c8a84b;
+    --top2:    #8ea0b8;
+    --top3:    #c8845a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Sora', sans-serif; min-height: 100vh; }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: linear-gradient(180deg, #0d1018 0%, transparent 100%);
+  }
+  .header-title { font-size: clamp(1.4rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+  .header-title span { color: var(--gold); }
+  .header-meta { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--muted); text-align: right; line-height: 1.8; }
+  .live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent1); margin-right: 5px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+  /* TABS */
+  .tab-nav {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0 2rem;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* KPI ROW */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--border);
+  }
+  .kpi { background: var(--surface); padding: 1.6rem 1.8rem; display: flex; flex-direction: column; gap: 0.3rem; }
+  .kpi-label { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .kpi-value { font-size: 2rem; font-weight: 800; color: var(--gold); letter-spacing: -0.04em; line-height: 1; }
+  .kpi-sub { font-size: 0.7rem; color: var(--muted); }
+
+  /* CHARTS GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1px;
+    background: var(--border);
+    padding: 1px;
+  }
+  .card { background: var(--surface); padding: 1.6rem; }
+  .card.w4  { grid-column: span 4; }
+  .card.w6  { grid-column: span 6; }
+  .card.w8  { grid-column: span 8; }
+  .card.w12 { grid-column: span 12; }
+  @media (max-width: 900px) { .card.w4, .card.w6, .card.w8 { grid-column: span 12; } }
+  .card-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .card-title::before { content: ''; display: inline-block; width: 3px; height: 12px; background: var(--gold); border-radius: 2px; }
+  canvas { width: 100% !important; }
+
+  /* TOP 3 PODIUM (overview) */
+  .top3 { display: flex; flex-direction: column; gap: 0.75rem; }
+  .top3-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid transparent;
+  }
+  .top3-item:nth-child(1) { border-color: var(--top1); }
+  .top3-item:nth-child(2) { border-color: var(--top2); }
+  .top3-item:nth-child(3) { border-color: var(--top3); }
+  .rank { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); min-width: 1.5rem; }
+  .top3-name { flex: 1; font-size: 0.85rem; font-weight: 600; }
+  .top3-count { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--gold); }
+  .top3-bar-wrap { width: 100%; height: 3px; background: var(--border); border-radius: 2px; margin-top: 0.4rem; overflow: hidden; }
+  .top3-bar { height: 100%; border-radius: 2px; }
+
+  /* SALARY BOX */
+  .salary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem; }
+  .sal-item { text-align: center; }
+  .sal-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .sal-val { font-size: 1.3rem; font-weight: 800; color: var(--accent1); letter-spacing: -0.03em; }
+
+  /* TITLES TAB */
+  .titles-podium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+  .podium-card { background: var(--surface); padding: 2.5rem 2rem; text-align: center; }
+  .podium-card:nth-child(1) { border-top: 3px solid var(--top1); }
+  .podium-card:nth-child(2) { border-top: 3px solid var(--top2); }
+  .podium-card:nth-child(3) { border-top: 3px solid var(--top3); }
+  .podium-rank { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--muted); margin-bottom: 0.6rem; letter-spacing: 0.1em; }
+  .podium-title-text { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+  .podium-count { font-family: 'Space Mono', monospace; font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1rem; }
+  .podium-card:nth-child(1) .podium-count { color: var(--top1); }
+  .podium-card:nth-child(2) .podium-count { color: var(--top2); }
+  .podium-card:nth-child(3) .podium-count { color: var(--top3); }
+  .podium-salary {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent1);
+    background: rgba(62,207,178,0.08);
+    border-radius: 4px;
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    line-height: 1.6;
+  }
+  .podium-salary.no-data { color: var(--muted); background: rgba(255,255,255,0.03); }
+
+  .titles-table-wrap { background: var(--surface); overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  thead tr { background: rgba(255,255,255,0.03); border-bottom: 2px solid var(--border); }
+  th {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding: 1rem 1.2rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.025); }
+  .td-rank { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--muted); }
+  .td-count { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--gold); }
+  .td-salary { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--accent1); }
+  .td-salary.none { color: var(--muted); font-style: italic; font-size: 0.7rem; }
+  .mini-bar-wrap { width: 100px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .mini-bar { height: 100%; background: var(--gold); border-radius: 2px; }
+  @media (max-width: 700px) {
+    .titles-podium { grid-template-columns: 1fr; }
+    .hide-mobile { display: none; }
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 3rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="header-title">Current Job Market in<br><span>Ethiopia 🇪🇹</span></div>
+  </div>
+  <div class="header-meta">
+    <span class="live-dot"></span>AUTO-UPDATED<br>
+    SCRAPED: 2026-05-16T08:00:23.267933<br>
+    PERIOD: Feb 23, 2026 – May 16, 2026
+  </div>
+</header>
+
+<!-- TAB NAV -->
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('overview', this)">Overview</button>
+  <button class="tab-btn" onclick="switchTab('titles', this)">Job Titles Ranking</button>
+</nav>
+
+<!-- ═══════════════════════════ TAB: OVERVIEW ════════════════════════════════ -->
+<div class="tab-panel active" id="tab-overview">
+
+  <div class="kpi-row">
+    <div class="kpi">
+      <span class="kpi-label">Total Listings</span>
+      <span class="kpi-value">1058</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Companies Hiring</span>
+      <span class="kpi-value">369</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Industries</span>
+      <span class="kpi-value">48</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Remote Jobs</span>
+      <span class="kpi-value">99</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">With Salary Info</span>
+      <span class="kpi-value">268</span>
+      <span class="kpi-sub">of 1058 listings</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card w12">
+      <div class="card-title">Job Postings Per Week</div>
+      <canvas id="weeklyChart" height="80"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Top 3 Industries</div>
+      <div class="top3" id="top3Container"></div>
+    </div>
+    <div class="card w8">
+      <div class="card-title">Jobs by Industry</div>
+      <canvas id="industryChart" height="200"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Experience Level</div>
+      <canvas id="expChart" height="220"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Work Mode</div>
+      <canvas id="modeChart" height="220"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Contract Type</div>
+      <canvas id="contractChart" height="220"></canvas>
+    </div>
+    <div class="card w8">
+      <div class="card-title">Top In-Demand Skills</div>
+      <canvas id="skillsChart" height="220"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Education Required</div>
+      <canvas id="eduChart" height="220"></canvas>
+    </div>
+    <div class="card w8">
+      <div class="card-title">Top Hiring Companies (excl. Private Client)</div>
+      <canvas id="companiesChart" height="180"></canvas>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Salary Range (ETB)</div>
+      <div class="salary-grid" id="salaryBox"></div>
+    </div>
+    <div class="card w4">
+      <div class="card-title">Gender Preference</div>
+      <canvas id="genderChart" height="220"></canvas>
+    </div>
+  </div>
+
+</div><!-- end tab-overview -->
+
+<!-- ═══════════════════════════ TAB: TITLES RANKING ═════════════════════════ -->
+<div class="tab-panel" id="tab-titles">
+
+  <!-- Month selector -->
+  <div style="background:var(--surface);padding:1.2rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem;">
+    <span style="font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Viewing Month</span>
+    <select id="monthSelect" onchange="renderTitles(this.value)"
+      style="background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:4px;
+             padding:0.4rem 0.8rem;font-family:'Space Mono',monospace;font-size:0.7rem;cursor:pointer;">
+    </select>
+  </div>
+
+  <!-- Top 3 podium -->
+  <div class="titles-podium" id="titlesPodium"></div>
+
+  <!-- Rest of titles: #4 onwards in a table -->
+  <div class="titles-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Job Title</th>
+          <th>Listings</th>
+          <th>Salary Range (ETB)</th>
+          <th class="hide-mobile">Volume</th>
+        </tr>
+      </thead>
+      <tbody id="titlesTableBody"></tbody>
+    </table>
+  </div>
+
+</div><!-- end tab-titles -->
+
+<footer>
+  <span>Ethiopian Job Market Dashboard · Powered by afriworket.com scraper</span>
+  <span>Auto-generated 2026-05-16 08:46 UTC · github.com/Imr-u/Job_market</span>
+</footer>
+
+<script>
+const D = {"industry": {"labels": ["Sales & Promotion", "Accounting & Finance", "Creative Art & Design", "Marketing", "Customer Service & Care", "Construction & Civil Engineering", "Manufacturing & Production", "Multimedia Content Production", "Other", "Software Design & Development", "Human Resource & Talent Management", "Media & Entertainment", "Teaching & Education", "Food & Drink Preparation / Service", "Information Technology", "Architecture & Urban Planning", "Business Administration & Operations", "Secretarial & Office Management", "Mechanical & Electrical Engineering", "Transportation & Delivery", "Healthcare", "Logistics & Supply Chain", "Retail & Office Support", "Fashion / Clothing & Textile Design", "Hospitality & Tourism", "Tutoring, Training & Mentorship", "Woodwork & Carpentry", "Event Management & Organization", "Installation & Maintenance", "Security & Safety", "Documentation & Writing", "Journalism & Communication", "Pharmaceutical", "Purchasing & Procurement", "Chemical & Biomedical Engineering", "Translation & Transcription", "Janitorial & Office Services", "Advisory & Consultancy", "Data Science & Analytics", "Beauty & Grooming", "Agriculture", "Research Services", "Psychiatry, Psychology & Social Work", "Horticulture", "Veterinary", "Brokerage & Case Closing", "Environmental, Mining & Energy Engineering", "Livestock & Animal Husbandry"], "values": [154, 102, 63, 61, 57, 54, 41, 40, 35, 34, 34, 31, 30, 29, 27, 25, 24, 21, 19, 18, 16, 14, 13, 12, 9, 8, 8, 7, 7, 7, 7, 6, 6, 6, 5, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1], "top3": ["Sales & Promotion", "Accounting & Finance", "Creative Art & Design"]}, "weekly": {"labels": ["2026-02-23/2026-03-01", "2026-03-02/2026-03-08", "2026-03-09/2026-03-15", "2026-03-16/2026-03-22", "2026-03-23/2026-03-29", "2026-03-30/2026-04-05", "2026-04-06/2026-04-12", "2026-04-13/2026-04-19", "2026-04-20/2026-04-26", "2026-04-27/2026-05-03", "2026-05-04/2026-05-10", "2026-05-11/2026-05-17"], "values": [2, 2, 23, 81, 120, 95, 97, 139, 133, 126, 130, 110]}, "experience": {"labels": ["Mid-Level", "Senior", "Junior", "Not Specified"], "values": [437, 314, 235, 72]}, "work_mode": {"labels": ["Onsite", "Remote", "Hybrid", "Unknown"], "values": [866, 99, 81, 12]}, "contract_type": {"labels": ["Full Time", "Contract", "Part Time", "Freelance", "Unknown"], "values": [919, 54, 43, 30, 12]}, "skills": {"labels": ["Communication", "Accountability", "Sales", "Problem Solving", "Time Management", "Customer Service", "Account Management", "Work Address", "English Language", "Creative Thinking", "Management", "Video Editing", "Leadership", "Teamwork", "Communications"], "values": [234, 110, 62, 49, 46, 45, 38, 34, 32, 31, 31, 29, 28, 28, 28]}, "education": {"labels": ["Bachelors Degree", "Not Required", "Not Specified", "Diploma", "Certificate", "Secondary School", "Tvet", "Masters Degree", "Phd"], "values": [586, 124, 121, 120, 52, 34, 16, 4, 1]}, "gender": {"labels": ["Both", "Female", "Male"], "values": [625, 333, 100]}, "salary": {"min": 1, "max": 204300, "median": 12950, "mean": 17343, "period_breakdown": {"Monthly": 235, "Fixed": 19, "per": 2, "Hourly": 2, "for": 1, "monthly": 1, "Senior": 1, "net": 1, "Net": 1}}, "companies": {"labels": ["M Advertising activities", "Afriwork Recruitment", "Sheger Wedding Store", "Shangi Furniture PLC.", "AIT Technologies", "Bright Techno Tonic plc", "Emarosh Real state", "wb interior", "Melhiq Consult PLC", "Majestic Trading P.L.C"], "values": [19, 14, 12, 9, 8, 7, 7, 7, 7, 6]}, "monthly_titles": {"2026-05": [{"rank": 1, "title": "Sales Representative", "count": 53, "salary_min": 3000, "salary_max": 30000, "salary_med": 9500}, {"rank": 2, "title": "Video Editor", "count": 18, "salary_min": 12000, "salary_max": 30000, "salary_med": 17500}, {"rank": 3, "title": "Accountant", "count": 13, "salary_min": 13000, "salary_max": 13000, "salary_med": 13000}, {"rank": 4, "title": "Civil Engineer", "count": 9, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 5, "title": "Teacher", "count": 8, "salary_min": 20700, "salary_max": 20700, "salary_med": 20700}, {"rank": 6, "title": "Marketing Officer", "count": 8, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 7, "title": "Customer Service", "count": 7, "salary_min": 7000, "salary_max": 7000, "salary_med": 7000}, {"rank": 8, "title": "Senior Accountant", "count": 7, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 9, "title": "Receptionist", "count": 7, "salary_min": 11000, "salary_max": 11000, "salary_med": 11000}, {"rank": 10, "title": "Cashier", "count": 7, "salary_min": 8500, "salary_max": 10000, "salary_med": 9250}, {"rank": 11, "title": "HR Officer", "count": 6, "salary_min": 28000, "salary_max": 28000, "salary_med": 28000}, {"rank": 12, "title": "Graphic Designer", "count": 6, "salary_min": 8000, "salary_max": 8000, "salary_med": 8000}, {"rank": 13, "title": "Software Engineer", "count": 5, "salary_min": 50000, "salary_max": 70000, "salary_med": 60000}, {"rank": 14, "title": "Office Manager", "count": 5, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 15, "title": "Social Media Manager", "count": 5, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 16, "title": "Secretary", "count": 5, "salary_min": 8000, "salary_max": 15000, "salary_med": 11500}, {"rank": 17, "title": "Mechanical Engineer", "count": 4, "salary_min": 10000, "salary_max": 20000, "salary_med": 15000}, {"rank": 18, "title": "Sales Manager", "count": 4, "salary_min": 8500, "salary_max": 22000, "salary_med": 15000}, {"rank": 19, "title": "Electrician", "count": 4, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 20, "title": "Fashion Designer", "count": 4, "salary_min": 7500, "salary_max": 7500, "salary_med": 7500}, {"rank": 21, "title": "Finance Officer", "count": 4, "salary_min": 80, "salary_max": 80, "salary_med": 80}, {"rank": 22, "title": "Content Creator", "count": 4, "salary_min": 10000, "salary_max": 31000, "salary_med": 20500}, {"rank": 23, "title": "Driver", "count": 4, "salary_min": 10000, "salary_max": 34000, "salary_med": 22000}, {"rank": 24, "title": "Logistics Officer", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 25, "title": "3D Designer", "count": 3, "salary_min": 15000, "salary_max": 45000, "salary_med": 30000}, {"rank": 26, "title": "Chef", "count": 3, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 27, "title": "Marketing Manager", "count": 3, "salary_min": 18000, "salary_max": 18000, "salary_med": 18000}, {"rank": 28, "title": "Store Keeper", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 29, "title": "Game Zone ፑል እና ፕሌይስቴሽን አጫዋች", "count": 2, "salary_min": 7000, "salary_max": 7000, "salary_med": 7000}, {"rank": 30, "title": "Security Guard", "count": 2, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 31, "title": "IT Officer", "count": 2, "salary_min": 70000, "salary_max": 70000, "salary_med": 70000}, {"rank": 32, "title": "Architect", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 33, "title": "Supervisor For A Supermarket", "count": 2, "salary_min": 8000, "salary_max": 8000, "salary_med": 8000}, {"rank": 34, "title": "Interior Designer", "count": 1, "salary_min": 13000, "salary_max": 13000, "salary_med": 13000}, {"rank": 35, "title": "Barista", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 36, "title": "Morocco And Massage Therapist/የማሳጅና ሞሮኮ ባለሙያ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 37, "title": "Af Somali Translator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 38, "title": "Afar Translator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 39, "title": "HR Manager", "count": 1, "salary_min": 25000, "salary_max": 25000, "salary_med": 25000}, {"rank": 40, "title": "Public Relation", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 41, "title": "UI/UX Designer", "count": 1, "salary_min": 17000, "salary_max": 17000, "salary_med": 17000}, {"rank": 42, "title": "Public Relations And Pomotion Head", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 43, "title": "Operational Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 44, "title": "Site Supervisor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 45, "title": "Contract Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 46, "title": "General Forman", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 47, "title": "Columnist / Writer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 48, "title": "Operational Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 49, "title": "Film Actor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 50, "title": "Event Coordinator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 51, "title": "Project Coordinator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 52, "title": "Business Development", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 53, "title": "Community Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 54, "title": "Construction", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 55, "title": "Chemist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 56, "title": "Pharmacist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 57, "title": "Printer Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 58, "title": "Consultant", "count": 1, "salary_min": 12000, "salary_max": 12000, "salary_med": 12000}, {"rank": 59, "title": "Procurement Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 60, "title": "Showroom", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 61, "title": "Photo Editor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 62, "title": "Hotel / Restaurant Manager", "count": 1, "salary_min": 15500, "salary_max": 15500, "salary_med": 15500}, {"rank": 63, "title": "Daycare Nanny", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 64, "title": "Other", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 65, "title": "የሞተር ብስክሌት ማድረስ አጋር", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 66, "title": "የሞተር ብስክሌት አሽከርካሪዎች", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 67, "title": "Laboratory Technician", "count": 1, "salary_min": 45000, "salary_max": 45000, "salary_med": 45000}, {"rank": 68, "title": "Customer Acquisition Agents", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 69, "title": "Engineering Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 70, "title": "Room Attendant", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 71, "title": "Housekeeping Supervisor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 72, "title": "Solar Engineer", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 73, "title": "F&B Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 74, "title": "Script Writer", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 75, "title": "Quantity Surveyor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 76, "title": "Contract Admnistrator And Tender Preparation Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 77, "title": "Furniture Designer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 78, "title": "Deputy Ceo", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 79, "title": "Animal Nutritionist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 80, "title": "Assembly Worker", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 81, "title": "Welder / Metal Fabricator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 82, "title": "Workshop Foreman", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 83, "title": "በያጅ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 84, "title": "ፅዳት ሰራተኛ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 85, "title": "Agent /Delivery Person", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 86, "title": "Ai Creative Production", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 87, "title": "Game Zone", "count": 1, "salary_min": 6000, "salary_max": 6000, "salary_med": 6000}, {"rank": 88, "title": "እንጨት ባለሙያ", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 89, "title": "Human Resources & Administration Supervisor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 90, "title": "Full-Time Website Developer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 91, "title": "ፋይበር ግላስ ባለሙያ", "count": 1, "salary_min": 25000, "salary_max": 25000, "salary_med": 25000}], "2026-04": [{"rank": 1, "title": "Sales Representative", "count": 78, "salary_min": 4000, "salary_max": 22327, "salary_med": 10000}, {"rank": 2, "title": "Accountant", "count": 23, "salary_min": 8000, "salary_max": 25000, "salary_med": 11000}, {"rank": 3, "title": "Marketing Officer", "count": 19, "salary_min": 7500, "salary_max": 20000, "salary_med": 15000}, {"rank": 4, "title": "Receptionist", "count": 18, "salary_min": 10000, "salary_max": 15000, "salary_med": 11450}, {"rank": 5, "title": "Graphic Designer", "count": 18, "salary_min": 7000, "salary_max": 30000, "salary_med": 10000}, {"rank": 6, "title": "Content Creator", "count": 16, "salary_min": 7500, "salary_max": 20000, "salary_med": 13000}, {"rank": 7, "title": "Teacher", "count": 16, "salary_min": 500, "salary_max": 70000, "salary_med": 15000}, {"rank": 8, "title": "Video Editor", "count": 14, "salary_min": 500, "salary_max": 14000, "salary_med": 8000}, {"rank": 9, "title": "Customer Service", "count": 13, "salary_min": 16000, "salary_max": 25000, "salary_med": 21000}, {"rank": 10, "title": "Architect", "count": 11, "salary_min": 10000, "salary_max": 12000, "salary_med": 11000}, {"rank": 11, "title": "HR Officer", "count": 11, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 12, "title": "Software Engineer", "count": 10, "salary_min": 29000, "salary_max": 29000, "salary_med": 29000}, {"rank": 13, "title": "Senior Accountant", "count": 10, "salary_min": 12000, "salary_max": 30000, "salary_med": 25000}, {"rank": 14, "title": "Office Manager", "count": 9, "salary_min": 9000, "salary_max": 25000, "salary_med": 13000}, {"rank": 15, "title": "Sales Manager", "count": 9, "salary_min": 8500, "salary_max": 39568, "salary_med": 18500}, {"rank": 16, "title": "Social Media Manager", "count": 9, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 17, "title": "Marketing Manager", "count": 9, "salary_min": 15000, "salary_max": 45000, "salary_med": 22500}, {"rank": 18, "title": "Driver", "count": 9, "salary_min": 10000, "salary_max": 20000, "salary_med": 15000}, {"rank": 19, "title": "Finance Officer", "count": 8, "salary_min": 8000, "salary_max": 80000, "salary_med": 44000}, {"rank": 20, "title": "Fashion Designer", "count": 7, "salary_min": 800, "salary_max": 10000, "salary_med": 7500}, {"rank": 21, "title": "Engineering Manager", "count": 6, "salary_min": 23000, "salary_max": 23000, "salary_med": 23000}, {"rank": 22, "title": "Store Keeper", "count": 6, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 23, "title": "Civil Engineer", "count": 5, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 24, "title": "Executive Assistant", "count": 5, "salary_min": 30000, "salary_max": 40000, "salary_med": 35000}, {"rank": 25, "title": "HR Manager", "count": 5, "salary_min": 20000, "salary_max": 25000, "salary_med": 22500}, {"rank": 26, "title": "Cashier", "count": 5, "salary_min": 7000, "salary_max": 7000, "salary_med": 7000}, {"rank": 27, "title": "Pharmacist", "count": 4, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 28, "title": "DevOps Engineer", "count": 4, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 29, "title": "Chef", "count": 4, "salary_min": 7000, "salary_max": 7000, "salary_med": 7000}, {"rank": 30, "title": "Secretary", "count": 4, "salary_min": 9000, "salary_max": 10000, "salary_med": 9500}, {"rank": 31, "title": "IT Officer", "count": 4, "salary_min": 11000, "salary_max": 11000, "salary_med": 11000}, {"rank": 32, "title": "Electrician", "count": 4, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 33, "title": "Procurement Officer", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 34, "title": "Security Guard", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 35, "title": "Script Writer", "count": 3, "salary_min": 30000, "salary_max": 30000, "salary_med": 30000}, {"rank": 36, "title": "Tender Officer", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 37, "title": "Logistics Officer", "count": 3, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 38, "title": "Interior Designer", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 39, "title": "Biomedical Engineer", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 40, "title": "Tender", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 41, "title": "Waiter / Waitress", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 42, "title": "የወረቀት ቦርሳ እና ፓኬጂንግ ሰራተኛ", "count": 2, "salary_min": 5000, "salary_max": 5000, "salary_med": 5000}, {"rank": 43, "title": "ጉዳይ አስፈጻሚ", "count": 2, "salary_min": 11000, "salary_max": 11000, "salary_med": 11000}, {"rank": 44, "title": "የፅዳት ሰራተኛ", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 45, "title": "ወርክ ሾኘ ማናጀር እና Supervisor", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 46, "title": "Business Development", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 47, "title": "Barista", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 48, "title": "Product Manager", "count": 2, "salary_min": 67000, "salary_max": 67000, "salary_med": 67000}, {"rank": 49, "title": "Brand & Operations", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 50, "title": "Research And Development", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 51, "title": "Drafts Man", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 52, "title": "Profesional Video Grapher", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 53, "title": "Cleaning Service Supervisor", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 54, "title": "ሁለገብ የብየዳ ባለሙያ", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 55, "title": "ጽዳት", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 56, "title": "Operations Director / General Manager", "count": 1, "salary_min": 40000, "salary_max": 40000, "salary_med": 40000}, {"rank": 57, "title": "Video Production Specialist", "count": 1, "salary_min": 22000, "salary_max": 22000, "salary_med": 22000}, {"rank": 58, "title": "Data Scientist", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 59, "title": "Qa Specialist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 60, "title": "ጋዜጠኛ/ሪፖርተር", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 61, "title": "Beauty & Makeup Artist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 62, "title": "Research & Development", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 63, "title": "Mobile Application Developer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 64, "title": "የሬስቶራንት ሱፐርቫይዘር", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 65, "title": "ማተሚያ ቤት አጋዥ", "count": 1, "salary_min": 6000, "salary_max": 6000, "salary_med": 6000}, {"rank": 66, "title": "Machine Oprator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 67, "title": "Cto", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 68, "title": "Design And Finishing Engineering", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 69, "title": "Mid Level Qa Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 70, "title": "Garment Quality Checker", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 71, "title": "Copier Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 72, "title": "Artificial Stone Rock Sculptor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 73, "title": "Modern Dancer", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 74, "title": "Production & Fabrication", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 75, "title": "Machine Design Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 76, "title": "Bar Man", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 77, "title": "Spa Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 78, "title": "Planning, Monitoring Amd Evaluation Service Head", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 79, "title": "Fleet Managment Service Head", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 80, "title": "Auditor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 81, "title": "Furniture Manufacturing Supervisor", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 82, "title": "Technical Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 83, "title": "Agronomist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 84, "title": "Doctor / GP", "count": 1, "salary_min": 31000, "salary_max": 31000, "salary_med": 31000}, {"rank": 85, "title": "Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 86, "title": "አጋዥ ሰራተኛ", "count": 1, "salary_min": 6000, "salary_max": 6000, "salary_med": 6000}, {"rank": 87, "title": "እንጨት ቀለም ቀቢ", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 88, "title": "ዋና አናፂ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 89, "title": "Purchases", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 90, "title": "Medical Billing Specialist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 91, "title": "Nanny", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 92, "title": "Chemical Engineer (Detergent Manufacturing", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 93, "title": "የእንስሳት ሀኪም", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 94, "title": "የቲክቶክ ሆስት እና ተዋናይ ይፈለጋል", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 95, "title": "Quantity Surveyor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 96, "title": "Cable Puller:", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 97, "title": "Nanny/ Child Care", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 98, "title": "& Fire Protection Plumber", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 99, "title": "Water Supply And Drainage Worker", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 100, "title": "Design And Drafting", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 101, "title": "የኮስሞቲክስ ሽያጭ ባለሙያ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 102, "title": "Inventory & Operations", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 103, "title": "Operation Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 104, "title": "Manager", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 105, "title": "Workshop Supervisor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 106, "title": "Supervisor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 107, "title": "Accounting And Financ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 108, "title": "Female Production", "count": 1, "salary_min": 8000, "salary_max": 8000, "salary_med": 8000}, {"rank": 109, "title": "Consultant", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 110, "title": "Human Resource And General Service Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 111, "title": "ጠቅላላ አገልግሎት", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 112, "title": "Journalist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 113, "title": "3D Designer", "count": 1, "salary_min": 2000, "salary_max": 2000, "salary_med": 2000}, {"rank": 114, "title": "Researcher", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 115, "title": "Hotel / Restaurant Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 116, "title": "Manager Technical Operation And Project Management", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 117, "title": "Remote Bookkeeper", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 118, "title": "Data Analyst", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 119, "title": "Ecommerce Operations Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 120, "title": "Sanitation Technician", "count": 1, "salary_min": 21000, "salary_max": 21000, "salary_med": 21000}, {"rank": 121, "title": "Stock Controler", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 122, "title": "Chinese Translator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 123, "title": "Elevator Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 124, "title": "የፋብሪካ ሰራተኛ", "count": 1, "salary_min": 5000, "salary_max": 5000, "salary_med": 5000}, {"rank": 125, "title": "Cnc And Laser Machine Operator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 126, "title": "Furniture Designer", "count": 1, "salary_min": 1, "salary_max": 1, "salary_med": 1}, {"rank": 127, "title": "B2B Deal Closer & Proposal Specialist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 128, "title": "Multimedia Journalist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 129, "title": "Grant Officer", "count": 1, "salary_min": 50000, "salary_max": 50000, "salary_med": 50000}, {"rank": 130, "title": "Voice Over Artist", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 131, "title": "Global Live Entertainment Dancer", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 132, "title": "Oxy-Acetylene Cutting Operator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 133, "title": "ኢንተርየር ዲዛይን, ግራፊክስ ዲዛይን / ኦንላይን አስተማሪዎች", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 134, "title": "Online Call Service Agent", "count": 1, "salary_min": 13228, "salary_max": 13228, "salary_med": 13228}, {"rank": 135, "title": "Drawings And Design", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 136, "title": "የዶር ቱ ዶር ሽያጭ ባለሙያ", "count": 1, "salary_min": 7000, "salary_max": 7000, "salary_med": 7000}, {"rank": 137, "title": "Nanny ሞግዚት", "count": 1, "salary_min": 6000, "salary_max": 6000, "salary_med": 6000}, {"rank": 138, "title": "Contract Administrator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 139, "title": "Branch Manager For A Supermarket", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 140, "title": "Supervisor For A Supermarket", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 141, "title": "UI/UX Designer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 142, "title": "Janitor/ፅዳት ሰራተኛ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 143, "title": "Printing And Printing Operator", "count": 1, "salary_min": 8000, "salary_max": 8000, "salary_med": 8000}, {"rank": 144, "title": "Battery Charging Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 145, "title": "Co-Host & Correspondent", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 146, "title": "Showroom", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 147, "title": "የስፌት እና ታፒሴሪ ሰራተኛ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 148, "title": "የብረት ሰራተኛ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 149, "title": "Bilingual Content Coordinator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 150, "title": "የፈርኒቸር ገጣሚ ባለሞያ", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 151, "title": "Led Screen Wall Operator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 152, "title": "General Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 153, "title": "የፊኒሺንግ ባለሞያ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 154, "title": "የእንጨት ባለሞያ", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 155, "title": "Battery Swapper", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 156, "title": "Field Survey & Generation Officer", "count": 1, "salary_min": 7200, "salary_max": 7200, "salary_med": 7200}, {"rank": 157, "title": "Arabic And English Language Translater", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 158, "title": "Expert Manger On Delivery Company", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}], "2026-03": [{"rank": 1, "title": "Sales Representative", "count": 35, "salary_min": 6000, "salary_max": 204300, "salary_med": 10750}, {"rank": 2, "title": "Accountant", "count": 16, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 3, "title": "Teacher", "count": 11, "salary_min": 9000, "salary_max": 22900, "salary_med": 13000}, {"rank": 4, "title": "Marketing Officer", "count": 10, "salary_min": 5000, "salary_max": 35000, "salary_med": 10000}, {"rank": 5, "title": "Video Editor", "count": 9, "salary_min": 9000, "salary_max": 30000, "salary_med": 15000}, {"rank": 6, "title": "Graphic Designer", "count": 9, "salary_min": 10000, "salary_max": 13000, "salary_med": 11500}, {"rank": 7, "title": "Senior Accountant", "count": 9, "salary_min": 30000, "salary_max": 35000, "salary_med": 32500}, {"rank": 8, "title": "Civil Engineer", "count": 7, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 9, "title": "Content Creator", "count": 6, "salary_min": 15000, "salary_max": 31000, "salary_med": 20000}, {"rank": 10, "title": "Software Engineer", "count": 6, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 11, "title": "Architect", "count": 6, "salary_min": 25000, "salary_max": 25000, "salary_med": 25000}, {"rank": 12, "title": "Customer Service", "count": 6, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 13, "title": "IT Officer", "count": 6, "salary_min": 12000, "salary_max": 23000, "salary_med": 17500}, {"rank": 14, "title": "Business Development", "count": 5, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 15, "title": "HR Manager", "count": 5, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 16, "title": "Secretary", "count": 5, "salary_min": 7000, "salary_max": 12500, "salary_med": 9750}, {"rank": 17, "title": "Cashier", "count": 4, "salary_min": 7000, "salary_max": 10000, "salary_med": 9000}, {"rank": 18, "title": "HR Officer", "count": 4, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 19, "title": "Interior Designer", "count": 4, "salary_min": 11000, "salary_max": 25000, "salary_med": 18000}, {"rank": 20, "title": "Sales Manager", "count": 4, "salary_min": 15000, "salary_max": 20000, "salary_med": 17500}, {"rank": 21, "title": "Engineering Manager", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 22, "title": "Electrician", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 23, "title": "Office Manager", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 24, "title": "Driver", "count": 3, "salary_min": 7500, "salary_max": 12500, "salary_med": 12000}, {"rank": 25, "title": "Store Keeper", "count": 3, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 26, "title": "Finance Officer", "count": 3, "salary_min": 25000, "salary_max": 25000, "salary_med": 25000}, {"rank": 27, "title": "Laboratory Technician", "count": 2, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 28, "title": "Chef", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 29, "title": "Nurse", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 30, "title": "Procurement Officer", "count": 2, "salary_min": 13000, "salary_max": 13000, "salary_med": 13000}, {"rank": 31, "title": "DevOps Engineer", "count": 2, "salary_min": 100000, "salary_max": 100000, "salary_med": 100000}, {"rank": 32, "title": "UI/UX Designer", "count": 2, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 33, "title": "Receptionist", "count": 2, "salary_min": 9000, "salary_max": 9000, "salary_med": 9000}, {"rank": 34, "title": "Marketing Manager", "count": 2, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 35, "title": "Consultant", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 36, "title": "Script Writer", "count": 1, "salary_min": 6000, "salary_max": 6000, "salary_med": 6000}, {"rank": 37, "title": "Waiter / Waitress", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 38, "title": "Product Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 39, "title": "Reporter", "count": 1, "salary_min": 9000, "salary_max": 9000, "salary_med": 9000}, {"rank": 40, "title": "Nanny", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 41, "title": "Program Director", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 42, "title": "Ticketing Agent", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 43, "title": "Event Project Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 44, "title": "Bartender", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 45, "title": "Data Scientist", "count": 1, "salary_min": 40000, "salary_max": 40000, "salary_med": 40000}, {"rank": 46, "title": "Tender & Project Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 47, "title": "Bike Station Keeper", "count": 1, "salary_min": 4000, "salary_max": 4000, "salary_med": 4000}, {"rank": 48, "title": "Maintainance Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 49, "title": "Job Bidding & Application Specialist", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 50, "title": "3D Designer", "count": 1, "salary_min": 40000, "salary_max": 40000, "salary_med": 40000}, {"rank": 51, "title": "Executive Assistant", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 52, "title": "Engineers", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 53, "title": "Juice Bar Attendant", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 54, "title": "Business Journalist/ Documentary Producer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 55, "title": "Delivery Operations Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 56, "title": "የእንጨት ስራ አጋዥ", "count": 1, "salary_min": 15000, "salary_max": 15000, "salary_med": 15000}, {"rank": 57, "title": "የእንጨት ሰራተኛ", "count": 1, "salary_min": 25000, "salary_max": 25000, "salary_med": 25000}, {"rank": 58, "title": "Quality Control Analysts", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 59, "title": "Sacco Manager/Ceo", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 60, "title": "Branch Coordinator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 61, "title": "Savings And Resource Mobilization Specialist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 62, "title": "Full-Stack Developer & Edtech Specialist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 63, "title": "የዲጂታል ሚዲያ ማናጀር እና ኮንቴንት ክሬተር", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 64, "title": "Operations & Growth Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 65, "title": "Inventory And Operations", "count": 1, "salary_min": 26470, "salary_max": 26470, "salary_med": 26470}, {"rank": 66, "title": "Commercial Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 67, "title": "Security Guard", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 68, "title": "Pharmacist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 69, "title": "Technology Professionals", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 70, "title": "Ehs Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 71, "title": "Hairstylist", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 72, "title": "እንግዳ ተቀባይ", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 73, "title": "Meetup Coordinator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 74, "title": "Hotel / Restaurant Manager", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 75, "title": "Project & Operations Officer", "count": 1, "salary_min": 50000, "salary_max": 50000, "salary_med": 50000}, {"rank": 76, "title": "Social Media Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 77, "title": "Designing And Finishing Engineer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 78, "title": "Lawyer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 79, "title": "General Manager", "count": 1, "salary_min": 10000, "salary_max": 10000, "salary_med": 10000}, {"rank": 80, "title": "Data Analyst", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 81, "title": "Doctor / GP", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 82, "title": "Facility Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 83, "title": "Fashion Designer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 84, "title": "Quantity Surveyor", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 85, "title": "Design Head", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 86, "title": "Multimedia Specialist", "count": 1, "salary_min": 20000, "salary_max": 20000, "salary_med": 20000}, {"rank": 87, "title": "Production Fabrication And Installation Manager", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 88, "title": "Registrar Office Head", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 89, "title": "Maintenance Technician", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}], "2026-02": [{"rank": 1, "title": "Marketing Officer", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}, {"rank": 2, "title": "English To Afar Interpreter/Translator", "count": 1, "salary_min": null, "salary_max": null, "salary_med": null}]}, "months_available": ["2026-05", "2026-04", "2026-03", "2026-02"], "kpi": {"total_jobs": 1058, "total_companies": 369, "total_industries": 48, "jobs_with_salary": 268, "remote_jobs": 99, "last_updated": "2026-05-16T08:00:23.267933", "date_range_start": "Feb 23, 2026", "date_range_end": "May 16, 2026"}};
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Palette ───────────────────────────────────────────────────────────────────
+const gold    = '#c8a84b';
+const accent1 = '#3ecfb2';
+const accent2 = '#e05c5c';
+const accent3 = '#7b8aff';
+const muted   = '#5a6070';
+const border  = '#1e2230';
+const PALETTE = [
+  '#c8a84b','#3ecfb2','#7b8aff','#e05c5c','#e07b5c',
+  '#5ce0b8','#b87bff','#ff9f7b','#7bcce0','#e0c07b',
+  '#5c7be0','#c05ce0','#7be07b','#e05c9f','#9fe05c',
+];
+const baseOpts = {
+  responsive: true,
+  plugins: {
+    legend: { labels: { color: '#8090a0', font: { family: 'Space Mono', size: 10 } } },
+    tooltip: { backgroundColor: '#1a1e28', titleColor: '#c8a84b', bodyColor: '#8090a0' },
+  },
+};
+
+// ── Weekly trend ──────────────────────────────────────────────────────────────
+new Chart(document.getElementById('weeklyChart'), {
+  type: 'line',
+  data: {
+    labels: D.weekly.labels,
+    datasets: [{
+      label: 'Postings',
+      data: D.weekly.values,
+      borderColor: gold,
+      backgroundColor: gold + '22',
+      pointBackgroundColor: gold,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      fill: true,
+      tension: 0.4,
+    }],
+  },
+  options: { ...baseOpts, scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+  }},
+});
+
+// ── Industry bar ──────────────────────────────────────────────────────────────
+new Chart(document.getElementById('industryChart'), {
+  type: 'bar',
+  data: { labels: D.industry.labels, datasets: [{ label: 'Jobs', data: D.industry.values, backgroundColor: PALETTE, borderRadius: 3 }] },
+  options: { ...baseOpts, indexAxis: 'y', scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: '#c0cad8', font: { size: 10 } }, grid: { color: 'transparent' } },
+  }, plugins: { ...baseOpts.plugins, legend: { display: false } } },
+});
+
+// ── Top 3 industries podium ───────────────────────────────────────────────────
+const top3El = document.getElementById('top3Container');
+const top3Colors = ['#c8a84b','#8ea0b8','#c8845a'];
+const maxVal = D.industry.values[0] || 1;
+D.industry.top3.forEach((name, i) => {
+  const idx = D.industry.labels.indexOf(name);
+  const val = D.industry.values[idx];
+  const pct = Math.round((val / maxVal) * 100);
+  top3El.innerHTML += `
+    <div class="top3-item">
+      <span class="rank">#${i+1}</span>
+      <div style="flex:1">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="top3-name">${name}</span>
+          <span class="top3-count">${val}</span>
+        </div>
+        <div class="top3-bar-wrap">
+          <div class="top3-bar" style="width:${pct}%;background:${top3Colors[i]}"></div>
+        </div>
+      </div>
+    </div>`;
+});
+
+// ── Donut helper ──────────────────────────────────────────────────────────────
+function donut(id, labels, values, colors) {
+  new Chart(document.getElementById(id), {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data: values, backgroundColor: colors || PALETTE, borderWidth: 0 }] },
+    options: { ...baseOpts, cutout: '65%', plugins: { ...baseOpts.plugins,
+      legend: { position: 'bottom', labels: { color: '#8090a0', font: { family: 'Space Mono', size: 9 }, boxWidth: 10, padding: 10 } }
+    }},
+  });
+}
+donut('expChart',      D.experience.labels,    D.experience.values);
+donut('modeChart',     D.work_mode.labels,     D.work_mode.values,     [accent1, gold, accent3, muted]);
+donut('contractChart', D.contract_type.labels, D.contract_type.values, [accent3, gold, accent1, accent2]);
+donut('genderChart',   D.gender.labels,        D.gender.values,        [accent1, accent2, gold]);
+donut('eduChart',      D.education.labels,     D.education.values);
+
+// ── Skills bar ────────────────────────────────────────────────────────────────
+new Chart(document.getElementById('skillsChart'), {
+  type: 'bar',
+  data: { labels: D.skills.labels, datasets: [{ label: 'Frequency', data: D.skills.values, backgroundColor: accent3+'cc', borderRadius: 3 }] },
+  options: { ...baseOpts, indexAxis: 'y', scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: '#c0cad8', font: { size: 10 } }, grid: { color: 'transparent' } },
+  }, plugins: { ...baseOpts.plugins, legend: { display: false } } },
+});
+
+// ── Companies bar ─────────────────────────────────────────────────────────────
+new Chart(document.getElementById('companiesChart'), {
+  type: 'bar',
+  data: { labels: D.companies.labels, datasets: [{ label: 'Listings', data: D.companies.values, backgroundColor: accent2+'bb', borderRadius: 3 }] },
+  options: { ...baseOpts, indexAxis: 'y', scales: {
+    x: { ticks: { color: muted, font: { family: 'Space Mono', size: 9 } }, grid: { color: border } },
+    y: { ticks: { color: '#c0cad8', font: { size: 10 } }, grid: { color: 'transparent' } },
+  }, plugins: { ...baseOpts.plugins, legend: { display: false } } },
+});
+
+// ── Salary box ────────────────────────────────────────────────────────────────
+const sb = document.getElementById('salaryBox');
+if (D.salary) {
+  const fmt = n => n.toLocaleString() + ' ETB';
+  sb.innerHTML = `
+    <div class="sal-item"><div class="sal-label">Median</div><div class="sal-val">${fmt(D.salary.median)}</div></div>
+    <div class="sal-item"><div class="sal-label">Mean</div><div class="sal-val">${fmt(D.salary.mean)}</div></div>
+    <div class="sal-item"><div class="sal-label">Min</div><div class="sal-val" style="color:var(--accent2)">${fmt(D.salary.min)}</div></div>
+    <div class="sal-item"><div class="sal-label">Max</div><div class="sal-val" style="color:var(--gold)">${fmt(D.salary.max)}</div></div>`;
+} else {
+  sb.innerHTML = '<p style="color:var(--muted);font-size:0.8rem;padding:1rem 0;grid-column:span 2">No structured salary data available.</p>';
+}
+
+// ── TITLES RANKING TAB ────────────────────────────────────────────────────────
+const podiumColors = ['#c8a84b', '#8ea0b8', '#c8845a'];
+
+function fmtSalary(t) {
+  if (t.salary_min === null) return null;
+  const fmt = n => (n/1000).toFixed(0) + 'K';
+  if (t.salary_min === t.salary_max) return fmt(t.salary_min) + ' ETB';
+  return fmt(t.salary_min) + ' – ' + fmt(t.salary_max) + ' ETB';
+}
+
+function renderTitles(month) {
+  const titles = D.monthly_titles[month] || [];
+  const maxCount = titles[0]?.count || 1;
+
+  // Podium
+  const podium = document.getElementById('titlesPodium');
+  podium.innerHTML = '';
+  titles.slice(0, 3).forEach((t, i) => {
+    const sal = fmtSalary(t);
+    const salHtml = sal
+      ? `<div class="podium-salary">${sal}<br><span style="font-size:0.6rem;opacity:0.7">SALARY RANGE</span></div>`
+      : `<div class="podium-salary no-data">No salary data</div>`;
+    podium.innerHTML += `
+      <div class="podium-card">
+        <div class="podium-rank"># ${t.rank} MOST LISTED</div>
+        <div class="podium-title-text">${t.title}</div>
+        <div class="podium-count">${t.count}</div>
+        ${salHtml}
+      </div>`;
+  });
+
+  // Table
+  const tbody = document.getElementById('titlesTableBody');
+  tbody.innerHTML = '';
+  titles.slice(3).forEach(t => {
+    const sal = fmtSalary(t);
+    const pct = Math.round((t.count / maxCount) * 100);
+    tbody.innerHTML += `
+      <tr>
+        <td class="td-rank">${t.rank}</td>
+        <td>${t.title}</td>
+        <td class="td-count">${t.count}</td>
+        <td class="${sal ? 'td-salary' : 'td-salary none'}">${sal || 'not listed'}</td>
+        <td class="hide-mobile">
+          <div class="mini-bar-wrap"><div class="mini-bar" style="width:${pct}%"></div></div>
+        </td>
+      </tr>`;
+  });
+}
+
+// Populate month selector and render default
+const monthSelect = document.getElementById('monthSelect');
+D.months_available.forEach((m, i) => {
+  const opt = document.createElement('option');
+  opt.value = m;
+  opt.text = m;
+  if (i === 0) opt.selected = true;
+  monthSelect.appendChild(opt);
+});
+renderTitles(D.months_available[0]);
+</script>
+</body>
+</html>
