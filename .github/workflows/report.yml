@@ -29,10 +29,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Stage raw parquet
+      - name: Download latest parquet from scraper repo
         run: |
           mkdir -p data
-          cp jobs.parquet data/jobs_raw.parquet
+          curl -L "https://github.com/Imr-u/jobs.et/raw/main/data/jobs.parquet" -o data/jobs_raw.parquet
 
       - name: Clean data
         run: python pipeline/clean.py
